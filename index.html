@@ -256,7 +256,6 @@
             
             <!-- ÁREA DA LOGO (SVG EMBUTIDO) -->
             <a href="#" class="block">
-                <!-- Mudança: h-12 no mobile e h-16 no desktop para aumentar a logo -->
                 <svg viewBox="0 0 860 467" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 md:h-16 w-auto">
                     <path d="M218 227.5H293L299 241.5L218 227.5Z" fill="#FF6A00"/>
                     <path d="M157.5 187.5L282.778 183L293 211L157.5 187.5Z" fill="#FF6A00"/>
@@ -276,7 +275,6 @@
                     <path d="M106.678 391.944C124.726 370.436 153.779 365.102 171.57 380.031C189.36 394.959 189.152 424.496 171.105 446.004C153.057 467.512 124.004 472.847 106.213 457.918C88.4225 442.99 88.6308 413.452 106.678 391.944ZM155.233 399.499C146.336 392.034 131.807 394.701 122.782 405.457C113.757 416.213 113.653 430.984 122.549 438.449C131.446 445.915 145.975 443.247 155 432.491C164.026 421.736 164.13 406.965 155.233 399.499Z" fill="#FFFDFD"/>
                     <path d="M266.673 392.379C284.721 370.871 313.774 365.537 331.565 380.466C349.355 395.394 349.147 424.931 331.1 446.439C313.052 467.948 283.999 473.282 266.208 458.353C248.417 443.425 248.626 413.887 266.673 392.379ZM315.228 399.934C306.331 392.469 291.802 395.137 282.776 405.893C273.752 416.648 273.648 431.419 282.544 438.885C291.441 446.35 305.97 443.683 314.995 432.927C324.021 422.171 324.125 407.4 315.228 399.934Z" fill="#FFFDFD"/>
                     <path d="M531.673 392.379C549.721 370.871 578.774 365.537 596.565 380.466C614.355 395.394 614.147 424.931 596.1 446.439C578.052 467.948 548.999 473.282 531.208 458.353C513.417 443.425 513.626 413.887 531.673 392.379ZM580.228 399.934C571.331 392.469 556.802 395.137 547.776 405.893C538.752 416.648 538.648 431.419 547.544 438.885C556.441 446.35 570.97 443.683 579.995 432.927C589.021 422.171 589.125 407.4 580.228 399.934Z" fill="#FF6A00"/>
-                    <path d="M781.673 392.379C799.721 370.871 828.774 365.537 846.565 380.466C864.355 395.394 864.147 424.931 846.1 446.439C828.052 467.948 798.999 473.282 781.208 458.353C763.417 443.425 763.626 413.887 781.673 392.379ZM830.228 399.934C821.331 392.469 806.802 395.137 797.776 405.893C788.752 416.648 788.648 431.419 797.544 438.885C806.441 446.35 820.97 443.683 829.995 432.927C839.021 422.171 839.125 407.4 830.228 399.934Z" fill="#FF6A00"/>
                     <path d="M29 460.5H0L19.5 364C23.9947 351.535 33.562 344.656 47 344.5C60.438 344.344 108 344.5 108 344.5L102.5 367H52C47.7444 367.553 46.165 368.913 45 373.5L41 396H90.5L84 418.5H36.5L29 460.5Z" fill="white"/>
                     <path d="M240.5 352.5H214.5L209.5 376.5H195L191 396H204.5C199.265 417.562 196.311 443.453 196.5 450.5C196.689 457.547 210.139 469.447 238 462L240.5 445.5C225.177 447.296 222.287 443.715 225 431L231.5 396H252L258 376.5H235.5L240.5 352.5Z" fill="white"/>
                     <path d="M757.5 352.5H731.5L726.5 376.5H712L708 396H721.5C716.265 417.562 713.311 443.453 713.5 450.5C713.689 457.547 727.139 469.447 755 462L757.5 445.5C742.177 447.296 739.287 443.715 742 431L748.5 396H769L775 376.5H752.5L757.5 352.5Z" fill="#FF6A00"/>
@@ -372,16 +370,16 @@
             <!-- GRID ESTILOS COM SLIDER -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
                 
-                <!-- Card 1 -->
+                <!-- Card 1: Natural Aprimorado -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">Natural Aprimorado</h3>
                         <p class="text-sm text-gray-500">“A mesma foto, só que melhor.” Correção de luz, cores equilibradas e mais nitidez, sem cara de filtro.</p>
                     </div>
                     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
-                        <img src="estilo-melhor-versao.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                        <img src="natural-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="estilo-melhor-versao.jpg" alt="Antes" class="style-slider-img" style="filter: brightness(0.85) sepia(0.2);">
+                            <img src="natural-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -392,16 +390,16 @@
                     </a>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Card 2: Perfil Profissional -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">Perfil Profissional</h3>
                         <p class="text-sm text-gray-500">“Foto séria, limpa e confiável.” Ideal para LinkedIn, WhatsApp Business e perfis de trabalho.</p>
                     </div>
                     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
-                        <img src="estilo-profissional.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                        <img src="profissional-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="estilo-profissional.jpg" alt="Antes" class="style-slider-img" style="filter: brightness(0.8) contrast(0.9) grayscale(0.2);">
+                            <img src="profissional-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                          <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -412,16 +410,16 @@
                     </a>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Card 3: Produto em Destaque -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">Produto em Destaque</h3>
                         <p class="text-sm text-gray-500">“Foto mais vendável.” Perfeito para comida, produtos, artesanato e pequenos negócios.</p>
                     </div>
                     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
-                        <img src="estilo-produto.jpg" alt="Depois" class="style-slider-img" loading="lazy" onerror="this.src='estilo-quadro.jpg'">
+                        <img src="produto-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" onerror="this.src='estilo-quadro.jpg'">
                         <div class="style-slider-overlay">
-                            <img src="estilo-produto.jpg" alt="Antes" class="style-slider-img" style="filter: brightness(0.9) contrast(0.8);" onerror="this.src='estilo-quadro.jpg'">
+                            <img src="produto-antes.jpg" alt="Antes" class="style-slider-img" onerror="this.src='estilo-quadro.jpg'">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -432,16 +430,16 @@
                     </a>
                 </div>
 
-                <!-- Card 4 -->
+                <!-- Card 4: Cinema / Dramático -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">Cinema / Dramático</h3>
                         <p class="text-sm text-gray-500">“Foto com impacto.” Luz dramática, contraste forte e estética cinematográfica.</p>
                     </div>
                     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
-                        <img src="estilo-cinema.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                        <img src="cinema-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="estilo-cinema.jpg" alt="Antes" class="style-slider-img" style="filter: brightness(1.2) contrast(0.8) saturate(0.5);">
+                            <img src="cinema-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -452,16 +450,16 @@
                     </a>
                 </div>
 
-                <!-- Card 5 -->
+                <!-- Card 5: Arte & Ilustração -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">Arte & Ilustração</h3>
                         <p class="text-sm text-gray-500">“Transformação artística.” Desenho, pintura, lápis ou quadro — forte para presente e emoção.</p>
                     </div>
                     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
-                        <img src="estilo-desenho.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                        <img src="arte-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="estilo-desenho.jpg" alt="Antes" class="style-slider-img" style="filter: opacity(0.6);">
+                            <img src="arte-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -472,16 +470,16 @@
                     </a>
                 </div>
 
-                <!-- Card 6 -->
+                <!-- Card 6: 3D / Estilizado -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">3D / Estilizado</h3>
                         <p class="text-sm text-gray-500">“Estilo divertido.” Personagem 3D, cartoon ou Pixar-like — ideal para pets, presentes e conteúdo.</p>
                     </div>
                     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
-                        <img src="estilo-3d.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                        <img src="3d-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="estilo-3d.jpg" alt="Antes" class="style-slider-img" style="filter: blur(2px) grayscale(0.5);">
+                            <img src="3d-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -501,7 +499,7 @@
                     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
                         <img src="restauracao-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="restauracao-antes.jpg" alt="Antes" class="style-slider-img" style="filter: sepia(0.8) contrast(0.8) brightness(0.9) grayscale(0.5);">
+                            <img src="restauracao-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -535,6 +533,10 @@
     </section>
 
     <!-- 4. Planos / Preços -->
+    <!-- ... (Resto do site mantido igual) ... -->
+    <!-- (Mantendo o resto para não repetir código desnecessário na resposta, mas o arquivo completo conteria tudo) -->
+    <!-- Vou incluir o resto para ser o arquivo COMPLETO conforme solicitado -->
+
     <section class="pt-4 pb-8 md:pt-8 md:pb-12 bg-white" id="precos">
         <div class="container mx-auto px-6">
             <div class="text-center mb-6 md:mb-12">
@@ -543,6 +545,7 @@
                     Escolha a quantidade de fotos e <br class="block md:hidden"> receba tudo pronto no WhatsApp.
                 </p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
                  <!-- Package 1 -->
                 <div class="border rounded-2xl p-4 md:p-5 text-center hover:shadow-xl transition relative bg-white">
@@ -558,7 +561,8 @@
                         Quero 1 foto
                     </a>
                 </div>
-                <!-- Package 2 -->
+
+                <!-- Package 2 (Highlighted) -->
                 <div class="border-2 border-brand-orange rounded-2xl p-4 md:p-5 text-center shadow-lg transform md:-translate-y-4 relative bg-white">
                     <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-orange text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                         Mais Popular
@@ -575,6 +579,7 @@
                         Quero 5 fotos
                     </a>
                 </div>
+
                 <!-- Package 3 -->
                 <div class="border rounded-2xl p-4 md:p-5 text-center hover:shadow-xl transition relative bg-white">
                     <h3 class="text-base md:text-lg font-semibold text-gray-500 mb-2">Pack Completo</h3>
@@ -603,8 +608,10 @@
 
     <!-- 5. Restauração (Destaque) -->
     <section class="pt-10 pb-16 md:py-14 bg-sepia-texture text-white relative overflow-hidden">
+        
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-10">
+                <!-- Conteúdo Texto (Esquerda) -->
                 <div class="md:w-1/2">
                     <span class="bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wide mb-4 inline-block">Serviço Especial</span>
                     <h2 class="text-2xl md:text-4xl font-bold mb-4">Restauração de Fotos Antigas</h2>
@@ -612,27 +619,59 @@
                         O tempo passa, mas as memórias podem ser preservadas. Restauramos fotos antigas, recuperando detalhes e trazendo vida de volta às imagens da sua família, sempre respeitando a história original.
                     </p>
                     <div class="space-y-4">
-                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base"><span>1 Foto Antiga</span><span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 10,00</span></div>
-                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base"><span>5 Fotos Antigas</span><span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 39,90</span></div>
-                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base"><span>10 Fotos Antigas</span><span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 69,90</span></div>
+                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base">
+                            <span>1 Foto Antiga</span>
+                            <span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 10,00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base">
+                            <span>5 Fotos Antigas</span>
+                            <span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 39,90</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base">
+                            <span>10 Fotos Antigas</span>
+                            <span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 69,90</span>
+                        </div>
                     </div>
+                    <!-- Botão Centralizado no Mobile (mx-auto w-fit) e Esquerda no Desktop (md:mx-0) -->
                     <a href="https://wa.me/5565992726478?text=Tenho%20fotos%20antigas%20para%20restaurar." class="wa-link-btn flex items-center justify-center w-fit mx-auto md:mx-0 mt-8 bg-white text-brand-blue hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition shadow-lg text-sm md:text-base" data-message="Tenho fotos antigas para restaurar.">
                         Quero restaurar minhas fotos
                     </a>
                 </div>
-                <div class="md:w-1/2 flex justify-center relative w-full mt-8 md:mt-0 h-96">
-                    <div class="photo-frame absolute top-0 left-1/2 -translate-x-[90%] w-56 sm:w-64 transform -rotate-6 z-10 transition hover:z-30 hover:scale-105 duration-300 md:w-60 md:left-auto md:top-0 md:right-[48%] md:translate-x-0">
+
+                <!-- Visual Comparação (Direita) -->
+                <!-- Container ajustado para mobile: h-96, mt-6 -->
+                <div class="md:w-1/2 flex justify-center relative w-full mt-6 md:mt-0 h-96">
+                    
+                    <!-- Foto 1: Antes (Lado Esquerdo no Mobile) -->
+                    <!-- Ajuste Mobile: -top-5 (Subiu para centralizar) -->
+                    <!-- Ajuste Mobile: w-56 (Aumentado de w-44) -->
+                    <div class="photo-frame absolute -top-5 left-1/2 -translate-x-[90%] w-56 sm:w-64 transform -rotate-6 z-10 transition hover:z-30 hover:scale-105 duration-300 md:w-60 md:left-auto md:top-0 md:right-[48%] md:translate-x-0">
                         <div class="relative overflow-hidden aspect-[3/4]">
-                            <img src="restauracao-antes.jpg" class="w-full h-full object-cover" alt="Foto Antiga Antes">
+                            <!-- Local Image: restauracao-antes.jpg -->
+                            <img src="restauracao-antes.jpg" 
+                                 class="w-full h-full object-cover" 
+                                 alt="Foto Antiga Antes">
                         </div>
-                        <div class="text-center mt-2"><span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">ANTES</span></div>
+                        <div class="text-center mt-2">
+                            <span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">ANTES</span>
+                        </div>
                     </div>
-                    <div class="photo-frame absolute top-12 left-1/2 -translate-x-[10%] w-56 sm:w-64 transform rotate-3 z-20 transition hover:scale-105 duration-300 md:w-60 md:right-auto md:top-8 md:left-[48%] md:translate-x-0">
+
+                    <!-- Foto 2: Depois (Lado Direito no Mobile) -->
+                    <!-- Ajuste Mobile: top-8 (Subiu acompanhando a primeira) -->
+                    <!-- Ajuste Mobile: w-56 (Aumentado de w-44) -->
+                    <div class="photo-frame absolute top-8 left-1/2 -translate-x-[10%] w-56 sm:w-64 transform rotate-3 z-20 transition hover:scale-105 duration-300 md:w-60 md:right-auto md:top-8 md:left-[48%] md:translate-x-0">
                         <div class="relative overflow-hidden aspect-[3/4]">
-                            <img src="restauracao-depois.jpg" class="w-full h-full object-cover" alt="Foto Restaurada Depois">
+                            <!-- Local Image: restauracao-depois.jpg -->
+                            <img src="restauracao-depois.jpg" 
+                                 class="w-full h-full object-cover" 
+                                 alt="Foto Restaurada Depois">
                         </div>
-                        <div class="text-center mt-2"><span class="text-xs font-bold text-brand-orange uppercase tracking-widest">DEPOIS</span></div>
+                        <div class="text-center mt-2">
+                            <span class="text-xs font-bold text-brand-orange uppercase tracking-widest">DEPOIS</span>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -645,19 +684,44 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-brand-blue">Quem já usou o FotoPronto</h2>
                 <p class="text-gray-600 mt-1 md:mt-2 text-sm md:text-base">Resultados reais e mensagens de clientes.</p>
             </div>
+
+            <!-- Carrossel Mobile / Grid Desktop -->
             <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-6 px-6 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0 mb-4 md:mb-6 no-scrollbar">
+               <!-- Card 1 -->
+               <!-- Mudança: bg-gray-50 -> bg-gray-100 -->
                <div class="flex-shrink-0 w-[85%] md:w-auto snap-center bg-gray-100 rounded-xl p-4 border border-gray-200 shadow-sm flex items-center justify-center h-64 md:h-80 relative overflow-hidden">
+                   <!-- <div class="text-gray-400 text-center absolute z-0">
+                       <i class="fab fa-whatsapp text-4xl mb-2 opacity-50"></i>
+                       <p class="font-bold">Print do WhatsApp #1</p>
+                   </div> -->
+                   <!-- Local Image: print1.jpg -->
                    <img src="print1.jpg" class="absolute inset-0 w-full h-full object-cover z-10" alt="Depoimento 1" onerror="this.style.display='none';">
                </div>
+               
+               <!-- Card 2 -->
                <div class="flex-shrink-0 w-[85%] md:w-auto snap-center bg-gray-100 rounded-xl p-4 border border-gray-200 shadow-sm flex items-center justify-center h-64 md:h-80 relative overflow-hidden">
+                   <!-- <div class="text-gray-400 text-center absolute z-0">
+                       <i class="fab fa-whatsapp text-4xl mb-2 opacity-50"></i>
+                       <p class="font-bold">Print do WhatsApp #2</p>
+                   </div> -->
+                   <!-- Local Image: print2.jpg -->
                    <img src="print2.jpg" class="absolute inset-0 w-full h-full object-cover z-10" alt="Depoimento 2" onerror="this.style.display='none';">
                </div>
+
+               <!-- Card 3 -->
                <div class="flex-shrink-0 w-[85%] md:w-auto snap-center bg-gray-100 rounded-xl p-4 border border-gray-200 shadow-sm flex items-center justify-center h-64 md:h-80 relative overflow-hidden">
+                   <!-- <div class="text-gray-400 text-center absolute z-0">
+                       <i class="fab fa-whatsapp text-4xl mb-2 opacity-50"></i>
+                       <p class="font-bold">Print do WhatsApp #3</p>
+                   </div> -->
+                   <!-- Local Image: print3.jpg -->
                    <img src="print3.jpg" class="absolute inset-0 w-full h-full object-cover z-10" alt="Depoimento 3" onerror="this.style.display='none';">
                </div>
             </div>
+            
             <div class="text-center">
                 <p class="text-xs text-gray-400 mb-2 italic">*As mensagens podem ser ocultadas parcialmente para preservar a privacidade.</p>
+                <!-- Mudança: Adicionada quebra de linha <br> no mobile antes de 'Fale com a gente' -->
                 <a href="#" class="wa-link-btn text-brand-orange font-bold hover:underline text-sm md:text-base leading-relaxed" data-message="Olá! Vi os depoimentos e quero o meu resultado também.">
                     Quer o seu resultado também? <br class="block md:hidden"> Fale com a gente no WhatsApp <i class="fas fa-arrow-right ml-1"></i>
                 </a>
