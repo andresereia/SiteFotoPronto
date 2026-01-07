@@ -236,8 +236,8 @@
                     <path d="M478.5 233C445.573 240.964 413.401 241.733 344.5 240C372.451 271.423 390.722 285.132 435 292C459.63 266.197 468.166 253.218 478.5 233Z" fill="#3CA8F3"/>
                     <path d="M336 226.5L418 228.5C394.705 213.02 374.463 193.153 323 134C316.605 168.502 314.545 188.062 336 226.5Z" fill="#7EB327"/>
                     <path d="M106.678 391.944C124.726 370.436 153.779 365.102 171.57 380.031C189.36 394.959 189.152 424.496 171.105 446.004C153.057 467.512 124.004 472.847 106.213 457.918C88.4225 442.99 88.6308 413.452 106.678 391.944ZM155.233 399.499C146.336 392.034 131.807 394.701 122.782 405.457C113.757 416.213 113.653 430.984 122.549 438.449C131.446 445.915 145.975 443.247 155 432.491C164.026 421.736 164.13 406.965 155.233 399.499Z" fill="#FFFDFD"/>
-                    <path d="M266.673 392.379C284.721 370.871 313.774 365.537 331.565 380.466C349.355 395.394 349.147 424.931 331.1 446.439C313.052 467.948 283.999 473.282 266.208 458.353C248.417 443.425 248.626 413.887 266.673 392.379ZM315.228 399.934C306.331 392.469 291.802 395.137 282.776 405.893C273.752 416.648 273.648 431.419 282.544 438.885C291.441 446.35 305.97 443.683 314.995 432.927C324.021 422.171 324.125 407.4 315.228 399.934Z" fill="#FFFDFD"/>
-                    <path d="M531.673 392.379C549.721 370.871 578.774 365.537 596.565 380.466C614.355 395.394 614.147 424.931 596.1 446.439C578.052 467.948 548.999 473.282 531.208 458.353C513.417 443.425 513.626 413.887 531.673 392.379ZM580.228 399.934C571.331 392.469 556.802 395.137 547.776 405.893C538.752 416.648 538.648 431.419 547.544 438.885C556.441 446.35 570.97 443.683 579.995 432.927C589.021 422.171 589.125 407.4 580.228 399.934Z" fill="#FF6A00"/>
+                    <path d="M266.673 392.379C284.721 370.871 313.774 365.537 331.565 380.466C349.355 395.394 349.147 424.931 331.1 446.439C313.052 467.948 283.999 473.282 266.208 458.353C248.417 443.425 248.626 413.887 266.673 392.379ZM315.228 399.934C306.331 392.469 291.802 395.137 282.776 405.893C273.752 416.648 273.648 431.419 282.544 438.885C291.441 445.35 305.97 443.683 314.995 432.927C324.021 422.171 324.125 407.4 315.228 399.934Z" fill="#FFFDFD"/>
+                    <path d="M531.673 392.379C549.721 370.871 578.774 365.537 596.565 380.466C614.355 395.394 614.147 424.931 596.1 446.439C578.052 467.948 548.999 473.282 531.208 458.353C513.417 443.425 513.626 413.887 531.673 392.379ZM580.228 399.934C571.331 392.469 556.802 395.137 547.776 405.893C538.752 416.648 538.648 431.419 547.544 438.885C556.441 445.35 570.97 443.683 579.995 432.927C589.021 422.171 589.125 407.4 580.228 399.934Z" fill="#FF6A00"/>
                     <path d="M29 460.5H0L19.5 364C23.9947 351.535 33.562 344.656 47 344.5C60.438 344.344 108 344.5 108 344.5L102.5 367H52C47.7444 367.553 46.165 368.913 45 373.5L41 396H90.5L84 418.5H36.5L29 460.5Z" fill="white"/>
                     <path d="M240.5 352.5H214.5L209.5 376.5H195L191 396H204.5C199.265 417.562 196.311 443.453 196.5 450.5C196.689 457.547 210.139 469.447 238 462L240.5 445.5C225.177 447.296 222.287 443.715 225 431L231.5 396H252L258 376.5H235.5L240.5 352.5Z" fill="white"/>
                     <path d="M757.5 352.5H731.5L726.5 376.5H712L708 396H721.5C716.265 417.562 713.311 443.453 713.5 450.5C713.689 457.547 727.139 469.447 755 462L757.5 445.5C742.177 447.296 739.287 443.715 742 431L748.5 396H769L775 376.5H752.5L757.5 352.5Z" fill="#FF6A00"/>
@@ -608,24 +608,19 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-brand-blue">Dúvidas Comuns</h2>
             </div>
 
-            <div class="space-y-3 md:space-y-4"> <!-- Reduzido space-y de 4 para 3 no mobile -->
-                
-                <!-- FAQ 1 -->
+            <div class="space-y-3 md:space-y-4">
                 <details class="group bg-white rounded-lg shadow-sm">
-                    <!-- Mudança: p-4 md:p-6 -> py-3 px-4 md:py-4 md:px-6 (Redução vertical) -->
                     <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
                         <span class="text-sm md:text-base">As fotos ficam naturais?</span>
                         <span class="transition group-open:rotate-180">
                             <i class="fas fa-chevron-down text-brand-orange"></i>
                         </span>
                     </summary>
-                    <!-- Mudança: pb-4 md:pb-6 -> pb-3 md:pb-4 (Redução vertical inferior) -->
                     <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">
                         Sim. O FotoPronto melhora luz, cores e nitidez mantendo a aparência natural. Se você quiser um estilo específico (perfil profissional, cinema, etc.), é só escolher na hora.
                     </div>
                 </details>
 
-                <!-- FAQ 2 -->
                 <details class="group bg-white rounded-lg shadow-sm">
                     <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
                         <span class="text-sm md:text-base">Quanto tempo demora?</span>
@@ -638,7 +633,6 @@
                     </div>
                 </details>
 
-                <!-- FAQ 3 -->
                 <details class="group bg-white rounded-lg shadow-sm">
                     <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
                         <span class="text-sm md:text-base">Como envio minhas fotos?</span>
@@ -650,8 +644,7 @@
                         Você envia pelo WhatsApp. Para melhor qualidade, envie como Documento (não como “Foto”). Se preferir, pode enviar normalmente e a gente te orienta na hora.
                     </div>
                 </details>
-                
-                <!-- FAQ 4 -->
+
                 <details class="group bg-white rounded-lg shadow-sm">
                     <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
                         <span class="text-sm md:text-base">Como funciona o pagamento?</span>
@@ -664,7 +657,6 @@
                     </div>
                 </details>
 
-                <!-- FAQ 5 (NOVO) -->
                 <details class="group bg-white rounded-lg shadow-sm">
                     <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
                         <span class="text-sm md:text-base">Posso escolher o estilo?</span>
@@ -677,7 +669,6 @@
                     </div>
                 </details>
 
-                <!-- FAQ 6 (NOVO) -->
                 <details class="group bg-white rounded-lg shadow-sm">
                     <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
                         <span class="text-sm md:text-base">O resultado depende da foto original?</span>
@@ -689,17 +680,14 @@
                         Sim. Fotos muito escuras, tremidas ou com baixa qualidade têm limite de melhoria — mas a gente sempre faz o melhor possível dentro do que a imagem permite.
                     </div>
                 </details>
-
             </div>
         </div>
     </section>
 
     <!-- 9. CTA Final -->
-    <!-- Mobile: py-12 -->
     <section class="py-8 md:py-14 bg-white text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-2xl md:text-4xl font-bold text-brand-blue mb-4 md:mb-6">Pronto para deixar suas fotos incríveis?</h2>
-            <!-- Mudança: max-w-xl -> max-w-4xl (para caber numa linha desktop) e <br> adicionado para mobile -->
             <p class="text-gray-600 text-base md:text-lg mb-6 md:mb-8 max-w-4xl mx-auto">
                 Não deixe suas fotos paradas na galeria.<br class="block md:hidden"> Dê vida a elas agora mesmo.
             </p>
@@ -812,9 +800,8 @@
                 <p class="font-medium">Ao contratar o FotoPronto, o cliente declara estar de acordo com todas as políticas acima.</p>
             </div>
 
-            <!-- Footer do Modal -->
-            <div class="bg-gray-50 p-4 border-t border-gray-100 flex justify-between items-center shrink-0">
-                <a href="/politicas" class="text-brand-orange hover:underline text-xs font-bold">Abrir página completa</a>
+            <!-- Footer do Modal (ATUALIZADO: removido "Abrir página completa") -->
+            <div class="bg-gray-50 p-4 border-t border-gray-100 flex justify-end items-center shrink-0">
                 <button onclick="document.getElementById('policiesModal').classList.add('hidden')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-6 rounded-lg transition text-sm">
                     Fechar
                 </button>
@@ -854,7 +841,6 @@
                 <div id="step1" class="step active">
                     <h3 class="text-lg font-bold text-brand-blue mb-4 text-center shrink-0">Quantas fotos você quer melhorar?</h3>
                     <div class="grid gap-4 flex-1">
-                        <!-- Options Quantity - EMOJIS AGORA SÃO UNICODE -->
                         <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectQty(1, 7.00, 'Rápido', this)">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors">
@@ -908,13 +894,11 @@
                         <h3 class="text-lg font-bold text-brand-blue">Qual estilo você prefere?</h3>
                         <p id="styleSubtitle" class="text-xs text-gray-500 min-h-[1.5em] text-center"></p>
                     </div>
-                     <!-- AI Button -->
                      <div class="mb-3 px-1 text-center">
                         <button onclick="toggleAIConsultant()" class="text-xs font-bold text-brand-orange border border-brand-orange rounded-full px-4 py-1 hover:bg-orange-50 transition flex items-center justify-center mx-auto gap-2">
                              ✨ Não sabe qual escolher? Deixe a IA ajudar!
                         </button>
                     </div>
-                    <!-- AI Panel -->
                     <div id="aiConsultantPanel" class="hidden mb-4 bg-blue-50 rounded-xl p-4 border border-blue-100 transition-all">
                         <label class="block text-xs font-bold text-brand-blue mb-2">Descreva sua foto ou objetivo:</label>
                         <textarea id="aiInput" class="w-full text-xs p-2 rounded-lg border border-gray-300 mb-2 focus:border-brand-orange focus:outline-none" rows="2" placeholder="Ex: Foto pro LinkedIn bem séria..."></textarea>
@@ -1016,8 +1000,6 @@
                     <h3 class="text-lg font-bold text-brand-blue mb-2 text-center shrink-0">Seus Dados</h3>
                     
                     <div class="flex-1 flex flex-col overflow-y-auto custom-scroll px-1 pb-1">
-                        
-                        <!-- Formulário CRM -->
                         <div class="space-y-3 mb-4 shrink-0">
                             <div>
                                 <label class="block text-xs font-bold text-gray-600 mb-1">Nome Completo</label>
@@ -1033,7 +1015,6 @@
                             </div>
                         </div>
 
-                        <!-- Resumo Compacto -->
                         <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 relative overflow-hidden shrink-0">
                             <div class="flex justify-between items-center mb-1">
                                 <span class="text-xs text-gray-500">Pacote & Estilo</span>
@@ -1043,7 +1024,6 @@
                                 <span id="summaryPackageName"></span> - <span id="summaryStyle"></span>
                             </div>
 
-                            <!-- Restauração Condicional -->
                             <div id="restorationSummary" class="hidden border-t border-gray-200 pt-2 mt-2">
                                 <div class="flex justify-between items-center">
                                     <span class="text-xs text-gray-500">Restauração (Adicional)</span>
@@ -1074,7 +1054,6 @@
                     </div>
                 </div>
 
-                <!-- Navegação -->
                 <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center shrink-0" id="navButtons">
                     <button id="prevBtn" class="px-4 py-2 text-gray-400 font-semibold hover:text-brand-blue transition-colors rounded-lg hover:bg-gray-50 invisible flex items-center gap-2" onclick="changeStep(-1)">
                         <i class="fas fa-chevron-left text-xs"></i> Voltar
@@ -1087,16 +1066,14 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script>
         // --- 1. CONFIGURAÇÃO CENTRAL DO WHATSAPP ---
         const whatsappConfig = {
-            number: "5565992726478", // Número atualizado
+            number: "5565992726478",
             message: "Olá! Vim pelo site do FotoPronto e quero melhorar minhas fotos."
         };
-        const apiKey = ""; // Placeholder
+        const apiKey = "";
 
-        // --- HELPERS PARA EMOJIS (ASCII SAFE) ---
         function getEmoji(type) {
             if(type === 'user') return String.fromCodePoint(0x1F464);
             if(type === 'package') return String.fromCodePoint(0x1F4E6);
@@ -1105,16 +1082,11 @@
             return '';
         }
 
-        // --- 2. LÓGICA GERAL E MODAL ---
         document.addEventListener("DOMContentLoaded", function() {
-            // Slider init
-            // CORRECTION: Ensure we target all sliders correctly, including the new style ones
             const sliders = document.querySelectorAll('.comparison-slider, .style-slider-container');
             
             sliders.forEach(slider => {
-                // Determine which children elements to use based on slider type
                 const isStyleCard = slider.classList.contains('style-slider-container');
-                
                 const resizeDiv = isStyleCard ? slider.querySelector('.style-slider-overlay') : slider.querySelector('.resize-image');
                 const handle = isStyleCard ? slider.querySelector('.style-slider-handle') : slider.querySelector('.handle');
 
@@ -1137,18 +1109,16 @@
                 window.addEventListener('mouseup', () => isDown = false);
                 slider.addEventListener('mousemove', (e) => { if(isDown) move(e); });
                 
-                // Touch events with passive false to prevent scrolling while dragging
                 slider.addEventListener('touchstart', (e) => { isDown = true; move(e); }, {passive: false});
                 window.addEventListener('touchend', () => isDown = false);
                 slider.addEventListener('touchmove', (e) => { 
                     if(isDown) {
-                        e.preventDefault(); // Prevent page scroll on mobile while sliding
+                        e.preventDefault();
                         move(e); 
                     }
                 }, {passive: false});
             });
 
-            // Standard buttons logic
             const standardButtons = document.querySelectorAll('.wa-hero-btn, .wa-link-btn');
             standardButtons.forEach(btn => {
                 const msg = btn.getAttribute('data-message') || whatsappConfig.message;
@@ -1156,7 +1126,6 @@
                 btn.href = url;
             });
             
-            // Close Policies Modal Logic
             const policiesModal = document.getElementById('policiesModal');
             if (policiesModal) {
                 document.addEventListener('keydown', (e) => {
@@ -1165,7 +1134,6 @@
                     }
                 });
                 
-                // Close on overlay click
                 policiesModal.addEventListener('click', (e) => {
                      if (e.target === policiesModal) {
                         policiesModal.classList.add('hidden');
@@ -1174,7 +1142,6 @@
             }
         });
         
-        // --- 3. LÓGICA DO SIMULADOR (WIZARD) ---
         let currentStep = 1;
         const initialData = { qty: 0, price: 0, pkgName: '', styles: [], restoration: { qty: 0, price: 0 }, customer: { name: '', phone: '', email: '' } };
         let selectedData = JSON.parse(JSON.stringify(initialData));
@@ -1317,7 +1284,7 @@
             if (isValid) {
                 btn.classList.remove('bg-gray-300', 'pointer-events-none', 'opacity-70');
                 btn.classList.add('bg-green-500', 'hover:bg-green-600');
-                btn.style.pointerEvents = 'auto'; // Force enable pointer events
+                btn.style.pointerEvents = 'auto';
                 updateSummary(); 
             } else {
                 btn.classList.add('bg-gray-300', 'pointer-events-none', 'opacity-70');
@@ -1368,7 +1335,6 @@
             updateUI();
         }
 
-        // --- GEMINI AI LOGIC ---
         function toggleAIConsultant() {
             const panel = document.getElementById('aiConsultantPanel');
             panel.classList.toggle('hidden');
@@ -1406,7 +1372,6 @@
                 const data = await response.json();
                 const aiResponse = data.candidates[0].content.parts[0].text;
                 
-                // Parse style name for button action (simple heuristic)
                 let matchedStyle = "";
                 const styles = ['Perfil Profissional', 'Sua Melhor Versão', 'Personagem 3D', 'Foto de Cinema', 'Desenho a Lápis', 'Vire Quadro', 'Dramático (P&B)'];
                 
@@ -1423,12 +1388,11 @@
                 if (matchedStyle) {
                     selectBtn.style.display = 'block';
                     selectBtn.onclick = function() {
-                        // Find button with this text and click it
                         const buttons = document.querySelectorAll('#step2 .option-style');
                         buttons.forEach(btn => {
                              if(btn.innerText.includes(matchedStyle)) {
                                  selectStyle(matchedStyle, btn);
-                                 toggleAIConsultant(); // Close AI panel
+                                 toggleAIConsultant();
                              }
                         });
                     };
