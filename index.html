@@ -11,13 +11,15 @@
     <meta property="og:description" content="Deixe suas fotos mais bonitas, claras e nítidas — com resultado natural e entrega rápida no WhatsApp.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fotopronto.com">
-    <meta property="og:image" content="slider-depois.jpg">
+    <!-- ATUALIZADO: Agora aponta para a logo -->
+    <meta property="og:image" content="logo.jpg">
 
     <!-- TWITTER CARDS -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FotoPronto — Suas fotos melhores em minutos">
     <meta name="twitter:description" content="Deixe suas fotos mais bonitas, claras e nítidas — com resultado natural e entrega rápida no WhatsApp.">
-    <meta name="twitter:image" content="slider-depois.jpg">
+    <!-- ATUALIZADO: Agora aponta para a logo -->
+    <meta name="twitter:image" content="logo.jpg">
     
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,46 +130,6 @@
             pointer-events: none;
         }
 
-        /* Custom Styles for Slider */
-        .comparison-slider {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 0.5rem;
-            cursor: col-resize;
-        }
-        .comparison-slider img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .resize-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 50%;
-            overflow: hidden;
-            border-right: 2px solid white;
-            z-index: 10;
-        }
-        .handle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            background: #ff6a00;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            z-index: 20;
-            pointer-events: none; /* Let clicks pass through to container */
-        }
         /* FAQ Animation */
         details > summary {
             list-style: none;
@@ -256,6 +218,7 @@
             
             <!-- ÁREA DA LOGO (SVG EMBUTIDO) -->
             <a href="#" class="block">
+                <!-- Mudança: h-12 no mobile e h-16 no desktop para aumentar a logo -->
                 <svg viewBox="0 0 860 467" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 md:h-16 w-auto">
                     <path d="M218 227.5H293L299 241.5L218 227.5Z" fill="#FF6A00"/>
                     <path d="M157.5 187.5L282.778 183L293 211L157.5 187.5Z" fill="#FF6A00"/>
@@ -533,10 +496,6 @@
     </section>
 
     <!-- 4. Planos / Preços -->
-    <!-- ... (Resto do site mantido igual) ... -->
-    <!-- (Mantendo o resto para não repetir código desnecessário na resposta, mas o arquivo completo conteria tudo) -->
-    <!-- Vou incluir o resto para ser o arquivo COMPLETO conforme solicitado -->
-
     <section class="pt-4 pb-8 md:pt-8 md:pb-12 bg-white" id="precos">
         <div class="container mx-auto px-6">
             <div class="text-center mb-6 md:mb-12">
@@ -545,7 +504,6 @@
                     Escolha a quantidade de fotos e <br class="block md:hidden"> receba tudo pronto no WhatsApp.
                 </p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
                  <!-- Package 1 -->
                 <div class="border rounded-2xl p-4 md:p-5 text-center hover:shadow-xl transition relative bg-white">
@@ -561,8 +519,7 @@
                         Quero 1 foto
                     </a>
                 </div>
-
-                <!-- Package 2 (Highlighted) -->
+                <!-- Package 2 -->
                 <div class="border-2 border-brand-orange rounded-2xl p-4 md:p-5 text-center shadow-lg transform md:-translate-y-4 relative bg-white">
                     <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-orange text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                         Mais Popular
@@ -579,7 +536,6 @@
                         Quero 5 fotos
                     </a>
                 </div>
-
                 <!-- Package 3 -->
                 <div class="border rounded-2xl p-4 md:p-5 text-center hover:shadow-xl transition relative bg-white">
                     <h3 class="text-base md:text-lg font-semibold text-gray-500 mb-2">Pack Completo</h3>
@@ -608,10 +564,8 @@
 
     <!-- 5. Restauração (Destaque) -->
     <section class="pt-10 pb-16 md:py-14 bg-sepia-texture text-white relative overflow-hidden">
-        
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-10">
-                <!-- Conteúdo Texto (Esquerda) -->
                 <div class="md:w-1/2">
                     <span class="bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wide mb-4 inline-block">Serviço Especial</span>
                     <h2 class="text-2xl md:text-4xl font-bold mb-4">Restauração de Fotos Antigas</h2>
@@ -619,156 +573,133 @@
                         O tempo passa, mas as memórias podem ser preservadas. Restauramos fotos antigas, recuperando detalhes e trazendo vida de volta às imagens da sua família, sempre respeitando a história original.
                     </p>
                     <div class="space-y-4">
-                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base">
-                            <span>1 Foto Antiga</span>
-                            <span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 10,00</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base">
-                            <span>5 Fotos Antigas</span>
-                            <span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 39,90</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base">
-                            <span>10 Fotos Antigas</span>
-                            <span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 69,90</span>
-                        </div>
+                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base"><span>1 Foto Antiga</span><span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 10,00</span></div>
+                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base"><span>5 Fotos Antigas</span><span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 39,90</span></div>
+                        <div class="flex justify-between items-center border-b-2 border-gray-700 pb-2 text-sm md:text-base"><span>10 Fotos Antigas</span><span class="font-bold text-brand-orange"><span class="text-xs md:text-sm">R$</span> 69,90</span></div>
                     </div>
-                    <!-- Botão Centralizado no Mobile (mx-auto w-fit) e Esquerda no Desktop (md:mx-0) -->
                     <a href="https://wa.me/5565992726478?text=Tenho%20fotos%20antigas%20para%20restaurar." class="wa-link-btn flex items-center justify-center w-fit mx-auto md:mx-0 mt-8 bg-white text-brand-blue hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition shadow-lg text-sm md:text-base" data-message="Tenho fotos antigas para restaurar.">
                         Quero restaurar minhas fotos
                     </a>
                 </div>
-
-                <!-- Visual Comparação (Direita) -->
-                <!-- Container ajustado para mobile: h-96, mt-6 -->
                 <div class="md:w-1/2 flex justify-center relative w-full mt-6 md:mt-0 h-96">
-                    
-                    <!-- Foto 1: Antes (Lado Esquerdo no Mobile) -->
-                    <!-- Ajuste Mobile: -top-5 (Subiu para centralizar) -->
-                    <!-- Ajuste Mobile: w-56 (Aumentado de w-44) -->
                     <div class="photo-frame absolute -top-5 left-1/2 -translate-x-[90%] w-56 sm:w-64 transform -rotate-6 z-10 transition hover:z-30 hover:scale-105 duration-300 md:w-60 md:left-auto md:top-0 md:right-[48%] md:translate-x-0">
                         <div class="relative overflow-hidden aspect-[3/4]">
-                            <!-- Local Image: restauracao-antes.jpg -->
-                            <img src="restauracao-antes.jpg" 
-                                 class="w-full h-full object-cover" 
-                                 alt="Foto Antiga Antes">
+                            <img src="restauracao-antes.jpg" class="w-full h-full object-cover" alt="Foto Antiga Antes">
                         </div>
-                        <div class="text-center mt-2">
-                            <span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">ANTES</span>
-                        </div>
+                        <div class="text-center mt-2"><span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">ANTES</span></div>
                     </div>
-
-                    <!-- Foto 2: Depois (Lado Direito no Mobile) -->
-                    <!-- Ajuste Mobile: top-8 (Subiu acompanhando a primeira) -->
-                    <!-- Ajuste Mobile: w-56 (Aumentado de w-44) -->
                     <div class="photo-frame absolute top-8 left-1/2 -translate-x-[10%] w-56 sm:w-64 transform rotate-3 z-20 transition hover:scale-105 duration-300 md:w-60 md:right-auto md:top-8 md:left-[48%] md:translate-x-0">
                         <div class="relative overflow-hidden aspect-[3/4]">
-                            <!-- Local Image: restauracao-depois.jpg -->
-                            <img src="restauracao-depois.jpg" 
-                                 class="w-full h-full object-cover" 
-                                 alt="Foto Restaurada Depois">
+                            <img src="restauracao-depois.jpg" class="w-full h-full object-cover" alt="Foto Restaurada Depois">
                         </div>
-                        <div class="text-center mt-2">
-                            <span class="text-xs font-bold text-brand-orange uppercase tracking-widest">DEPOIS</span>
-                        </div>
+                        <div class="text-center mt-2"><span class="text-xs font-bold text-brand-orange uppercase tracking-widest">DEPOIS</span></div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. Prova Social -->
-    <section class="pt-8 pb-6 md:pt-14 md:pb-8 bg-white border-t border-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-6 md:mb-10">
-                <h2 class="text-2xl md:text-3xl font-bold text-brand-blue">Quem já usou o FotoPronto</h2>
-                <p class="text-gray-600 mt-1 md:mt-2 text-sm md:text-base">Resultados reais e mensagens de clientes.</p>
-            </div>
-
-            <!-- Carrossel Mobile / Grid Desktop -->
-            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-6 px-6 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0 mb-4 md:mb-6 no-scrollbar">
-               <!-- Card 1 -->
-               <!-- Mudança: bg-gray-50 -> bg-gray-100 -->
-               <div class="flex-shrink-0 w-[85%] md:w-auto snap-center bg-gray-100 rounded-xl p-4 border border-gray-200 shadow-sm flex items-center justify-center h-64 md:h-80 relative overflow-hidden">
-                   <!-- <div class="text-gray-400 text-center absolute z-0">
-                       <i class="fab fa-whatsapp text-4xl mb-2 opacity-50"></i>
-                       <p class="font-bold">Print do WhatsApp #1</p>
-                   </div> -->
-                   <!-- Local Image: print1.jpg -->
-                   <img src="print1.jpg" class="absolute inset-0 w-full h-full object-cover z-10" alt="Depoimento 1" onerror="this.style.display='none';">
-               </div>
-               
-               <!-- Card 2 -->
-               <div class="flex-shrink-0 w-[85%] md:w-auto snap-center bg-gray-100 rounded-xl p-4 border border-gray-200 shadow-sm flex items-center justify-center h-64 md:h-80 relative overflow-hidden">
-                   <!-- <div class="text-gray-400 text-center absolute z-0">
-                       <i class="fab fa-whatsapp text-4xl mb-2 opacity-50"></i>
-                       <p class="font-bold">Print do WhatsApp #2</p>
-                   </div> -->
-                   <!-- Local Image: print2.jpg -->
-                   <img src="print2.jpg" class="absolute inset-0 w-full h-full object-cover z-10" alt="Depoimento 2" onerror="this.style.display='none';">
-               </div>
-
-               <!-- Card 3 -->
-               <div class="flex-shrink-0 w-[85%] md:w-auto snap-center bg-gray-100 rounded-xl p-4 border border-gray-200 shadow-sm flex items-center justify-center h-64 md:h-80 relative overflow-hidden">
-                   <!-- <div class="text-gray-400 text-center absolute z-0">
-                       <i class="fab fa-whatsapp text-4xl mb-2 opacity-50"></i>
-                       <p class="font-bold">Print do WhatsApp #3</p>
-                   </div> -->
-                   <!-- Local Image: print3.jpg -->
-                   <img src="print3.jpg" class="absolute inset-0 w-full h-full object-cover z-10" alt="Depoimento 3" onerror="this.style.display='none';">
-               </div>
-            </div>
-            
-            <div class="text-center">
-                <p class="text-xs text-gray-400 mb-2 italic">*As mensagens podem ser ocultadas parcialmente para preservar a privacidade.</p>
-                <!-- Mudança: Adicionada quebra de linha <br> no mobile antes de 'Fale com a gente' -->
-                <a href="#" class="wa-link-btn text-brand-orange font-bold hover:underline text-sm md:text-base leading-relaxed" data-message="Olá! Vi os depoimentos e quero o meu resultado também.">
-                    Quer o seu resultado também? <br class="block md:hidden"> Fale com a gente no WhatsApp <i class="fas fa-arrow-right ml-1"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. FAQ -->
+    <!-- 8. FAQ -->
+    <!-- Mobile: py-8 -->
+    <!-- Mudança: bg-gray-50 -> bg-gray-100 -->
     <section class="py-8 md:py-14 bg-gray-100">
         <div class="container mx-auto px-6 max-w-3xl">
             <div class="text-center mb-6 md:mb-12">
                 <h2 class="text-2xl md:text-3xl font-bold text-brand-blue">Dúvidas Comuns</h2>
             </div>
-            <div class="space-y-3 md:space-y-4">
-                 <!-- FAQ Items -->
+
+            <div class="space-y-3 md:space-y-4"> <!-- Reduzido space-y de 4 para 3 no mobile -->
+                
+                <!-- FAQ 1 -->
                 <details class="group bg-white rounded-lg shadow-sm">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue"><span class="text-sm md:text-base">As fotos ficam naturais?</span><span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-orange"></i></span></summary>
-                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">Sim. O FotoPronto melhora luz, cores e nitidez mantendo a aparência natural. Se você quiser um estilo específico (perfil profissional, cinema, etc.), é só escolher na hora.</div>
+                    <!-- Mudança: p-4 md:p-6 -> py-3 px-4 md:py-4 md:px-6 (Redução vertical) -->
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
+                        <span class="text-sm md:text-base">As fotos ficam naturais?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-brand-orange"></i>
+                        </span>
+                    </summary>
+                    <!-- Mudança: pb-4 md:pb-6 -> pb-3 md:pb-4 (Redução vertical inferior) -->
+                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">
+                        Sim. O FotoPronto melhora luz, cores e nitidez mantendo a aparência natural. Se você quiser um estilo específico (perfil profissional, cinema, etc.), é só escolher na hora.
+                    </div>
                 </details>
+
+                <!-- FAQ 2 -->
                 <details class="group bg-white rounded-lg shadow-sm">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue"><span class="text-sm md:text-base">Quanto tempo demora?</span><span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-orange"></i></span></summary>
-                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">Na maioria dos casos, entregamos no mesmo dia após a confirmação do Pix. Para pacotes maiores e restauração de fotos antigas, o prazo pode ser de até 24 horas.</div>
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
+                        <span class="text-sm md:text-base">Quanto tempo demora?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-brand-orange"></i>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">
+                        Na maioria dos casos, entregamos no mesmo dia após a confirmação do Pix. Para pacotes maiores e restauração de fotos antigas, o prazo pode ser de até 24 horas.
+                    </div>
                 </details>
+
+                <!-- FAQ 3 -->
                 <details class="group bg-white rounded-lg shadow-sm">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue"><span class="text-sm md:text-base">Como envio minhas fotos?</span><span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-orange"></i></span></summary>
-                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">Você envia pelo WhatsApp. Para melhor qualidade, envie como Documento.</div>
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
+                        <span class="text-sm md:text-base">Como envio minhas fotos?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-brand-orange"></i>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">
+                        Você envia pelo WhatsApp. Para melhor qualidade, envie como Documento (não como “Foto”). Se preferir, pode enviar normalmente e a gente te orienta na hora.
+                    </div>
                 </details>
+                
+                <!-- FAQ 4 -->
                 <details class="group bg-white rounded-lg shadow-sm">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue"><span class="text-sm md:text-base">Como funciona o pagamento?</span><span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-orange"></i></span></summary>
-                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">O pagamento é antecipado via Pix. Após a confirmação, iniciamos a edição e enviamos as fotos finalizadas pelo WhatsApp.</div>
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
+                        <span class="text-sm md:text-base">Como funciona o pagamento?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-brand-orange"></i>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">
+                        O pagamento é antecipado via Pix. Após a confirmação, iniciamos a edição e enviamos as fotos finalizadas pelo WhatsApp.
+                    </div>
                 </details>
+
+                <!-- FAQ 5 (NOVO) -->
                 <details class="group bg-white rounded-lg shadow-sm">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue"><span class="text-sm md:text-base">Posso escolher o estilo?</span><span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-orange"></i></span></summary>
-                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">Sim. Você pode escolher 1 estilo nos pacotes de 1 e 5 fotos.</div>
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
+                        <span class="text-sm md:text-base">Posso escolher o estilo?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-brand-orange"></i>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">
+                        Sim. Você pode escolher 1 estilo nos pacotes de 1 e 5 fotos. No pacote de 10 fotos, você pode escolher até 2 estilos.
+                    </div>
                 </details>
+
+                <!-- FAQ 6 (NOVO) -->
                 <details class="group bg-white rounded-lg shadow-sm">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue"><span class="text-sm md:text-base">O resultado depende da foto original?</span><span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-orange"></i></span></summary>
-                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">Sim. Fotos muito escuras ou tremidas têm limite de melhoria.</div>
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none py-3 px-4 md:py-4 md:px-6 text-brand-blue">
+                        <span class="text-sm md:text-base">O resultado depende da foto original?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-brand-orange"></i>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base">
+                        Sim. Fotos muito escuras, tremidas ou com baixa qualidade têm limite de melhoria — mas a gente sempre faz o melhor possível dentro do que a imagem permite.
+                    </div>
                 </details>
+
             </div>
         </div>
     </section>
 
-    <!-- 8. CTA Final -->
+    <!-- 9. CTA Final -->
+    <!-- Mobile: py-12 -->
     <section class="py-8 md:py-14 bg-white text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-2xl md:text-4xl font-bold text-brand-blue mb-4 md:mb-6">Pronto para deixar suas fotos incríveis?</h2>
+            <!-- Mudança: max-w-xl -> max-w-4xl (para caber numa linha desktop) e <br> adicionado para mobile -->
             <p class="text-gray-600 text-base md:text-lg mb-6 md:mb-8 max-w-4xl mx-auto">
                 Não deixe suas fotos paradas na galeria.<br class="block md:hidden"> Dê vida a elas agora mesmo.
             </p>
@@ -786,7 +717,7 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
+    <!-- Floating WhatsApp Button (Mobile) -->
     <a href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Vim%20pelo%20site." class="whatsapp-float wa-link-btn" target="_blank" data-message="Olá! Vim pelo site e quero melhorar minhas fotos.">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -894,52 +825,84 @@
     <!-- MODAL DE SIMULADOR DE PEDIDO (Wizard) -->
     <div id="orderModal" class="hidden fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50" role="dialog" aria-modal="true">
         <div class="relative bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden flex flex-col h-full max-h-[90dvh] animate-fade-in-up">
-            <button onclick="document.getElementById('orderModal').classList.add('hidden'); document.body.style.overflow = '';" class="absolute top-4 right-4 z-20 text-white/80 hover:text-white transition"><i class="fas fa-times text-xl"></i></button>
+            
+            <!-- Botão Fechar -->
+            <button onclick="document.getElementById('orderModal').classList.add('hidden')" class="absolute top-4 right-4 z-20 text-white/80 hover:text-white transition">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+
+            <!-- Cabeçalho -->
             <div class="bg-brand-blue p-4 text-center shrink-0">
                 <h2 class="text-white text-xl font-bold tracking-tight">Monte seu Pedido</h2>
             </div>
+
+            <!-- Conteúdo -->
             <div class="p-6 flex-1 overflow-y-auto custom-scroll flex flex-col relative">
-                <!-- Wizard Content ... (Mesmo de antes, com emojis corrigidos) -->
+                
                 <!-- Barra de Progresso -->
                 <div class="flex items-center justify-between mb-6 relative px-2 shrink-0">
                     <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-200 -z-10 rounded"></div>
                     <div id="progressBar" class="absolute top-1/2 left-0 w-0 h-1 bg-brand-orange -z-10 rounded transition-all duration-300"></div>
+                    
                     <div class="w-8 h-8 bg-brand-orange text-white rounded-full flex items-center justify-center text-sm font-bold step-indicator shadow-sm z-10 transition-colors duration-300">1</div>
                     <div class="w-8 h-8 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center text-sm font-bold step-indicator shadow-sm z-10 transition-colors duration-300">2</div>
                     <div class="w-8 h-8 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center text-sm font-bold step-indicator shadow-sm z-10 transition-colors duration-300">3</div>
                     <div class="w-8 h-8 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center text-sm font-bold step-indicator shadow-sm z-10 transition-colors duration-300">4</div>
                 </div>
 
-                <!-- PASSO 1 -->
+                <!-- PASSO 1: Quantidade -->
                 <div id="step1" class="step active">
                     <h3 class="text-lg font-bold text-brand-blue mb-4 text-center shrink-0">Quantas fotos você quer melhorar?</h3>
                     <div class="grid gap-4 flex-1">
                         <!-- Options Quantity - EMOJIS AGORA SÃO UNICODE -->
                         <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectQty(1, 7.00, 'Rápido', this)">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors"><i class="fas fa-image"></i></div>
-                                <div><span class="font-bold text-brand-blue block">1 Foto</span><span class="text-xs text-gray-500">Rápido</span></div>
+                                <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-brand-blue block">1 Foto</span>
+                                    <span class="text-xs text-gray-500">Rápido</span>
+                                </div>
                             </div>
                             <span class="text-brand-orange font-bold text-lg">R$ 7,00</span>
                         </div>
+
                         <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectQty(5, 29.90, 'Kit Social', this)">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors"><i class="fas fa-layer-group"></i></div>
-                                <div><span class="font-bold text-brand-blue block">5 Fotos</span><span class="text-xs text-gray-500">Kit Social</span></div>
+                                 <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-brand-blue block">5 Fotos</span>
+                                    <span class="text-xs text-gray-500">Kit Social</span>
+                                </div>
                             </div>
-                            <div class="text-right"><span class="text-brand-orange font-bold text-lg">R$ 29,90</span><div class="text-[10px] text-green-600 font-bold bg-green-100 px-2 py-0.5 rounded-full mt-1">Mais escolhido</div></div>
+                            <div class="text-right">
+                                <span class="text-brand-orange font-bold text-lg">R$ 29,90</span>
+                                <div class="text-[10px] text-green-600 font-bold bg-green-100 px-2 py-0.5 rounded-full mt-1">Mais escolhido</div>
+                            </div>
                         </div>
+
                         <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectQty(10, 49.90, 'Pack Completo', this)">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors"><i class="fas fa-images"></i></div>
-                                <div><span class="font-bold text-brand-blue block">10 Fotos</span><span class="text-xs text-gray-500">Pack Completo</span></div>
+                                 <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors">
+                                    <i class="fas fa-images"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-brand-blue block">10 Fotos</span>
+                                    <span class="text-xs text-gray-500">Pack Completo</span>
+                                </div>
                             </div>
-                            <div class="text-right"><span class="text-brand-orange font-bold text-lg">R$ 49,90</span><div class="text-[10px] text-green-600 font-bold bg-green-100 px-2 py-0.5 rounded-full mt-1">Melhor Valor</div></div>
+                            <div class="text-right">
+                                <span class="text-brand-orange font-bold text-lg">R$ 49,90</span>
+                                <div class="text-[10px] text-green-600 font-bold bg-green-100 px-2 py-0.5 rounded-full mt-1">Melhor Valor</div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PASSO 2 -->
+                <!-- PASSO 2: Estilo -->
                 <div id="step2" class="step">
                     <div class="shrink-0 text-center mb-2">
                         <h3 class="text-lg font-bold text-brand-blue">Qual estilo você prefere?</h3>
@@ -988,55 +951,137 @@
                     </div>
                 </div>
 
-                <!-- PASSO 3 -->
+                <!-- PASSO 3: Restauração -->
                 <div id="step3" class="step">
-                     <div class="shrink-0 text-center mb-6">
+                    <div class="shrink-0 text-center mb-6">
                         <h3 class="text-lg font-bold text-brand-blue mb-1">Tem fotos antigas para restaurar?</h3>
                         <p class="text-xs text-gray-500">Recupere a qualidade de memórias do passado.</p>
                     </div>
+                    
                     <div class="flex flex-col gap-3 flex-1">
                         <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectRestoration(1, 10.00, this)">
-                            <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-amber-100 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors"><i class="fas fa-history"></i></div><div><span class="font-bold text-brand-blue block">1 Foto Antiga</span><span class="text-xs text-gray-500">Restauração</span></div></div><span class="text-brand-orange font-bold text-lg">R$ 10,00</span>
-                        </div>
-                        <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectRestoration(5, 39.90, this)">
-                            <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-amber-100 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors"><i class="fas fa-box-open"></i></div><div><span class="font-bold text-brand-blue block">5 Fotos Antigas</span><span class="text-xs text-gray-500">Pacote Família</span></div></div><div class="text-right"><span class="text-brand-orange font-bold text-lg">R$ 39,90</span></div>
-                        </div>
-                        <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectRestoration(10, 69.90, this)">
-                            <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-amber-100 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors"><i class="fas fa-archive"></i></div><div><span class="font-bold text-brand-blue block">10 Fotos Antigas</span><span class="text-xs text-gray-500">Álbum Completo</span></div></div><div class="text-right"><span class="text-brand-orange font-bold text-lg">R$ 69,90</span></div>
-                        </div>
-                        <div class="mt-auto pt-4 pb-2"><button onclick="skipRestoration()" class="w-full border-2 border-gray-200 text-gray-500 font-bold py-3 rounded-xl hover:border-brand-blue hover:text-brand-blue hover:bg-gray-50 transition-all flex items-center justify-center gap-2"><span>Não tenho fotos antigas / Pular</span><i class="fas fa-arrow-right text-xs"></i></button></div>
-                    </div>
-                </div>
-
-                <!-- PASSO 4 -->
-                <div id="step4" class="step">
-                     <h3 class="text-lg font-bold text-brand-blue mb-2 text-center shrink-0">Seus Dados</h3>
-                    <div class="flex-1 flex flex-col overflow-y-auto custom-scroll px-1 pb-1">
-                        <div class="space-y-3 mb-4 shrink-0">
-                            <div><label class="block text-xs font-bold text-gray-600 mb-1">Nome Completo</label><input type="text" id="customerName" placeholder="Seu nome" class="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-orange focus:outline-none transition-colors" oninput="validateForm(); saveProgress()"></div>
-                            <div><label class="block text-xs font-bold text-gray-600 mb-1">WhatsApp (com DDD)</label><input type="tel" id="customerPhone" placeholder="(00) 00000-0000" class="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-orange focus:outline-none transition-colors" oninput="validateForm(); saveProgress()"></div>
-                            <div><label class="block text-xs font-bold text-gray-600 mb-1">E-mail (Opcional)</label><input type="email" id="customerEmail" placeholder="seu@email.com" class="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-orange focus:outline-none transition-colors" oninput="validateForm(); saveProgress()"></div>
-                        </div>
-                        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 relative overflow-hidden shrink-0">
-                            <div class="flex justify-between items-center mb-1"><span class="text-xs text-gray-500">Pacote & Estilo</span><span id="summaryPackagePrice" class="font-bold text-brand-blue text-sm">R$ 0,00</span></div>
-                            <div class="text-sm font-bold text-brand-blue mb-2 leading-tight"><span id="summaryPackageName"></span> - <span id="summaryStyle"></span></div>
-                            <div id="restorationSummary" class="hidden border-t border-gray-200 pt-2 mt-2">
-                                <div class="flex justify-between items-center"><span class="text-xs text-gray-500">Restauração (Adicional)</span><span id="summaryRestorationPrice" class="font-bold text-brand-blue text-sm">R$ 0,00</span></div>
-                                <div class="text-sm font-medium text-gray-700"><span id="summaryRestorationQty"></span></div>
+                            <div class="flex items-center gap-3">
+                                 <div class="w-10 h-10 rounded-full bg-amber-100 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors">
+                                    <i class="fas fa-history"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-brand-blue block">1 Foto Antiga</span>
+                                    <span class="text-xs text-gray-500">Restauração</span>
+                                </div>
                             </div>
-                            <div class="flex justify-between items-center pt-3 mt-2 border-t border-gray-200"><span class="text-brand-blue font-bold">TOTAL</span><span id="summaryPrice" class="text-2xl font-black text-brand-orange">R$ 0,00</span></div>
+                            <span class="text-brand-orange font-bold text-lg">R$ 10,00</span>
                         </div>
-                    </div>
-                    <div class="shrink-0 mt-3 pt-2 border-t border-gray-100">
-                        <a id="finalWhatsappBtn" href="#" target="_blank" class="block w-full bg-gray-300 text-white text-lg font-bold py-4 rounded-xl shadow-lg text-center transition-all flex items-center justify-center gap-2 pointer-events-none opacity-70"><i class="fab fa-whatsapp text-2xl"></i> Enviar Pedido</a>
-                        <p class="text-center text-xs text-gray-400 mt-3 mb-1">Preencha seus dados para habilitar o botão.</p>
-                        <button onclick="resetForm()" class="w-full py-2 text-sm text-gray-400 hover:text-brand-blue underline transition-colors">Refazer pedido</button>
+
+                        <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectRestoration(5, 39.90, this)">
+                            <div class="flex items-center gap-3">
+                                 <div class="w-10 h-10 rounded-full bg-amber-100 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-brand-blue block">5 Fotos Antigas</span>
+                                    <span class="text-xs text-gray-500">Pacote Família</span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-brand-orange font-bold text-lg">R$ 39,90</span>
+                            </div>
+                        </div>
+
+                        <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectRestoration(10, 69.90, this)">
+                            <div class="flex items-center gap-3">
+                                 <div class="w-10 h-10 rounded-full bg-amber-100 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors">
+                                    <i class="fas fa-archive"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-brand-blue block">10 Fotos Antigas</span>
+                                    <span class="text-xs text-gray-500">Álbum Completo</span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-brand-orange font-bold text-lg">R$ 69,90</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 pb-2">
+                            <button onclick="skipRestoration()" class="w-full border-2 border-gray-200 text-gray-500 font-bold py-3 rounded-xl hover:border-brand-blue hover:text-brand-blue hover:bg-gray-50 transition-all flex items-center justify-center gap-2">
+                                <span>Não tenho fotos antigas / Pular</span>
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
+                <!-- PASSO 4: Identificação e Resumo -->
+                <div id="step4" class="step">
+                    <h3 class="text-lg font-bold text-brand-blue mb-2 text-center shrink-0">Seus Dados</h3>
+                    
+                    <div class="flex-1 flex flex-col overflow-y-auto custom-scroll px-1 pb-1">
+                        
+                        <!-- Formulário CRM -->
+                        <div class="space-y-3 mb-4 shrink-0">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">Nome Completo</label>
+                                <input type="text" id="customerName" placeholder="Seu nome" class="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-orange focus:outline-none transition-colors" oninput="validateForm(); saveProgress()">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">WhatsApp (com DDD)</label>
+                                <input type="tel" id="customerPhone" placeholder="(00) 00000-0000" class="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-orange focus:outline-none transition-colors" oninput="validateForm(); saveProgress()">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">E-mail (Opcional)</label>
+                                <input type="email" id="customerEmail" placeholder="seu@email.com" class="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-orange focus:outline-none transition-colors" oninput="validateForm(); saveProgress()">
+                            </div>
+                        </div>
+
+                        <!-- Resumo Compacto -->
+                        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 relative overflow-hidden shrink-0">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs text-gray-500">Pacote & Estilo</span>
+                                <span id="summaryPackagePrice" class="font-bold text-brand-blue text-sm">R$ 0,00</span>
+                            </div>
+                            <div class="text-sm font-bold text-brand-blue mb-2 leading-tight">
+                                <span id="summaryPackageName"></span> - <span id="summaryStyle"></span>
+                            </div>
+
+                            <!-- Restauração Condicional -->
+                            <div id="restorationSummary" class="hidden border-t border-gray-200 pt-2 mt-2">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-gray-500">Restauração (Adicional)</span>
+                                    <span id="summaryRestorationPrice" class="font-bold text-brand-blue text-sm">R$ 0,00</span>
+                                </div>
+                                <div class="text-sm font-medium text-gray-700">
+                                    <span id="summaryRestorationQty"></span>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center pt-3 mt-2 border-t border-gray-200">
+                                <span class="text-brand-blue font-bold">TOTAL</span>
+                                <span id="summaryPrice" class="text-2xl font-black text-brand-orange">R$ 0,00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shrink-0 mt-3 pt-2 border-t border-gray-100">
+                        <a id="finalWhatsappBtn" href="#" target="_blank" class="block w-full bg-gray-300 text-white text-lg font-bold py-4 rounded-xl shadow-lg text-center transition-all flex items-center justify-center gap-2 pointer-events-none opacity-70">
+                            <i class="fab fa-whatsapp text-2xl"></i> Enviar Pedido
+                        </a>
+                        
+                        <p class="text-center text-xs text-gray-400 mt-3 mb-1">Preencha seus dados para habilitar o botão.</p>
+
+                        <button onclick="resetForm()" class="w-full py-2 text-sm text-gray-400 hover:text-brand-blue underline transition-colors">
+                            Refazer pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navegação -->
                 <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center shrink-0" id="navButtons">
-                    <button id="prevBtn" class="px-4 py-2 text-gray-400 font-semibold hover:text-brand-blue transition-colors rounded-lg hover:bg-gray-50 invisible flex items-center gap-2" onclick="changeStep(-1)"><i class="fas fa-chevron-left text-xs"></i> Voltar</button>
-                    <button id="nextBtn" class="bg-brand-blue text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-opacity-90 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none transition-all flex items-center gap-2" onclick="changeStep(1)" disabled>Próximo <i class="fas fa-chevron-right text-xs"></i></button>
+                    <button id="prevBtn" class="px-4 py-2 text-gray-400 font-semibold hover:text-brand-blue transition-colors rounded-lg hover:bg-gray-50 invisible flex items-center gap-2" onclick="changeStep(-1)">
+                        <i class="fas fa-chevron-left text-xs"></i> Voltar
+                    </button>
+                    <button id="nextBtn" class="bg-brand-blue text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-opacity-90 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none transition-all flex items-center gap-2" onclick="changeStep(1)" disabled>
+                        Próximo <i class="fas fa-chevron-right text-xs"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1063,13 +1108,15 @@
         // --- 2. LÓGICA GERAL E MODAL ---
         document.addEventListener("DOMContentLoaded", function() {
             // Slider init
+            // CORRECTION: Ensure we target all sliders correctly, including the new style ones
             const sliders = document.querySelectorAll('.comparison-slider, .style-slider-container');
+            
             sliders.forEach(slider => {
-                const resizeDiv = slider.querySelector('.resize-image');
-                const handle = slider.querySelector('.handle');
+                // Determine which children elements to use based on slider type
+                const isStyleCard = slider.classList.contains('style-slider-container');
                 
-                const overlay = slider.querySelector('.style-slider-overlay');
-                const sHandle = slider.querySelector('.style-slider-handle');
+                const resizeDiv = isStyleCard ? slider.querySelector('.style-slider-overlay') : slider.querySelector('.resize-image');
+                const handle = isStyleCard ? slider.querySelector('.style-slider-handle') : slider.querySelector('.handle');
 
                 let isDown = false;
 
@@ -1080,16 +1127,25 @@
                     if (x > rect.width) x = rect.width;
                     const percent = (x / rect.width) * 100;
                     
-                    if (resizeDiv) { resizeDiv.style.width = percent + "%"; handle.style.left = percent + "%"; }
-                    if (overlay) { overlay.style.width = percent + "%"; sHandle.style.left = percent + "%"; }
+                    if (resizeDiv && handle) { 
+                        resizeDiv.style.width = percent + "%"; 
+                        handle.style.left = percent + "%"; 
+                    }
                 };
 
                 slider.addEventListener('mousedown', (e) => { isDown = true; move(e); });
                 window.addEventListener('mouseup', () => isDown = false);
                 slider.addEventListener('mousemove', (e) => { if(isDown) move(e); });
-                slider.addEventListener('touchstart', (e) => { isDown = true; move(e.touches[0]); }, {passive: false});
+                
+                // Touch events with passive false to prevent scrolling while dragging
+                slider.addEventListener('touchstart', (e) => { isDown = true; move(e); }, {passive: false});
                 window.addEventListener('touchend', () => isDown = false);
-                slider.addEventListener('touchmove', (e) => { if(isDown) move(e.touches[0]); }, {passive: false});
+                slider.addEventListener('touchmove', (e) => { 
+                    if(isDown) {
+                        e.preventDefault(); // Prevent page scroll on mobile while sliding
+                        move(e); 
+                    }
+                }, {passive: false});
             });
 
             // Standard buttons logic
@@ -1102,18 +1158,20 @@
             
             // Close Policies Modal Logic
             const policiesModal = document.getElementById('policiesModal');
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && !policiesModal.classList.contains('hidden')) {
-                    policiesModal.classList.add('hidden');
-                }
-            });
-            
-            // Close on overlay click
-            policiesModal.addEventListener('click', (e) => {
-                 if (e.target === policiesModal) {
-                    policiesModal.classList.add('hidden');
-                }
-            });
+            if (policiesModal) {
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && !policiesModal.classList.contains('hidden')) {
+                        policiesModal.classList.add('hidden');
+                    }
+                });
+                
+                // Close on overlay click
+                policiesModal.addEventListener('click', (e) => {
+                     if (e.target === policiesModal) {
+                        policiesModal.classList.add('hidden');
+                    }
+                });
+            }
         });
         
         // --- 3. LÓGICA DO SIMULADOR (WIZARD) ---
