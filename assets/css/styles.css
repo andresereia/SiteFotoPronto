@@ -1,0 +1,156 @@
+/* BASE + NOISE (Usado na Navbar) */
+.bg-base-noise {
+    background-color: #0b0e2a;
+    /* Noise mais perceptível (opacity 0.12) */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.12'/%3E%3C/svg%3E");
+}
+
+/* HERO PREMIUM (Base + Noise + Glow Central Sutil) */
+.bg-hero-premium {
+    background-color: #0b0e2a;
+    background-image: 
+        /* Glow Radial Sutil no Centro */
+        radial-gradient(circle at 50% 40%, rgba(60, 70, 120, 0.15) 0%, rgba(11, 14, 42, 0) 60%),
+        /* Textura Noise - Opacidade aumentada para 0.12 */
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.12'/%3E%3C/svg%3E");
+    background-repeat: no-repeat, repeat;
+    background-size: 100% 100%, auto;
+}
+
+/* FUNDO SÉPIA/ANTIGO (Para seção de restauração) */
+.bg-sepia-texture {
+    background-color: #2a2320; /* Marrom escuro/café */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+}
+
+/* Moldura de Foto Antiga */
+.photo-frame {
+    background-color: #fdfbf7;
+    padding: 5px 5px 18px 5px; /* Borda estilo Polaroid/Foto antiga */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* ESTILOS DO COMPARADOR DE ESTILOS (Card) */
+.style-slider-container {
+    position: relative;
+    /* Altura controlada via classes tailwind (aspect/max-h) */
+    overflow: hidden;
+    border-radius: 0.75rem;
+    cursor: col-resize;
+    user-select: none;
+}
+.style-slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante corte correto */
+    display: block;
+    pointer-events: none;
+}
+.style-slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    border-right: 2px solid white;
+    z-index: 10;
+}
+.style-slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    /* Alterado para laranja sólido para garantir visibilidade das setas */
+    background: #ff6a00;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 20;
+    pointer-events: none;
+}
+
+/* FAQ Animation */
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+details[open] summary ~ * {
+    animation: sweep .3s ease-in-out;
+}
+@keyframes sweep {
+    0%    {opacity: 0; transform: translateY(-10px)}
+    100%  {opacity: 1; transform: translateY(0)}
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #1ebe57;
+}
+
+/* Utilitário para esconder scrollbar no carrossel mobile */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* ESTILOS DO SIMULADOR (WIZARD) */
+.option-card.selected {
+    border-color: #ff6a00;
+    background-color: #fff8f2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.option-style.selected {
+    border-color: #ff6a00;
+    background-color: #fff8f2;
+    box-shadow: 0 0 0 2px rgba(255, 106, 0, 0.2);
+}
+
+.step { display: none; height: 100%; }
+.step.active { display: flex; flex-direction: column; animation: fadeIn 0.4s ease-in-out; }
+
+.custom-scroll::-webkit-scrollbar { width: 6px; }
+.custom-scroll::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+.custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+.custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Modal Z-Index alto para ficar acima do whatsapp float */
+#orderModal, #styleModal, #policiesModal { z-index: 9999; }
+
+/* Modal Policies Scroll */
+#policiesModalContent { scroll-behavior: smooth; }
