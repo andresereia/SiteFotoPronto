@@ -8,18 +8,18 @@
     
     <!-- META TAGS OPEN GRAPH / COMPARTILHAMENTO -->
     <meta property="og:title" content="FotoPronto — Suas fotos melhores em minutos">
-    <meta property="og:description" content="Deixe suas fotos mais bonitas, claras e nítidas, com resultado profissional e entrega rápida no WhatsApp.">
+    <meta property="og:description" content="Deixe suas fotos mais bonitas, claras e nítidas — com resultado natural e entrega rápida no WhatsApp.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fotopronto.com">
     <!-- ATUALIZADO: Agora aponta para a logo -->
-    <meta property="og:image" content="assets/img/logo.jpg">
+    <meta property="og:image" content="logo.jpg">
 
     <!-- TWITTER CARDS -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FotoPronto — Suas fotos melhores em minutos">
-    <meta name="twitter:description" content="Deixe suas fotos mais bonitas, claras e nítidas, com resultado profissional e entrega rápida no WhatsApp.">
+    <meta name="twitter:description" content="Deixe suas fotos mais bonitas, claras e nítidas — com resultado natural e entrega rápida no WhatsApp.">
     <!-- ATUALIZADO: Agora aponta para a logo -->
-    <meta name="twitter:image" content="assets/img/logo.jpg">
+    <meta name="twitter:image" content="logo.jpg">
     
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,9 +51,164 @@
         }
     </script>
 
-    
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* BASE + NOISE (Usado na Navbar) */
+        .bg-base-noise {
+            background-color: #0b0e2a;
+            /* Noise mais perceptível (opacity 0.12) */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.12'/%3E%3C/svg%3E");
+        }
 
+        /* HERO PREMIUM (Base + Noise + Glow Central Sutil) */
+        .bg-hero-premium {
+            background-color: #0b0e2a;
+            background-image: 
+                /* Glow Radial Sutil no Centro */
+                radial-gradient(circle at 50% 40%, rgba(60, 70, 120, 0.15) 0%, rgba(11, 14, 42, 0) 60%),
+                /* Textura Noise - Opacidade aumentada para 0.12 */
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.12'/%3E%3C/svg%3E");
+            background-repeat: no-repeat, repeat;
+            background-size: 100% 100%, auto;
+        }
+
+        /* FUNDO SÉPIA/ANTIGO (Para seção de restauração) */
+        .bg-sepia-texture {
+            background-color: #2a2320; /* Marrom escuro/café */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+        }
+
+        /* Moldura de Foto Antiga */
+        .photo-frame {
+            background-color: #fdfbf7;
+            padding: 5px 5px 18px 5px; /* Borda estilo Polaroid/Foto antiga */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ESTILOS DO COMPARADOR DE ESTILOS (Card) */
+        .style-slider-container {
+            position: relative;
+            /* Altura controlada via classes tailwind (aspect/max-h) */
+            overflow: hidden;
+            border-radius: 0.75rem;
+            cursor: col-resize;
+            user-select: none;
+        }
+        .style-slider-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante corte correto */
+            display: block;
+            pointer-events: none;
+        }
+        .style-slider-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+            border-right: 2px solid white;
+            z-index: 10;
+        }
+        .style-slider-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 32px;
+            height: 32px;
+            /* Alterado para laranja sólido para garantir visibilidade das setas */
+            background: #ff6a00;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        /* FAQ Animation */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #1ebe57;
+        }
+        
+        /* Utilitário para esconder scrollbar no carrossel mobile */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* ESTILOS DO SIMULADOR (WIZARD) */
+        .option-card.selected {
+            border-color: #ff6a00;
+            background-color: #fff8f2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .option-style.selected {
+            border-color: #ff6a00;
+            background-color: #fff8f2;
+            box-shadow: 0 0 0 2px rgba(255, 106, 0, 0.2);
+        }
+
+        .step { display: none; height: 100%; }
+        .step.active { display: flex; flex-direction: column; animation: fadeIn 0.4s ease-in-out; }
+        
+        .custom-scroll::-webkit-scrollbar { width: 6px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(10px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        /* Modal Z-Index alto para ficar acima do whatsapp float */
+        #orderModal, #styleModal, #policiesModal { z-index: 9999; }
+        
+        /* Modal Policies Scroll */
+        #policiesModalContent { scroll-behavior: smooth; }
+    </style>
 </head>
 <body class="font-sans text-gray-700 bg-white">
 
@@ -106,7 +261,7 @@
                 <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white">em minutos.</span>
             </h1>
             <p class="text-base md:text-xl text-gray-300 mb-6 md:mb-8 max-w-3xl mx-auto font-light">
-                Deixe suas fotos mais bonitas, claras e nítidas, com resultado profissional e entrega rápida no WhatsApp.
+                Deixe suas fotos mais bonitas, claras e nítidas — com resultado natural e entrega rápida no WhatsApp.
             </p>
             <div class="flex flex-col items-center gap-4">
                 <a href="#" class="wa-hero-btn bg-brand-orange hover:bg-brand-orangeHover text-white text-base md:text-lg font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-xl w-10/12 md:w-auto text-center leading-tight whitespace-nowrap">
@@ -182,12 +337,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">Natural Aprimorado</h3>
-                       <p class="text-sm text-gray-500"><strong>“A mesma foto, só que melhor.”</strong> Correção de luz, cores equilibradas e mais nitidez, sem cara de filtro.</p>
+                        <p class="text-sm text-gray-500"><strong>“A mesma foto, só que melhor.”</strong> Correção de luz, cores equilibradas e mais nitidez, sem cara de filtro.</p>
                     </div>
-                    <div class="style-slider-container w-full rounded-xl relative group">
-                        <img src="assets/img/natural-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                    <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
+                        <img src="natural-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="assets/img/natural-antes.jpg" alt="Antes" class="style-slider-img">
+                            <img src="natural-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -202,12 +357,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">Perfil Profissional</h3>
-                        <p class="text-sm text-gray-500"><strong>“Foto séria, limpa e confiável.”</strong> Ideal para LinkedIn, WhatsApp Business e perfis de trabalho.</p>
+                        <p class="text-sm text-gray-500">“Foto séria, limpa e confiável.” Ideal para LinkedIn, WhatsApp Business e perfis de trabalho.</p>
                     </div>
-                    <div class="style-slider-container w-full rounded-xl relative group">
-                        <img src="assets/img/profissional-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                    <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
+                        <img src="profissional-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="assets/img/profissional-antes.jpg" alt="Antes" class="style-slider-img">
+                            <img src="profissional-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                          <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -222,12 +377,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">Produto em Destaque</h3>
-                        <p class="text-sm text-gray-500"><strong>“Foto mais vendável.”</strong> Perfeito para comida, produtos, artesanato e pequenos negócios.</p>
+                        <p class="text-sm text-gray-500">“Foto mais vendável.” Perfeito para comida, produtos, artesanato e pequenos negócios.</p>
                     </div>
-                    <div class="style-slider-container w-full rounded-xl relative group">
-                        <img src="assets/img/produto-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" onerror="this.src='estilo-quadro.jpg'">
+                    <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
+                        <img src="produto-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" onerror="this.src='estilo-quadro.jpg'">
                         <div class="style-slider-overlay">
-                            <img src="assets/img/produto-antes.jpg" alt="Antes" class="style-slider-img" onerror="this.src='estilo-quadro.jpg'">
+                            <img src="produto-antes.jpg" alt="Antes" class="style-slider-img" onerror="this.src='estilo-quadro.jpg'">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -242,12 +397,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">Cinema / Dramático</h3>
-                        <p class="text-sm text-gray-500"><strong>“Foto com impacto.”</strong> Luz dramática, contraste forte e estética cinematográfica.</p>
+                        <p class="text-sm text-gray-500">“Foto com impacto.” Luz dramática, contraste forte e estética cinematográfica.</p>
                     </div>
-                    <div class="style-slider-container w-full rounded-xl relative group">
-                        <img src="assets/img/cinema-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                    <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
+                        <img src="cinema-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="assets/img/cinema-antes.jpg" alt="Antes" class="style-slider-img">
+                            <img src="cinema-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -262,12 +417,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">Arte & Ilustração</h3>
-                        <p class="text-sm text-gray-500"><strong>“Transformação artística.”</strong> Desenho, pintura, lápis ou quadro — forte para presente e emoção.</p>
+                        <p class="text-sm text-gray-500">“Transformação artística.” Desenho, pintura, lápis ou quadro — forte para presente e emoção.</p>
                     </div>
-                    <div class="style-slider-container w-full rounded-xl relative group">
-                        <img src="assets/img/arte-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                    <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
+                        <img src="arte-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="assets/img/arte-antes.jpg" alt="Antes" class="style-slider-img">
+                            <img src="arte-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -282,12 +437,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4">
                     <div class="mb-3">
                         <h3 class="text-lg font-bold text-brand-blue">3D / Estilizado</h3>
-                        <p class="text-sm text-gray-500"><strong>“Estilo divertido.”</strong> Personagem 3D, cartoon ou Pixar-like — ideal para pets, presentes e conteúdo.</p>
+                        <p class="text-sm text-gray-500">“Estilo divertido.” Personagem 3D, cartoon ou Pixar-like — ideal para pets, presentes e conteúdo.</p>
                     </div>
-                    <div class="style-slider-container w-full rounded-xl relative group">
-                        <img src="assets/img/3d-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                    <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
+                        <img src="3d-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="assets/img/3d-antes.jpg" alt="Antes" class="style-slider-img">
+                            <img src="3d-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -302,12 +457,12 @@
                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 p-4 md:col-span-2 lg:col-span-2 lg:col-start-1 lg:col-end-3 xl:col-start-1 xl:col-end-3 mx-auto w-full md:w-1/2 lg:w-full">
                     <div class="mb-3 text-center md:text-left">
                         <h3 class="text-lg font-bold text-brand-blue">Restauração de Fotos</h3>
-                        <p class="text-sm text-gray-500"><strong>“Resgatar memórias.”</strong> Recuperação de fotos antigas, danificadas ou de baixa qualidade.</p>
+                        <p class="text-sm text-gray-500">“Resgatar memórias.” Recuperação de fotos antigas, danificadas ou de baixa qualidade.</p>
                     </div>
-                    <div class="style-slider-container w-full rounded-xl relative group">
-                        <img src="assets/img/restauracao-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
+                    <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
+                        <img src="restauracao-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy">
                         <div class="style-slider-overlay">
-                            <img src="assets/img/restauracao-antes.jpg" alt="Antes" class="style-slider-img">
+                            <img src="restauracao-antes.jpg" alt="Antes" class="style-slider-img">
                             <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
                         </div>
                         <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
@@ -429,13 +584,13 @@
                 <div class="md:w-1/2 flex justify-center relative w-full mt-6 md:mt-0 h-96">
                     <div class="photo-frame absolute -top-5 left-1/2 -translate-x-[90%] w-56 sm:w-64 transform -rotate-6 z-10 transition hover:z-30 hover:scale-105 duration-300 md:w-60 md:left-auto md:top-0 md:right-[48%] md:translate-x-0">
                         <div class="relative overflow-hidden aspect-[3/4]">
-                            <img src="assets/img/restauracao-antes.jpg" class="w-full h-full object-cover" alt="Foto Antiga Antes">
+                            <img src="restauracao-antes.jpg" class="w-full h-full object-cover" alt="Foto Antiga Antes">
                         </div>
                         <div class="text-center mt-2"><span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">ANTES</span></div>
                     </div>
                     <div class="photo-frame absolute top-8 left-1/2 -translate-x-[10%] w-56 sm:w-64 transform rotate-3 z-20 transition hover:scale-105 duration-300 md:w-60 md:right-auto md:top-8 md:left-[48%] md:translate-x-0">
                         <div class="relative overflow-hidden aspect-[3/4]">
-                            <img src="assets/img/restauracao-depois.jpg" class="w-full h-full object-cover" alt="Foto Restaurada Depois">
+                            <img src="restauracao-depois.jpg" class="w-full h-full object-cover" alt="Foto Restaurada Depois">
                         </div>
                         <div class="text-center mt-2"><span class="text-xs font-bold text-brand-orange uppercase tracking-widest">DEPOIS</span></div>
                     </div>
@@ -756,137 +911,30 @@
                     </div>
 
                     <div class="grid grid-cols-2 gap-3 flex-1 overflow-y-auto pr-1 custom-scroll content-start pb-2">
-                         <button class="option-style border-2 border-gray-100 rounded-lg p-4 text-sm font-medium text-gray-600 hover:border-brand-orange/50 hover:bg-gray-50 transition-all text-left flex flex-col items-center gap-2 h-full" onclick="selectStyle('Perfil Profissional', this)">
-                            <span class="text-2xl">&#128084;</span><span class="text-center">Perfil Profissional</span>
-                        </button>
-                        <button class="option-style border-2 border-gray-100 rounded-lg p-4 text-sm font-medium text-gray-600 hover:border-brand-orange/50 hover:bg-gray-50 transition-all text-left flex flex-col items-center gap-2 h-full" onclick="selectStyle('Sua Melhor Versão', this)">
-                            <span class="text-2xl">&#10024;</span><span class="text-center">Sua Melhor Versão</span>
-                        </button>
-                        <button class="option-style border-2 border-gray-100 rounded-lg p-4 text-sm font-medium text-gray-600 hover:border-brand-orange/50 hover:bg-gray-50 transition-all text-left flex flex-col items-center gap-2 h-full" onclick="selectStyle('Personagem 3D', this)">
-                            <span class="text-2xl">&#128126;</span><span class="text-center">Personagem 3D</span>
-                        </button>
-                        <button class="option-style border-2 border-gray-100 rounded-lg p-4 text-sm font-medium text-gray-600 hover:border-brand-orange/50 hover:bg-gray-50 transition-all text-left flex flex-col items-center gap-2 h-full" onclick="selectStyle('Foto de Cinema', this)">
-                            <span class="text-2xl">&#127916;</span><span class="text-center">Foto de Cinema</span>
-                        </button>
-                        <button class="option-style border-2 border-gray-100 rounded-lg p-4 text-sm font-medium text-gray-600 hover:border-brand-orange/50 hover:bg-gray-50 transition-all text-left flex flex-col items-center gap-2 h-full" onclick="selectStyle('Desenho a Lápis', this)">
-                            <span class="text-2xl">&#9999;&#65039;</span><span class="text-center">Desenho a Lápis</span>
-                        </button>
-                        <button class="option-style border-2 border-gray-100 rounded-lg p-4 text-sm font-medium text-gray-600 hover:border-brand-orange/50 hover:bg-gray-50 transition-all text-left flex flex-col items-center gap-2 h-full" onclick="selectStyle('Vire Quadro', this)">
-                            <span class="text-2xl">&#127912;</span><span class="text-center">Vire Quadro</span>
-                        </button>
-                        <button class="option-style col-span-2 border-2 border-gray-100 rounded-lg p-4 text-sm font-medium text-gray-600 hover:border-brand-orange/50 hover:bg-gray-50 transition-all text-left flex flex-row items-center justify-center gap-3" onclick="selectStyle('Dramático (P&B)', this)">
-                            <span class="text-2xl">&#9899;</span><span>Dramático (P&B)</span>
-                        </button>
-                    </div>
-                </div>
+    <button class="option-style border-2 border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center gap-2 h-full" onclick="selectStyle('Natural Aprimorado', this)">
+        <span class="text-2xl">&#10024;</span><span class="text-center">Natural Aprimorado</span>
+    </button>
+    <button class="option-style border-2 border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center gap-2 h-full" onclick="selectStyle('Perfil Profissional', this)">
+        <span class="text-2xl">&#128084;</span><span class="text-center">Perfil Profissional</span>
+    </button>
+    <button class="option-style border-2 border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center gap-2 h-full" onclick="selectStyle('Produto em Destaque', this)">
+        <span class="text-2xl">&#128722;</span><span class="text-center">Produto em Destaque</span>
+    </button>
+    <button class="option-style border-2 border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center gap-2 h-full" onclick="selectStyle('Cinema / Dramático', this)">
+        <span class="text-2xl">&#127916;</span><span class="text-center">Cinema / Dramático</span>
+    </button>
+    <button class="option-style border-2 border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center gap-2 h-full" onclick="selectStyle('Arte & Ilustração', this)">
+        <span class="text-2xl">&#127912;</span><span class="text-center">Arte &amp; Ilustração</span>
+    </button>
+    <button class="option-style border-2 border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center gap-2 h-full" onclick="selectStyle('3D / Estilizado', this)">
+        <span class="text-2xl">&#129302;</span><span class="text-center">3D / Estilizado</span>
+    </button>
+    <button class="option-style col-span-2 border-2 border-gray-200 rounded-xl p-4 flex items-center justify-center gap-2 text-sm font-medium text-gray-600 hover:border-brand-orange" onclick="selectStyle('Restauração de Fotos', this)">
+        <span class="text-2xl">&#128368;</span><span class="text-center">Restauração de Fotos</span>
+    </button>
+</div>
 
-                <!-- PASSO 3: Restauração -->
-                <div id="step3" class="step">
-                    <div class="shrink-0 text-center mb-6">
-                        <h3 class="text-lg font-bold text-brand-blue mb-1">Tem fotos antigas para restaurar?</h3>
-                        <p class="text-xs text-gray-500">Recupere a qualidade de memórias do passado.</p>
-                    </div>
-                    
-                    <div class="flex flex-col gap-3 flex-1">
-                        <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectRestoration(1, 10.00, this)">
-                            <div class="flex items-center gap-3">
-                                 <div class="w-10 h-10 rounded-full bg-amber-100 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors">
-                                    <i class="fas fa-history"></i>
-                                </div>
-                                <div>
-                                    <span class="font-bold text-brand-blue block">1 Foto Antiga</span>
-                                    <span class="text-xs text-gray-500">Restauração</span>
-                                </div>
-                            </div>
-                            <span class="text-brand-orange font-bold text-lg">R$ 10,00</span>
-                        </div>
-
-                        <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectRestoration(5, 39.90, this)">
-                            <div class="flex items-center gap-3">
-                                 <div class="w-10 h-10 rounded-full bg-amber-100 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors">
-                                    <i class="fas fa-box-open"></i>
-                                </div>
-                                <div>
-                                    <span class="font-bold text-brand-blue block">5 Fotos Antigas</span>
-                                    <span class="text-xs text-gray-500">Pacote Família</span>
-                                </div>
-                            </div>
-                            <div class="text-right">
-                                <span class="text-brand-orange font-bold text-lg">R$ 39,90</span>
-                            </div>
-                        </div>
-
-                        <div class="option-card border-2 border-gray-100 rounded-xl p-4 cursor-pointer hover:border-brand-orange/50 transition-all duration-200 flex justify-between items-center group" onclick="selectRestoration(10, 69.90, this)">
-                            <div class="flex items-center gap-3">
-                                 <div class="w-10 h-10 rounded-full bg-amber-100 text-brand-blue flex items-center justify-center group-hover:bg-orange-50 group-hover:text-brand-orange transition-colors">
-                                    <i class="fas fa-archive"></i>
-                                </div>
-                                <div>
-                                    <span class="font-bold text-brand-blue block">10 Fotos Antigas</span>
-                                    <span class="text-xs text-gray-500">Álbum Completo</span>
-                                </div>
-                            </div>
-                            <div class="text-right">
-                                <span class="text-brand-orange font-bold text-lg">R$ 69,90</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-auto pt-4 pb-2">
-                            <button onclick="skipRestoration()" class="w-full border-2 border-gray-200 text-gray-500 font-bold py-3 rounded-xl hover:border-brand-blue hover:text-brand-blue hover:bg-gray-50 transition-all flex items-center justify-center gap-2">
-                                <span>Não tenho fotos antigas / Pular</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PASSO 4: Identificação e Resumo -->
-                <div id="step4" class="step">
-                    <h3 class="text-lg font-bold text-brand-blue mb-2 text-center shrink-0">Seus Dados</h3>
-                    
-                    <div class="flex-1 flex flex-col overflow-y-auto custom-scroll px-1 pb-1">
-                        <div class="space-y-3 mb-4 shrink-0">
-                            <div>
-                                <label class="block text-xs font-bold text-gray-600 mb-1">Nome Completo</label>
-                                <input type="text" id="customerName" placeholder="Seu nome" class="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-orange focus:outline-none transition-colors" oninput="validateForm(); saveProgress()">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-gray-600 mb-1">WhatsApp (com DDD)</label>
-                                <input type="tel" id="customerPhone" placeholder="(00) 00000-0000" class="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-orange focus:outline-none transition-colors" oninput="validateForm(); saveProgress()">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-gray-600 mb-1">E-mail (Opcional)</label>
-                                <input type="email" id="customerEmail" placeholder="seu@email.com" class="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-orange focus:outline-none transition-colors" oninput="validateForm(); saveProgress()">
-                            </div>
-                        </div>
-
-                        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 relative overflow-hidden shrink-0">
-                            <div class="flex justify-between items-center mb-1">
-                                <span class="text-xs text-gray-500">Pacote & Estilo</span>
-                                <span id="summaryPackagePrice" class="font-bold text-brand-blue text-sm">R$ 0,00</span>
-                            </div>
-                            <div class="text-sm font-bold text-brand-blue mb-2 leading-tight">
-                                <span id="summaryPackageName"></span> - <span id="summaryStyle"></span>
-                            </div>
-
-                            <div id="restorationSummary" class="hidden border-t border-gray-200 pt-2 mt-2">
-                                <div class="flex justify-between items-center">
-                                    <span class="text-xs text-gray-500">Restauração (Adicional)</span>
-                                    <span id="summaryRestorationPrice" class="font-bold text-brand-blue text-sm">R$ 0,00</span>
-                                </div>
-                                <div class="text-sm font-medium text-gray-700">
-                                    <span id="summaryRestorationQty"></span>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-between items-center pt-3 mt-2 border-t border-gray-200">
-                                <span class="text-brand-blue font-bold">TOTAL</span>
-                                <span id="summaryPrice" class="text-2xl font-black text-brand-orange">R$ 0,00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="shrink-0 mt-3 pt-2 border-t border-gray-100">
+<div class="shrink-0 mt-3 pt-2 border-t border-gray-100">
                         <a id="finalWhatsappBtn" href="#" target="_blank" class="block w-full bg-gray-300 text-white text-lg font-bold py-4 rounded-xl shadow-lg text-center transition-all flex items-center justify-center gap-2 pointer-events-none opacity-70">
                             <i class="fab fa-whatsapp text-2xl"></i> Enviar Pedido
                         </a>
@@ -934,22 +982,6 @@
                 const isStyleCard = slider.classList.contains('style-slider-container');
                 const resizeDiv = isStyleCard ? slider.querySelector('.style-slider-overlay') : slider.querySelector('.resize-image');
                 const handle = isStyleCard ? slider.querySelector('.style-slider-handle') : slider.querySelector('.handle');
-
-
-                // Magnific-like behavior: keep BEFORE and AFTER exactly the same size (no stretching)
-                // by locking the container aspect-ratio to the loaded image ratio.
-                if (isStyleCard) {
-                    const baseImg = slider.querySelector('img.style-slider-img') || slider.querySelector('img');
-                    const setRatio = () => {
-                        if (baseImg && baseImg.naturalWidth && baseImg.naturalHeight) {
-                            slider.style.aspectRatio = `${baseImg.naturalWidth} / ${baseImg.naturalHeight}`;
-                        }
-                    };
-                    if (baseImg) {
-                        if (baseImg.complete) setRatio();
-                        else baseImg.addEventListener('load', setRatio, { once: true });
-                    }
-                }
 
                 let isDown = false;
 
