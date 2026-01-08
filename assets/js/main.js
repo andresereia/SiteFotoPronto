@@ -4,8 +4,6 @@ const whatsappConfig = {
   message: "Olá! Vim pelo site do FotoPronto e quero melhorar minhas fotos.",
 };
 
-const apiKey = ""; // Placeholder
-
 // --- HELPERS PARA EMOJIS (ASCII SAFE) ---
 function getEmoji(type) {
   if (type === "user") return String.fromCodePoint(0x1f464);
@@ -459,100 +457,6 @@ function resetForm() {
     .querySelectorAll(".selected")
     .forEach((c) => c.classList.remove("selected"));
   updateUI();
-}
-
-// --- GEMINI AI LOGIC ---
-function toggleAIConsultant() {
-  const panel = document.getElementById("aiConsultantPanel");
-  panel?.classList.toggle("hidden");
-}
-
-async function askGemini() {
-  const userInput = document.getElementById("aiInput")?.value.trim() || "";
-  if (!userInput) return;
-
-  const loading = document.getElementById("aiLoading");
-  const resultDiv = document.getElementById("aiResult");
-  const resultText = document.getElementById("aiTextResult");
-  const selectBtn = document.getElementById("aiSelectStyleBtn");
-
-  loading?.classList.remove("hidden");
-  resultDiv?.classList.add("hidden");
-
-  try {
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [
-            {
-              parts: [
-                {
-                  text:
-                    `Você é um consultor do FotoPronto. Estilos disponíveis: Perfil Profissional, Sua Melhor Versão, Personagem 3D, Foto de Cinema, Desenho a Lápis, Vire Quadro, Dramático (P&B). ` +
-                    `O usuário dirá o que quer. Responda APENAS com o nome do estilo mais adequado seguido de uma frase curta e divertida explicando o porquê. ` +
-                    `Exemplo: 'Personagem 3D: Vai ficar incrível e divertido!'. Entrada do usuário: ${userInput}`,
-                },
-              ],
-            },
-          ],
-        }),
-      }
-    );
-
-    if (!response.ok) throw new Error("API Error");
-
-    const data = await response.json();
-    const aiResponse =
-      data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-      "Não consegui entender a resposta do consultor.";
-
-    let matchedStyle = "";
-    const styles = [
-      "Perfil Profissional",
-      "Sua Melhor Versão",
-      "Personagem 3D",
-      "Foto de Cinema",
-      "Desenho a Lápis",
-      "Vire Quadro",
-      "Dramático (P&B)",
-    ];
-    for (let s of styles) {
-      if (aiResponse.includes(s)) {
-        matchedStyle = s;
-        break;
-      }
-    }
-
-    if (resultText) resultText.innerText = aiResponse;
-    resultDiv?.classList.remove("hidden");
-
-    if (matchedStyle && selectBtn) {
-      selectBtn.style.display = "block";
-      selectBtn.onclick = function () {
-        const buttons = document.querySelectorAll("#step2 .option-style");
-        buttons.forEach((btn) => {
-          if (btn.innerText.includes(matchedStyle)) {
-            selectStyle(matchedStyle, btn);
-            toggleAIConsultant();
-          }
-        });
-      };
-    } else if (selectBtn) {
-      selectBtn.style.display = "none";
-    }
-  } catch (error) {
-    console.error(error);
-    if (resultText)
-      resultText.innerText =
-        "Desculpe, não consegui conectar com o consultor agora. Tente escolher manualmente!";
-    resultDiv?.classList.remove("hidden");
-    if (selectBtn) selectBtn.style.display = "none";
-  } finally {
-    loading?.classList.add("hidden");
-  }
 }
 
 loadProgress();
