@@ -347,6 +347,10 @@
                   Pessoa / selfie / casal / família
                 </label>
                 <label class="flex items-center gap-2 text-sm">
+                  <input type="radio" name="q_tipo" value="natureza" />
+                  Paisagem / natureza / viagem
+                </label>
+                <label class="flex items-center gap-2 text-sm">
                   <input type="radio" name="q_tipo" value="produto" />
                   Produto (comida, item pra vender)
                 </label>
@@ -454,15 +458,15 @@
               <div>
                 <div class="flex flex-wrap items-center gap-2">
                   <h3 class="text-xl font-black text-brand-blue">
-                    Estilo 01 — Natural Aprimorado
+                    Estilo 01 — Pessoas | Natural Vivo
                   </h3>
                   <span class="tag"
                     ><i class="fas fa-leaf text-green-600"></i> natural</span
                   >
                 </div>
                 <p class="text-gray-600 mt-2 text-sm">
-                  A mesma foto, só que melhor: mais clara, mais nítida e com
-                  cores equilibradas — sem cara de filtro.
+                  A mesma foto, só que melhor: mais luz, mais clareza e mais
+                  vida — sem cara de filtro.
                 </p>
               </div>
             </div>
@@ -2615,7 +2619,159 @@
           <div class="bg-white rounded-2xl p-5 soft-card md:col-span-2">
             <div class="flex flex-wrap items-center gap-2">
               <h3 class="text-xl font-black text-brand-blue">
-                Estilo 07 — Restauração de Fotos
+                Estilo 07 — Natureza Viva
+              </h3>
+              <span class="tag"
+                ><i class="fas fa-mountain text-brand-orange"></i>
+                natureza</span
+              >
+            </div>
+            <p class="text-gray-600 mt-2 text-sm">
+              A mesma paisagem, só que viva: mais cor, mais profundidade e mais
+              presença visual — sem HDR exagerado e sem cara de filtro.
+            </p>
+
+            <!-- Carrossel (pares Antes/Depois) -->
+            <div class="mt-4 fp-carousel" data-carousel>
+              <div class="fp-slides">
+                <div class="fp-slide is-active">
+                  <div class="grid grid-cols-2 gap-3 p-3">
+                    <div
+                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
+                    >
+                      <img
+                        src="/assets/img/natureza-antes.jpg"
+                        alt="Natureza Antes"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                      />
+                      <p class="text-xs text-gray-500 p-2 font-bold">Antes</p>
+                    </div>
+                    <div
+                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
+                    >
+                      <img
+                        src="/assets/img/natureza-depois.jpg"
+                        alt="Natureza Depois"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                      />
+                      <p class="text-xs text-brand-orange p-2 font-black">
+                        Depois
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Exemplo 2 -->
+                <div class="fp-slide">
+                  <div class="grid grid-cols-2 gap-3 p-3">
+                    <div
+                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
+                    >
+                      <img
+                        src="/assets/img/natureza-ex2-antes.jpg"
+                        alt="Natureza Antes 2"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                      />
+                      <p class="text-xs text-gray-500 p-2 font-bold">Antes</p>
+                    </div>
+                    <div
+                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
+                    >
+                      <img
+                        src="/assets/img/natureza-ex2-depois.jpg"
+                        alt="Natureza Depois 2"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                      />
+                      <p class="text-xs text-brand-orange p-2 font-black">
+                        Depois
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Exemplo 3 -->
+                <div class="fp-slide">
+                  <div class="grid grid-cols-2 gap-3 p-3">
+                    <div
+                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
+                    >
+                      <img
+                        src="/assets/img/natureza-ex3-antes.jpg"
+                        alt="Natureza Antes 3"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                      />
+                      <p class="text-xs text-gray-500 p-2 font-bold">Antes</p>
+                    </div>
+                    <div
+                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
+                    >
+                      <img
+                        src="/assets/img/natureza-ex3-depois.jpg"
+                        alt="Natureza Depois 3"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                      />
+                      <p class="text-xs text-brand-orange p-2 font-black">
+                        Depois
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Adicione mais slides aqui -->
+              </div>
+
+              <div
+                class="absolute inset-0 flex items-center justify-between px-3 pointer-events-none"
+              >
+                <button
+                  class="fp-prev fp-nav-btn pointer-events-auto"
+                  aria-label="Anterior"
+                >
+                  <i class="fas fa-chevron-left text-brand-blue"></i>
+                </button>
+                <button
+                  class="fp-next fp-nav-btn pointer-events-auto"
+                  aria-label="Próximo"
+                >
+                  <i class="fas fa-chevron-right text-brand-blue"></i>
+                </button>
+              </div>
+
+              <div class="py-3">
+                <div class="fp-dots"></div>
+              </div>
+            </div>
+
+            <div class="mt-4 text-sm">
+              <p class="font-bold text-brand-blue">Melhor para:</p>
+              <ul class="list-disc ml-5 text-gray-600 mt-1 space-y-1">
+                <li>Paisagens e fotos de viagem (mar, montanha, floresta)</li>
+                <li>
+                  Fotos apagadas (céu sem cor, água sem detalhe,
+                  neblina/contra-luz)
+                </li>
+                <li>Quando você quer mais vida mantendo realista</li>
+              </ul>
+            </div>
+
+            <a
+              href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20Estilo%2007%20(Natureza%20Viva).%20Vou%20enviar%20a%20foto%20agora."
+              class="mt-4 inline-flex items-center gap-2 border-2 border-brand-orange bg-white text-brand-orange font-extrabold px-4 py-2 rounded-full hover:bg-orange-50 transition text-sm"
+            >
+              <i class="fab fa-whatsapp"></i> Quero este estilo
+            </a>
+          </div>
+
+          <!-- STYLE 08 -->
+          <div class="bg-white rounded-2xl p-5 soft-card md:col-span-2">
+            <div class="flex flex-wrap items-center gap-2">
+              <h3 class="text-xl font-black text-brand-blue">
+                Estilo 08 — Restauração de Fotos
               </h3>
               <span class="tag"
                 ><i class="fas fa-clock-rotate-left text-brand-orange"></i>
@@ -2965,7 +3121,7 @@
             </div>
 
             <a
-              href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20Estilo%2007%20(Restaura%C3%A7%C3%A3o%20de%20Foto)."
+              href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20Estilo%2008%20(Restaura%C3%A7%C3%A3o%20de%20Foto)."
               class="mt-4 inline-flex items-center gap-2 border-2 border-brand-orange bg-white text-brand-orange font-extrabold px-4 py-2 rounded-full hover:bg-orange-50 transition text-sm"
             >
               <i class="fab fa-whatsapp"></i> Quero este estilo
@@ -3042,11 +3198,21 @@
             return;
           }
 
-          if (tipo === "antiga") {
+          if (tipo === "natureza") {
             setSuggestion(
               "Estilo 07",
+              "Natureza Viva",
+              "Olá! Quero melhorar uma paisagem (Estilo 07 — Natureza Viva). Vou enviar a imagem agora.",
+              "Mais vida para mar, montanha e floresta: cor, profundidade e presença visual sem cara de filtro."
+            );
+            return;
+          }
+
+          if (tipo === "antiga") {
+            setSuggestion(
+              "Estilo 08",
               "Restauração de Fotos",
-              "Olá! Quero restaurar uma foto (Estilo 07). Vou enviar a imagem agora.",
+              "Olá! Quero restaurar uma foto (Estilo 08). Vou enviar a imagem agora.",
               "Ideal para fotos antigas, amareladas, riscadas ou com baixa qualidade."
             );
             return;
@@ -3065,8 +3231,8 @@
           if (obj === "natural") {
             setSuggestion(
               "Estilo 01",
-              "Natural Aprimorado",
-              "Olá! Quero melhorar minha foto mantendo natural (Estilo 01). Vou enviar a imagem agora.",
+              "Pessoas | Natural Vivo",
+              "Olá! Quero o Estilo 01 (Pessoas | Natural Vivo). Vou enviar a imagem agora.",
               "A mesma foto, só que melhor: luz, cor e nitidez sem cara de filtro."
             );
             return;
@@ -3094,9 +3260,9 @@
 
           if (obj === "restaurar") {
             setSuggestion(
-              "Estilo 07",
+              "Estilo 08",
               "Restauração de Fotos",
-              "Olá! Quero restaurar uma foto antiga (Estilo 07). Vou enviar a imagem agora.",
+              "Olá! Quero restaurar uma foto antiga (Estilo 08). Vou enviar a imagem agora.",
               "Ideal para fotos antigas, amareladas, riscadas ou com baixa qualidade."
             );
             return;
