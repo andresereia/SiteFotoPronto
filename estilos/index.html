@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -347,10 +347,6 @@
                   Pessoa / selfie / casal / família
                 </label>
                 <label class="flex items-center gap-2 text-sm">
-                  <input type="radio" name="q_tipo" value="natureza" />
-                  Paisagem / natureza / viagem
-                </label>
-                <label class="flex items-center gap-2 text-sm">
                   <input type="radio" name="q_tipo" value="produto" />
                   Produto (comida, item pra vender)
                 </label>
@@ -458,15 +454,15 @@
               <div>
                 <div class="flex flex-wrap items-center gap-2">
                   <h3 class="text-xl font-black text-brand-blue">
-                    Estilo 01 — Pessoas | Natural Vivo
+                    Estilo 01 — Natural Aprimorado
                   </h3>
                   <span class="tag"
                     ><i class="fas fa-leaf text-green-600"></i> natural</span
                   >
                 </div>
                 <p class="text-gray-600 mt-2 text-sm">
-                  A mesma foto, só que melhor: mais luz, mais clareza e mais
-                  vida — sem cara de filtro.
+                  A mesma foto, só que melhor: mais clara, mais nítida e com
+                  cores equilibradas — sem cara de filtro.
                 </p>
               </div>
             </div>
@@ -2619,159 +2615,7 @@
           <div class="bg-white rounded-2xl p-5 soft-card md:col-span-2">
             <div class="flex flex-wrap items-center gap-2">
               <h3 class="text-xl font-black text-brand-blue">
-                Estilo 07 — Natureza Viva
-              </h3>
-              <span class="tag"
-                ><i class="fas fa-mountain text-brand-orange"></i>
-                natureza</span
-              >
-            </div>
-            <p class="text-gray-600 mt-2 text-sm">
-              A mesma paisagem, só que viva: mais cor, mais profundidade e mais
-              presença visual — sem HDR exagerado e sem cara de filtro.
-            </p>
-
-            <!-- Carrossel (pares Antes/Depois) -->
-            <div class="mt-4 fp-carousel" data-carousel>
-              <div class="fp-slides">
-                <div class="fp-slide is-active">
-                  <div class="grid grid-cols-2 gap-3 p-3">
-                    <div
-                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
-                    >
-                      <img
-                        src="/assets/img/natureza-antes.jpg"
-                        alt="Natureza Antes"
-                        class="w-full h-48 object-cover"
-                        loading="lazy"
-                      />
-                      <p class="text-xs text-gray-500 p-2 font-bold">Antes</p>
-                    </div>
-                    <div
-                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
-                    >
-                      <img
-                        src="/assets/img/natureza-depois.jpg"
-                        alt="Natureza Depois"
-                        class="w-full h-48 object-cover"
-                        loading="lazy"
-                      />
-                      <p class="text-xs text-brand-orange p-2 font-black">
-                        Depois
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Exemplo 2 -->
-                <div class="fp-slide">
-                  <div class="grid grid-cols-2 gap-3 p-3">
-                    <div
-                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
-                    >
-                      <img
-                        src="/assets/img/natureza-ex2-antes.jpg"
-                        alt="Natureza Antes 2"
-                        class="w-full h-48 object-cover"
-                        loading="lazy"
-                      />
-                      <p class="text-xs text-gray-500 p-2 font-bold">Antes</p>
-                    </div>
-                    <div
-                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
-                    >
-                      <img
-                        src="/assets/img/natureza-ex2-depois.jpg"
-                        alt="Natureza Depois 2"
-                        class="w-full h-48 object-cover"
-                        loading="lazy"
-                      />
-                      <p class="text-xs text-brand-orange p-2 font-black">
-                        Depois
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Exemplo 3 -->
-                <div class="fp-slide">
-                  <div class="grid grid-cols-2 gap-3 p-3">
-                    <div
-                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
-                    >
-                      <img
-                        src="/assets/img/natureza-ex3-antes.jpg"
-                        alt="Natureza Antes 3"
-                        class="w-full h-48 object-cover"
-                        loading="lazy"
-                      />
-                      <p class="text-xs text-gray-500 p-2 font-bold">Antes</p>
-                    </div>
-                    <div
-                      class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50"
-                    >
-                      <img
-                        src="/assets/img/natureza-ex3-depois.jpg"
-                        alt="Natureza Depois 3"
-                        class="w-full h-48 object-cover"
-                        loading="lazy"
-                      />
-                      <p class="text-xs text-brand-orange p-2 font-black">
-                        Depois
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Adicione mais slides aqui -->
-              </div>
-
-              <div
-                class="absolute inset-0 flex items-center justify-between px-3 pointer-events-none"
-              >
-                <button
-                  class="fp-prev fp-nav-btn pointer-events-auto"
-                  aria-label="Anterior"
-                >
-                  <i class="fas fa-chevron-left text-brand-blue"></i>
-                </button>
-                <button
-                  class="fp-next fp-nav-btn pointer-events-auto"
-                  aria-label="Próximo"
-                >
-                  <i class="fas fa-chevron-right text-brand-blue"></i>
-                </button>
-              </div>
-
-              <div class="py-3">
-                <div class="fp-dots"></div>
-              </div>
-            </div>
-
-            <div class="mt-4 text-sm">
-              <p class="font-bold text-brand-blue">Melhor para:</p>
-              <ul class="list-disc ml-5 text-gray-600 mt-1 space-y-1">
-                <li>Paisagens e fotos de viagem (mar, montanha, floresta)</li>
-                <li>
-                  Fotos apagadas (céu sem cor, água sem detalhe,
-                  neblina/contra-luz)
-                </li>
-                <li>Quando você quer mais vida mantendo realista</li>
-              </ul>
-            </div>
-
-            <a
-              href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20Estilo%2007%20(Natureza%20Viva).%20Vou%20enviar%20a%20foto%20agora."
-              class="mt-4 inline-flex items-center gap-2 border-2 border-brand-orange bg-white text-brand-orange font-extrabold px-4 py-2 rounded-full hover:bg-orange-50 transition text-sm"
-            >
-              <i class="fab fa-whatsapp"></i> Quero este estilo
-            </a>
-          </div>
-
-          <!-- STYLE 08 -->
-          <div class="bg-white rounded-2xl p-5 soft-card md:col-span-2">
-            <div class="flex flex-wrap items-center gap-2">
-              <h3 class="text-xl font-black text-brand-blue">
-                Estilo 08 — Restauração de Fotos
+                Estilo 07 — Restauração de Fotos
               </h3>
               <span class="tag"
                 ><i class="fas fa-clock-rotate-left text-brand-orange"></i>
@@ -3121,7 +2965,7 @@
             </div>
 
             <a
-              href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20Estilo%2008%20(Restaura%C3%A7%C3%A3o%20de%20Foto)."
+              href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20Estilo%2007%20(Restaura%C3%A7%C3%A3o%20de%20Foto)."
               class="mt-4 inline-flex items-center gap-2 border-2 border-brand-orange bg-white text-brand-orange font-extrabold px-4 py-2 rounded-full hover:bg-orange-50 transition text-sm"
             >
               <i class="fab fa-whatsapp"></i> Quero este estilo
@@ -3164,7 +3008,7 @@
     </a>
 
     <script>
-      // ===== Decisor (mantido igual ao seu) =====
+      // ===== Decisor (3 perguntas) =====
       (function () {
         const btn = document.getElementById("btnSuggest");
         const title = document.getElementById("suggestTitle");
@@ -3179,86 +3023,28 @@
         }
 
         function setSuggestion(styleCode, styleName, message, extra) {
-          title.textContent = styleCode + " — " + styleName;
-          desc.textContent = extra || "";
-          const text = encodeURIComponent(message);
-          wa.href = "https://wa.me/5565992726478?text=" + text;
+          if (title) title.textContent = styleCode + " — " + styleName;
+          if (desc) desc.textContent = extra || "";
+          if (wa)
+            wa.href =
+              "https://wa.me/5565992726478?text=" + encodeURIComponent(message);
         }
 
-        btn.addEventListener("click", function () {
-          const tipo = getVal("q_tipo");
-          const obj = getVal("q_obj");
+        if (!btn) return;
 
-          if (!tipo || !obj) {
-            title.textContent = "Preencha as opções acima.";
-            desc.textContent = "É rapidinho — só 2 perguntas.";
-            wa.href =
-              "https://wa.me/5565992726478?text=" +
-              encodeURIComponent("Olá! Quero melhorar minhas fotos.");
-            return;
-          }
+        btn.addEventListener("click", () => {
+          // Q1: tipo de foto
+          const tipo = getVal("tipo"); // pessoa | produto | natureza | antiga
+          // Q2: objetivo
+          const obj = getVal("objetivo"); // natural | profissional | produto | cinema | arte | 3d
+          // Q3: nivel (opcional)
+          const nivel = getVal("nivel"); // sutil | forte (pode não existir no HTML)
 
-          if (tipo === "natureza") {
-            setSuggestion(
-              "Estilo 07",
-              "Natureza Viva",
-              "Olá! Quero melhorar uma paisagem (Estilo 07 — Natureza Viva). Vou enviar a imagem agora.",
-              "Mais vida para mar, montanha e floresta: cor, profundidade e presença visual sem cara de filtro."
-            );
-            return;
-          }
+          // Fallbacks
+          const objetivo = obj || "natural";
 
+          // Foto antiga sempre manda para Restauração (agora Estilo 08)
           if (tipo === "antiga") {
-            setSuggestion(
-              "Estilo 08",
-              "Restauração de Fotos",
-              "Olá! Quero restaurar uma foto (Estilo 08). Vou enviar a imagem agora.",
-              "Ideal para fotos antigas, amareladas, riscadas ou com baixa qualidade."
-            );
-            return;
-          }
-
-          if (tipo === "produto") {
-            setSuggestion(
-              "Estilo 03",
-              "Produto em Destaque",
-              "Olá! Quero melhorar a foto de um produto (Estilo 03). Vou enviar a imagem agora.",
-              "Perfeito para comida/itens de venda: melhora luz, nitidez e apresentação sem inventar nada."
-            );
-            return;
-          }
-
-          if (obj === "natural") {
-            setSuggestion(
-              "Estilo 01",
-              "Pessoas | Natural Vivo",
-              "Olá! Quero o Estilo 01 (Pessoas | Natural Vivo). Vou enviar a imagem agora.",
-              "A mesma foto, só que melhor: luz, cor e nitidez sem cara de filtro."
-            );
-            return;
-          }
-
-          if (obj === "profissional") {
-            setSuggestion(
-              "Estilo 02",
-              "Perfil Profissional",
-              "Olá! Quero uma foto de perfil profissional (Estilo 02). Vou enviar a imagem agora.",
-              "Ideal para LinkedIn/WhatsApp Business: acabamento de estúdio mantendo sua identidade."
-            );
-            return;
-          }
-
-          if (obj === "impacto") {
-            setSuggestion(
-              "Estilo 04",
-              "Cinema / Dramático",
-              "Olá! Quero um efeito cinema/dramático (Estilo 04). Vou enviar a imagem agora.",
-              "Impacto visual com cor viva e atmosfera — mantendo pessoas e o momento."
-            );
-            return;
-          }
-
-          if (obj === "restaurar") {
             setSuggestion(
               "Estilo 08",
               "Restauração de Fotos",
@@ -3268,32 +3054,140 @@
             return;
           }
 
+          // Natureza / Paisagem -> Estilo 07 por padrão (a não ser que a pessoa queira transformação)
+          if (tipo === "natureza") {
+            if (objetivo === "arte") {
+              setSuggestion(
+                "Estilo 05",
+                "Artes & Ilustração",
+                "Olá! Quero transformar minha foto em arte/ilustração (Estilo 05). Vou enviar a imagem agora.",
+                "Perfeito para transformar paisagens em arte sem perder a essência."
+              );
+              return;
+            }
+            if (objetivo === "3d") {
+              setSuggestion(
+                "Estilo 06",
+                "3D / Estilizado",
+                "Olá! Quero transformar minha foto em 3D estilizado (Estilo 06). Vou enviar a imagem agora.",
+                "Ótimo para um visual divertido e diferente."
+              );
+              return;
+            }
+
+            setSuggestion(
+              "Estilo 07",
+              "Natureza Viva",
+              "Olá! Quero dar mais vida a uma foto de paisagem/natureza (Estilo 07). Vou enviar a imagem agora.",
+              "A mesma paisagem, só que viva: mais cor, profundidade e presença visual, sem cara de filtro."
+            );
+            return;
+          }
+
+          // Produto -> Estilo 03 (sempre)
+          if (tipo === "produto") {
+            setSuggestion(
+              "Estilo 03",
+              "Produto em Destaque",
+              "Olá! Quero melhorar a foto de um produto (Estilo 03). Vou enviar a imagem agora.",
+              "Perfeito para itens de venda: melhora luz, nitidez e apresentação sem inventar nada."
+            );
+            return;
+          }
+
+          // Pessoa -> decide por objetivo
+          if (objetivo === "profissional") {
+            setSuggestion(
+              "Estilo 02",
+              "Perfil Profissional",
+              "Olá! Quero uma foto de perfil profissional (Estilo 02). Vou enviar a imagem agora.",
+              "Ideal para LinkedIn/WhatsApp Business: acabamento limpo mantendo sua identidade."
+            );
+            return;
+          }
+
+          if (objetivo === "cinema") {
+            setSuggestion(
+              "Estilo 04",
+              "Cinema / Dramático",
+              "Olá! Quero um estilo cinema/dramático (Estilo 04). Vou enviar a imagem agora.",
+              "Visual mais marcante, com luz e contraste mais dramáticos (sem parecer filtro barato)."
+            );
+            return;
+          }
+
+          if (objetivo === "arte") {
+            setSuggestion(
+              "Estilo 05",
+              "Artes & Ilustração",
+              "Olá! Quero transformar minha foto em arte/ilustração (Estilo 05). Vou enviar a imagem agora.",
+              "Transformação artística: ilustração/arte com acabamento bonito."
+            );
+            return;
+          }
+
+          if (objetivo === "3d") {
+            setSuggestion(
+              "Estilo 06",
+              "3D / Estilizado",
+              "Olá! Quero transformar em 3D estilizado (Estilo 06). Vou enviar a imagem agora.",
+              "Ótimo para avatar/presente. Se você quiser ‘pintura/desenho’, pede Estilo 05."
+            );
+            return;
+          }
+
+          // Default: Pessoas | Natural Vivo (Estilo 01)
           setSuggestion(
-            "Estilo 06",
-            "3D / Estilizado",
-            "Olá! Quero transformar em 3D estilizado (Estilo 06). Vou enviar a imagem agora.",
-            "Ótimo para avatar/presente. Se você quiser ‘pintura/desenho’, pede ESTILO 05."
+            "Estilo 01",
+            "Pessoas | Natural Vivo",
+            "Olá! Quero melhorar minha foto mantendo natural e com mais vida (Estilo 01). Vou enviar a imagem agora.",
+            "A mesma foto, só que melhor: mais luz, clareza e vida — sem cara de filtro."
           );
         });
       })();
 
-      // ===== Carrossel (genérico) =====
+      // ===== Carrossel (auto-remove slides quebrados) =====
       (function () {
         const carousels = document.querySelectorAll("[data-carousel]");
         carousels.forEach((root) => {
           const slidesWrap = root.querySelector(".fp-slides");
-          const slides = Array.from(root.querySelectorAll(".fp-slide"));
           const prevBtn = root.querySelector(".fp-prev");
           const nextBtn = root.querySelector(".fp-next");
           const dotsWrap = root.querySelector(".fp-dots");
 
-          if (!slidesWrap || slides.length === 0) return;
+          if (!slidesWrap) return;
 
-          let idx = slides.findIndex((s) => s.classList.contains("is-active"));
-          if (idx < 0) idx = 0;
+          // Sempre pegamos os slides do DOM (para permitir remover os quebrados)
+          function getSlides() {
+            return Array.from(root.querySelectorAll(".fp-slide"));
+          }
+
+          // Remove slides cujo <img> falhou em carregar (404, etc.)
+          function bindBrokenImageRemoval() {
+            const slides = getSlides();
+            slides.forEach((slide) => {
+              const img = slide.querySelector("img");
+              if (!img) return;
+
+              // Se já existe listener, não duplicar
+              if (img.dataset.fpBound === "1") return;
+              img.dataset.fpBound = "1";
+
+              img.addEventListener("error", () => {
+                // remove o slide inteiro e atualiza UI
+                slide.remove();
+                // re-render do carrossel depois de remover
+                setActive(Math.min(idx, getSlides().length - 1));
+              });
+            });
+          }
+
+          let idx = 0;
 
           function renderDots() {
+            const slides = getSlides();
             if (!dotsWrap) return;
+
             dotsWrap.innerHTML = "";
             slides.forEach((_, i) => {
               const dot = document.createElement("div");
@@ -3306,11 +3200,27 @@
           }
 
           function setActive(i) {
-            slides.forEach((s, k) => s.classList.toggle("is-active", k === i));
-            idx = i;
+            bindBrokenImageRemoval();
 
-            // esconder botões se só 1 slide
-            const multi = slides.length > 1;
+            const slides = getSlides();
+            const count = slides.length;
+
+            // Se não tiver slides válidos, esconder controles
+            if (count === 0) {
+              if (prevBtn) prevBtn.style.display = "none";
+              if (nextBtn) nextBtn.style.display = "none";
+              if (dotsWrap) dotsWrap.style.display = "none";
+              return;
+            }
+
+            // normaliza index
+            idx = Math.max(0, Math.min(i, count - 1));
+
+            slides.forEach((s, k) =>
+              s.classList.toggle("is-active", k === idx)
+            );
+
+            const multi = count > 1;
             if (prevBtn) prevBtn.style.display = multi ? "inline-flex" : "none";
             if (nextBtn) nextBtn.style.display = multi ? "inline-flex" : "none";
             if (dotsWrap) dotsWrap.style.display = multi ? "flex" : "none";
@@ -3319,7 +3229,9 @@
           }
 
           function goTo(i) {
+            const slides = getSlides();
             const n = slides.length;
+            if (n === 0) return;
             const next = (i + n) % n;
             setActive(next);
           }
@@ -3348,7 +3260,11 @@
             else prev();
           });
 
-          setActive(idx);
+          // start: tenta achar is-active, senão 0
+          const initial = getSlides().findIndex((s) =>
+            s.classList.contains("is-active")
+          );
+          setActive(initial >= 0 ? initial : 0);
         });
       })();
     </script>
