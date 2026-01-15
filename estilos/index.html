@@ -3278,50 +3278,119 @@
       })();
 
       // ===== Carrossel (genérico) =====
+      // Regras:
+      // - Dots refletem SOMENTE slides validos (todas as imgs do slide carregam)
+      // - Se qualquer img falhar, remove o slide inteiro do DOM
+      // - Inicializa (ativo/dots/controles) somente apos a validacao
       (function () {
-        const carousels = document.querySelectorAll("[data-carousel]");
-        carousels.forEach((root) => {
+        const TIMEOUT_MS = 4500;
+
+        function preloadImage(src, timeoutMs) {
+          return new Promise((resolve) => {
+            const url = (src || "").trim();
+            if (!url) return resolve(false);
+
+            const img = new Image();
+            let done = false;
+
+            const finish = (ok) => {
+              if (done) return;
+              done = true;
+              resolve(!!ok);
+            };
+
+            img.onload = () => finish(img.naturalWidth > 0);
+            img.onerror = () => finish(false);
+
+            // Timeout de seguranca
+            setTimeout(() => finish(img.naturalWidth > 0), timeoutMs);
+
+            img.src = url;
+          });
+        }
+
+        async function slideIsValid(slideEl) {
+          const imgs = Array.from(slideEl.querySelectorAll("img"));
+          if (imgs.length === 0) return false;
+
+          const checks = await Promise.all(
+            imgs.map((el) => preloadImage(el.getAttribute("src"), TIMEOUT_MS))
+          );
+
+          return checks.every(Boolean);
+        }
+
+        function getSlides(root) {
+          const wrap = root.querySelector(".fp-slides");
+          if (!wrap) return [];
+          return Array.from(wrap.querySelectorAll(":scope > .fp-slide"));
+        }
+
+        function setActive(slides, i) {
+          slides.forEach((s, k) => s.classList.toggle("is-active", k === i));
+        }
+
+        function renderDots(dotsWrap, slidesLen, idx, goTo) {
+          if (!dotsWrap) return;
+          dotsWrap.innerHTML = "";
+          for (let i = 0; i < slidesLen; i++) {
+            const dot = document.createElement("div");
+            dot.className = "fp-dot" + (i === idx ? " is-active" : "");
+            dot.setAttribute("role", "button");
+            dot.setAttribute("aria-label", "Ir para slide " + (i + 1));
+            dot.addEventListener("click", () => goTo(i));
+            dotsWrap.appendChild(dot);
+          }
+        }
+
+        function updateControls(prevBtn, nextBtn, dotsWrap, slidesLen) {
+          const multi = slidesLen > 1;
+          if (prevBtn) prevBtn.style.display = multi ? "inline-flex" : "none";
+          if (nextBtn) nextBtn.style.display = multi ? "inline-flex" : "none";
+          if (dotsWrap) dotsWrap.style.display = multi ? "flex" : "none";
+        }
+
+        async function initOne(root) {
           const slidesWrap = root.querySelector(".fp-slides");
-          const slides = Array.from(root.querySelectorAll(".fp-slide"));
           const prevBtn = root.querySelector(".fp-prev");
           const nextBtn = root.querySelector(".fp-next");
           const dotsWrap = root.querySelector(".fp-dots");
 
-          if (!slidesWrap || slides.length === 0) return;
+          if (!slidesWrap) return;
 
-          let idx = slides.findIndex((s) => s.classList.contains("is-active"));
-          if (idx < 0) idx = 0;
+          // 1) coletar slides
+          let slides = getSlides(root);
+          if (slides.length === 0) return;
 
-          function renderDots() {
-            if (!dotsWrap) return;
-            dotsWrap.innerHTML = "";
-            slides.forEach((_, i) => {
-              const dot = document.createElement("div");
-              dot.className = "fp-dot" + (i === idx ? " is-active" : "");
-              dot.setAttribute("role", "button");
-              dot.setAttribute("aria-label", "Ir para slide " + (i + 1));
-              dot.addEventListener("click", () => goTo(i));
-              dotsWrap.appendChild(dot);
-            });
+          // 2) esperar load/error das imagens (com timeout) + 3) remover slides invalidos
+          //    (remove se QUALQUER img falhar)
+          const keep = [];
+          for (const slide of slides) {
+            // remove "is-active" de todos por enquanto pra evitar idx quebrado
+            slide.classList.remove("is-active");
+
+            const ok = await slideIsValid(slide);
+            if (ok) keep.push(slide);
+            else slide.remove();
           }
 
-          function setActive(i) {
-            slides.forEach((s, k) => s.classList.toggle("is-active", k === i));
-            idx = i;
+          slides = keep;
 
-            // esconder botões se só 1 slide
-            const multi = slides.length > 1;
-            if (prevBtn) prevBtn.style.display = multi ? "inline-flex" : "none";
-            if (nextBtn) nextBtn.style.display = multi ? "inline-flex" : "none";
-            if (dotsWrap) dotsWrap.style.display = multi ? "flex" : "none";
-
-            renderDots();
+          // Se tudo falhou, esconde o carousel inteiro
+          if (slides.length === 0) {
+            root.style.display = "none";
+            return;
           }
+
+          // 4) setar o primeiro como ativo
+          let idx = 0;
+          setActive(slides, idx);
 
           function goTo(i) {
             const n = slides.length;
-            const next = (i + n) % n;
-            setActive(next);
+            idx = (i + n) % n;
+            setActive(slides, idx);
+            renderDots(dotsWrap, n, idx, goTo);
           }
 
           function next() {
@@ -3331,25 +3400,40 @@
             goTo(idx - 1);
           }
 
-          if (nextBtn) nextBtn.addEventListener("click", next);
-          if (prevBtn) prevBtn.addEventListener("click", prev);
+          // Garantir que nao duplica listeners ao recarregar via cache do navegador
+          if (nextBtn) {
+            nextBtn.onclick = next;
+          }
+          if (prevBtn) {
+            prevBtn.onclick = prev;
+          }
 
-          // swipe simples (mobile)
+          // 5) renderizar dots e controles com base no numero final de slides
+          updateControls(prevBtn, nextBtn, dotsWrap, slides.length);
+          renderDots(dotsWrap, slides.length, idx, goTo);
+
+          // swipe simples (mobile) - no wrapper
           let startX = 0;
           let endX = 0;
           slidesWrap.addEventListener("touchstart", (e) => {
             startX = e.changedTouches[0].screenX;
-          });
+          }, { passive: true });
           slidesWrap.addEventListener("touchend", (e) => {
             endX = e.changedTouches[0].screenX;
             const diff = endX - startX;
             if (Math.abs(diff) < 40) return;
             if (diff < 0) next();
             else prev();
-          });
+          }, { passive: true });
+        }
 
-          setActive(idx);
-        });
+        (async function () {
+          const carousels = document.querySelectorAll("[data-carousel]");
+          for (const root of carousels) {
+            // init em sequencia pra nao estourar conexoes (e fica mais previsivel)
+            await initOne(root);
+          }
+        })();
       })();
     </script>
   </body>
