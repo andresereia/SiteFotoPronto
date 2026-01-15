@@ -3008,7 +3008,7 @@
     </a>
 
     <script>
-      // ===== Decisor (3 perguntas) =====
+      // ===== Decisor (corrigido p/ seus names reais: q_tipo e q_obj) =====
       (function () {
         const btn = document.getElementById("btnSuggest");
         const title = document.getElementById("suggestTitle");
@@ -3033,18 +3033,21 @@
         if (!btn) return;
 
         btn.addEventListener("click", () => {
-          // Q1: tipo de foto
-          const tipo = getVal("tipo"); // pessoa | produto | natureza | antiga
-          // Q2: objetivo
-          const obj = getVal("objetivo"); // natural | profissional | produto | cinema | arte | 3d
-          // Q3: nivel (opcional)
-          const nivel = getVal("nivel"); // sutil | forte (pode não existir no HTML)
+          const tipo = getVal("q_tipo"); // pessoa | produto | antiga
+          const obj = getVal("q_obj"); // natural | profissional | impacto | criativo | restaurar
 
-          // Fallbacks
-          const objetivo = obj || "natural";
+          if (!tipo || !obj) {
+            setSuggestion(
+              "—",
+              "Selecione as opções",
+              "Olá! Tenho dúvida sobre qual estilo escolher. Posso enviar minha foto?",
+              "Escolha 1 opção em cada pergunta acima."
+            );
+            return;
+          }
 
-          // Foto antiga sempre manda para Restauração (agora Estilo 08)
-          if (tipo === "antiga") {
+          // Foto antiga / danificada -> (no seu plano: Estilo 08 Restauração)
+          if (tipo === "antiga" || obj === "restaurar") {
             setSuggestion(
               "Estilo 08",
               "Restauração de Fotos",
@@ -3054,37 +3057,7 @@
             return;
           }
 
-          // Natureza / Paisagem -> Estilo 07 por padrão (a não ser que a pessoa queira transformação)
-          if (tipo === "natureza") {
-            if (objetivo === "arte") {
-              setSuggestion(
-                "Estilo 05",
-                "Artes & Ilustração",
-                "Olá! Quero transformar minha foto em arte/ilustração (Estilo 05). Vou enviar a imagem agora.",
-                "Perfeito para transformar paisagens em arte sem perder a essência."
-              );
-              return;
-            }
-            if (objetivo === "3d") {
-              setSuggestion(
-                "Estilo 06",
-                "3D / Estilizado",
-                "Olá! Quero transformar minha foto em 3D estilizado (Estilo 06). Vou enviar a imagem agora.",
-                "Ótimo para um visual divertido e diferente."
-              );
-              return;
-            }
-
-            setSuggestion(
-              "Estilo 07",
-              "Natureza Viva",
-              "Olá! Quero dar mais vida a uma foto de paisagem/natureza (Estilo 07). Vou enviar a imagem agora.",
-              "A mesma paisagem, só que viva: mais cor, profundidade e presença visual, sem cara de filtro."
-            );
-            return;
-          }
-
-          // Produto -> Estilo 03 (sempre)
+          // Produto -> Estilo 03
           if (tipo === "produto") {
             setSuggestion(
               "Estilo 03",
@@ -3095,8 +3068,8 @@
             return;
           }
 
-          // Pessoa -> decide por objetivo
-          if (objetivo === "profissional") {
+          // Pessoa -> objetivo
+          if (obj === "profissional") {
             setSuggestion(
               "Estilo 02",
               "Perfil Profissional",
@@ -3106,50 +3079,61 @@
             return;
           }
 
-          if (objetivo === "cinema") {
+          if (obj === "impacto") {
             setSuggestion(
               "Estilo 04",
               "Cinema / Dramático",
               "Olá! Quero um estilo cinema/dramático (Estilo 04). Vou enviar a imagem agora.",
-              "Visual mais marcante, com luz e contraste mais dramáticos (sem parecer filtro barato)."
+              "Visual mais marcante, com clima e profundidade, sem cara de filtro barato."
             );
             return;
           }
 
-          if (objetivo === "arte") {
+          if (obj === "criativo") {
+            // aqui você pode decidir se sugere 05 ou 06 primeiro
             setSuggestion(
               "Estilo 05",
-              "Artes & Ilustração",
+              "Arte & Ilustração",
               "Olá! Quero transformar minha foto em arte/ilustração (Estilo 05). Vou enviar a imagem agora.",
-              "Transformação artística: ilustração/arte com acabamento bonito."
+              "Ótimo para presente e emoção. Se quiser “avatar 3D”, pede Estilo 06."
             );
             return;
           }
 
-          if (objetivo === "3d") {
-            setSuggestion(
-              "Estilo 06",
-              "3D / Estilizado",
-              "Olá! Quero transformar em 3D estilizado (Estilo 06). Vou enviar a imagem agora.",
-              "Ótimo para avatar/presente. Se você quiser ‘pintura/desenho’, pede Estilo 05."
-            );
-            return;
-          }
-
-          // Default: Pessoas | Natural Vivo (Estilo 01)
+          // Default: Natural (Estilo 01)
           setSuggestion(
             "Estilo 01",
-            "Pessoas | Natural Vivo",
-            "Olá! Quero melhorar minha foto mantendo natural e com mais vida (Estilo 01). Vou enviar a imagem agora.",
-            "A mesma foto, só que melhor: mais luz, clareza e vida — sem cara de filtro."
+            "Natural Aprimorado",
+            "Olá! Quero melhorar minha foto mantendo natural (Estilo 01). Vou enviar a imagem agora.",
+            "A mesma foto, só que melhor: luz, cores equilibradas e mais nitidez — sem cara de filtro."
           );
         });
       })();
 
-      // ===== Carrossel (auto-remove slides quebrados) =====
+      // ===== Carrossel (PRE-VALIDA imagens -> dots corretos no F5) =====
       (function () {
-        const carousels = document.querySelectorAll("[data-carousel]");
-        carousels.forEach((root) => {
+        function checkImage(src) {
+          return new Promise((resolve) => {
+            if (!src) return resolve(false);
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = src;
+          });
+        }
+
+        async function validateSlide(slide) {
+          const imgs = Array.from(slide.querySelectorAll("img"));
+          if (imgs.length === 0) return false;
+
+          // Se QUALQUER imagem do slide falhar, derruba o slide.
+          const results = await Promise.all(
+            imgs.map((im) => checkImage(im.getAttribute("src")))
+          );
+          return results.every(Boolean);
+        }
+
+        async function initCarousel(root) {
           const slidesWrap = root.querySelector(".fp-slides");
           const prevBtn = root.querySelector(".fp-prev");
           const nextBtn = root.querySelector(".fp-next");
@@ -3157,38 +3141,35 @@
 
           if (!slidesWrap) return;
 
-          // Sempre pegamos os slides do DOM (para permitir remover os quebrados)
-          function getSlides() {
-            return Array.from(root.querySelectorAll(".fp-slide"));
+          // 1) Pré-validar e remover slides inválidos ANTES de montar dots
+          let slides = Array.from(root.querySelectorAll(".fp-slide"));
+          const validity = await Promise.all(slides.map(validateSlide));
+
+          slides.forEach((slide, i) => {
+            if (!validity[i]) slide.remove();
+          });
+
+          slides = Array.from(root.querySelectorAll(".fp-slide"));
+
+          // 2) Se não sobrou nada, esconde UI
+          if (slides.length === 0) {
+            if (prevBtn) prevBtn.style.display = "none";
+            if (nextBtn) nextBtn.style.display = "none";
+            if (dotsWrap) dotsWrap.style.display = "none";
+            return;
           }
 
-          // Remove slides cujo <img> falhou em carregar (404, etc.)
-          function bindBrokenImageRemoval() {
-            const slides = getSlides();
-            slides.forEach((slide) => {
-              const img = slide.querySelector("img");
-              if (!img) return;
-
-              // Se já existe listener, não duplicar
-              if (img.dataset.fpBound === "1") return;
-              img.dataset.fpBound = "1";
-
-              img.addEventListener("error", () => {
-                // remove o slide inteiro e atualiza UI
-                slide.remove();
-                // re-render do carrossel depois de remover
-                setActive(Math.min(idx, getSlides().length - 1));
-              });
-            });
-          }
-
-          let idx = 0;
+          // 3) Estado
+          let idx = Math.max(
+            0,
+            slides.findIndex((s) => s.classList.contains("is-active"))
+          );
+          if (idx < 0) idx = 0;
 
           function renderDots() {
-            const slides = getSlides();
             if (!dotsWrap) return;
-
             dotsWrap.innerHTML = "";
+
             slides.forEach((_, i) => {
               const dot = document.createElement("div");
               dot.className = "fp-dot" + (i === idx ? " is-active" : "");
@@ -3200,22 +3181,11 @@
           }
 
           function setActive(i) {
-            bindBrokenImageRemoval();
-
-            const slides = getSlides();
+            slides = Array.from(root.querySelectorAll(".fp-slide"));
             const count = slides.length;
+            if (count === 0) return;
 
-            // Se não tiver slides válidos, esconder controles
-            if (count === 0) {
-              if (prevBtn) prevBtn.style.display = "none";
-              if (nextBtn) nextBtn.style.display = "none";
-              if (dotsWrap) dotsWrap.style.display = "none";
-              return;
-            }
-
-            // normaliza index
             idx = Math.max(0, Math.min(i, count - 1));
-
             slides.forEach((s, k) =>
               s.classList.toggle("is-active", k === idx)
             );
@@ -3229,10 +3199,9 @@
           }
 
           function goTo(i) {
-            const slides = getSlides();
-            const n = slides.length;
-            if (n === 0) return;
-            const next = (i + n) % n;
+            const count = slides.length;
+            if (count === 0) return;
+            const next = (i + count) % count;
             setActive(next);
           }
 
@@ -3246,12 +3215,14 @@
           if (nextBtn) nextBtn.addEventListener("click", next);
           if (prevBtn) prevBtn.addEventListener("click", prev);
 
-          // swipe simples (mobile)
+          // 4) Swipe
           let startX = 0;
           let endX = 0;
+
           slidesWrap.addEventListener("touchstart", (e) => {
             startX = e.changedTouches[0].screenX;
           });
+
           slidesWrap.addEventListener("touchend", (e) => {
             endX = e.changedTouches[0].screenX;
             const diff = endX - startX;
@@ -3260,12 +3231,22 @@
             else prev();
           });
 
-          // start: tenta achar is-active, senão 0
-          const initial = getSlides().findIndex((s) =>
-            s.classList.contains("is-active")
-          );
-          setActive(initial >= 0 ? initial : 0);
-        });
+          // 5) Ativa inicial
+          setActive(idx);
+        }
+
+        async function initAll() {
+          const carousels = document.querySelectorAll("[data-carousel]");
+          for (const root of carousels) {
+            await initCarousel(root);
+          }
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initAll);
+        } else {
+          initAll();
+        }
       })();
     </script>
   </body>
