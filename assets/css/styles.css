@@ -1,3 +1,19 @@
+/*
+  FONT RENDERING (Windows/Chrome): reduce “quadriculado” look
+  - Improves glyph smoothing without changing layout
+*/
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  /* Some browsers still honor this legacy hint */
+  font-smooth: always;
+}
+
+
 /* BASE + NOISE (Usado na Navbar) */
 .bg-base-noise {
   background-color: #0b0e2a;
