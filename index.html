@@ -42,33 +42,14 @@
       rel="stylesheet"
     />
 
-    <!-- FontAwesome for Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                blue: "#0b0e2a",
-                orange: "#ff6a00",
-                orangeHover: "#e55f00",
-                light: "#f8f9fa",
-              },
-            },
-            fontFamily: {
-              sans: ["Montserrat", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+<!-- Tailwind (compiled) -->
+    <link rel="stylesheet" href="assets/css/tailwind.min.css" />
 
     <!-- CSS separado -->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -79,7 +60,7 @@
     <nav class="bg-base-noise py-3 md:py-4 shadow-md sticky top-0 z-50">
       <div class="container mx-auto px-6 flex justify-between items-center">
         <!-- ÁREA DA LOGO (SVG EMBUTIDO) -->
-        <a href="#" class="block">
+        <a href="#" class="block" aria-label="FotoPronto - Início">
           <svg
             viewBox="0 0 860 467"
             fill="none"
@@ -182,6 +163,7 @@
       </div>
     </nav>
 
+    <main id="main" role="main">
     <!-- 1. Hero Section -->
     <header
       class="bg-hero-premium text-white pt-8 pb-12 md:pt-16 md:pb-20 relative overflow-hidden"
@@ -362,13 +344,13 @@
 
     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
         <picture>
-    <source type="image/webp" srcset="assets/img/natural-depois-540.webp 540w, assets/img/natural-depois-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/natural-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/natural-depois.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/natural-depois-360.webp 360w, assets/img/natural-depois-540.webp 540w, assets/img/natural-depois-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/natural-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/natural-depois.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
       <div class="style-slider-overlay">
           <picture>
-    <source type="image/webp" srcset="assets/img/natural-antes-540.webp 540w, assets/img/natural-antes-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/natural-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/natural-antes.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/natural-antes-360.webp 360w, assets/img/natural-antes-540.webp 540w, assets/img/natural-antes-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/natural-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/natural-antes.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
@@ -398,13 +380,13 @@
 
     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
         <picture>
-    <source type="image/webp" srcset="assets/img/profissional-depois-540.webp 540w, assets/img/profissional-depois-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/profissional-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/profissional-depois.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/profissional-depois-360.webp 360w, assets/img/profissional-depois-540.webp 540w, assets/img/profissional-depois-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/profissional-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/profissional-depois.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
       <div class="style-slider-overlay">
           <picture>
-    <source type="image/webp" srcset="assets/img/profissional-antes-540.webp 540w, assets/img/profissional-antes-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/profissional-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/profissional-antes.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/profissional-antes-360.webp 360w, assets/img/profissional-antes-540.webp 540w, assets/img/profissional-antes-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/profissional-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/profissional-antes.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
@@ -434,13 +416,13 @@
 
     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
         <picture>
-    <source type="image/webp" srcset="assets/img/produto-depois-540.webp 540w, assets/img/produto-depois-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/produto-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/produto-depois.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/produto-depois-360.webp 360w, assets/img/produto-depois-540.webp 540w, assets/img/produto-depois-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/produto-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/produto-depois.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
       <div class="style-slider-overlay">
           <picture>
-    <source type="image/webp" srcset="assets/img/produto-antes-540.webp 540w, assets/img/produto-antes-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/produto-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/produto-antes.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/produto-antes-360.webp 360w, assets/img/produto-antes-540.webp 540w, assets/img/produto-antes-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/produto-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/produto-antes.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
@@ -470,13 +452,13 @@
 
     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
         <picture>
-    <source type="image/webp" srcset="assets/img/cinema-depois-540.webp 540w, assets/img/cinema-depois-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/cinema-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/cinema-depois.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/cinema-depois-360.webp 360w, assets/img/cinema-depois-540.webp 540w, assets/img/cinema-depois-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/cinema-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/cinema-depois.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
       <div class="style-slider-overlay">
           <picture>
-    <source type="image/webp" srcset="assets/img/cinema-antes-540.webp 540w, assets/img/cinema-antes-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/cinema-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/cinema-antes.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/cinema-antes-360.webp 360w, assets/img/cinema-antes-540.webp 540w, assets/img/cinema-antes-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/cinema-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/cinema-antes.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
@@ -506,13 +488,13 @@
 
     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
         <picture>
-    <source type="image/webp" srcset="assets/img/arte-depois-540.webp 540w, assets/img/arte-depois-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/arte-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/arte-depois.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/arte-depois-360.webp 360w, assets/img/arte-depois-540.webp 540w, assets/img/arte-depois-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/arte-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/arte-depois.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
       <div class="style-slider-overlay">
           <picture>
-    <source type="image/webp" srcset="assets/img/arte-antes-540.webp 540w, assets/img/arte-antes-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/arte-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/arte-antes.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/arte-antes-360.webp 360w, assets/img/arte-antes-540.webp 540w, assets/img/arte-antes-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/arte-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/arte-antes.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
@@ -542,13 +524,13 @@
 
     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
         <picture>
-    <source type="image/webp" srcset="assets/img/3d-depois-540.webp 540w, assets/img/3d-depois-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/3d-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/3d-depois.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/3d-depois-360.webp 360w, assets/img/3d-depois-540.webp 540w, assets/img/3d-depois-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/3d-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/3d-depois.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
       <div class="style-slider-overlay">
           <picture>
-    <source type="image/webp" srcset="assets/img/3d-antes-540.webp 540w, assets/img/3d-antes-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/3d-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/3d-antes.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/3d-antes-360.webp 360w, assets/img/3d-antes-540.webp 540w, assets/img/3d-antes-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/3d-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/3d-antes.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
@@ -578,13 +560,13 @@
 
     <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
         <picture>
-    <source type="image/webp" srcset="assets/img/natureza-depois-540.webp 540w, assets/img/natureza-depois-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/natureza-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/natureza-depois.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/natureza-depois-360.webp 360w, assets/img/natureza-depois-540.webp 540w, assets/img/natureza-depois-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/natureza-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/natureza-depois.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
       <div class="style-slider-overlay">
           <picture>
-    <source type="image/webp" srcset="assets/img/natureza-antes-540.webp 540w, assets/img/natureza-antes-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/natureza-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/natureza-antes.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/natureza-antes-360.webp 360w, assets/img/natureza-antes-540.webp 540w, assets/img/natureza-antes-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/natureza-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/natureza-antes.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
@@ -616,13 +598,13 @@
 
   <div class="style-slider-container aspect-[4/5] w-full rounded-xl relative group max-h-[60vh] md:max-h-[520px]">
       <picture>
-    <source type="image/webp" srcset="assets/img/restauracao-ex7-depois-540.webp 540w, assets/img/restauracao-ex7-depois-1080.webp 1350w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/restauracao-ex7-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1350" height="1080" srcset="assets/img/restauracao-ex7-depois.jpg 1350w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/restauracao-ex7-depois-540.webp 540w, assets/img/restauracao-ex7-depois-1080.webp 1350w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/restauracao-ex7-depois.jpg" alt="Depois" class="style-slider-img" loading="lazy" decoding="async" width="1350" height="1080" srcset="assets/img/restauracao-ex7-depois.jpg 1350w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
     <div class="style-slider-overlay">
         <picture>
-    <source type="image/webp" srcset="assets/img/restauracao-ex7-antes-540.webp 540w, assets/img/restauracao-ex7-antes-1080.webp 1350w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/restauracao-ex7-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1350" height="1080" srcset="assets/img/restauracao-ex7-antes.jpg 1350w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/restauracao-ex7-antes-540.webp 540w, assets/img/restauracao-ex7-antes-1080.webp 1350w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/restauracao-ex7-antes.jpg" alt="Antes" class="style-slider-img" loading="lazy" decoding="async" width="1350" height="1080" srcset="assets/img/restauracao-ex7-antes.jpg 1350w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
       <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
     </div>
@@ -879,8 +861,8 @@
             >
               <div class="relative overflow-hidden aspect-[3/4]">
                   <picture>
-    <source type="image/webp" srcset="assets/img/restauracao-ex2-antes-540.webp 540w, assets/img/restauracao-ex2-antes-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/restauracao-ex2-antes.jpg" alt="Foto Antiga Antes" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/restauracao-ex2-antes.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/restauracao-ex2-antes-360.webp 360w, assets/img/restauracao-ex2-antes-540.webp 540w, assets/img/restauracao-ex2-antes-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/restauracao-ex2-antes.jpg" alt="Foto Antiga Antes" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/restauracao-ex2-antes.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
               </div>
               <div class="text-center mt-2">
@@ -895,8 +877,8 @@
             >
               <div class="relative overflow-hidden aspect-[3/4]">
                   <picture>
-    <source type="image/webp" srcset="assets/img/restauracao-ex2-depois-540.webp 540w, assets/img/restauracao-ex2-depois-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/restauracao-ex2-depois.jpg" alt="Foto Restaurada Depois" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/restauracao-ex2-depois.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/restauracao-ex2-depois-360.webp 360w, assets/img/restauracao-ex2-depois-540.webp 540w, assets/img/restauracao-ex2-depois-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/restauracao-ex2-depois.jpg" alt="Foto Restaurada Depois" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1080" height="1350" srcset="assets/img/restauracao-ex2-depois.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
               </div>
               <div class="text-center mt-2">
@@ -931,24 +913,24 @@
             class="flex-shrink-0 w-[85%] md:w-auto snap-center bg-gray-100 rounded-xl p-4 border border-gray-200 shadow-sm flex items-center justify-center h-64 md:h-80 relative overflow-hidden"
           >
               <picture>
-    <source type="image/webp" srcset="assets/img/print1-540.webp 540w, assets/img/print1-1080.webp 1200w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/print1.jpg" alt="Depoimento 1" class="absolute inset-0 w-full h-full object-cover z-10" loading="lazy" decoding="async" width="1200" height="900" srcset="assets/img/print1.jpg 1200w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/print1-540.webp 540w, assets/img/print1-1080.webp 1200w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/print1.jpg" alt="Depoimento 1" class="absolute inset-0 w-full h-full object-cover z-10" loading="lazy" decoding="async" width="1200" height="900" srcset="assets/img/print1.jpg 1200w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
           </div>
           <div
             class="flex-shrink-0 w-[85%] md:w-auto snap-center bg-gray-100 rounded-xl p-4 border border-gray-200 shadow-sm flex items-center justify-center h-64 md:h-80 relative overflow-hidden"
           >
               <picture>
-    <source type="image/webp" srcset="assets/img/print2-540.webp 540w, assets/img/print2-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/print2.jpg" alt="Depoimento 2" class="absolute inset-0 w-full h-full object-cover z-10" loading="lazy" decoding="async" srcset="assets/img/print2.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/print2-360.webp 360w, assets/img/print2-540.webp 540w, assets/img/print2-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/print2.jpg" alt="Depoimento 2" class="absolute inset-0 w-full h-full object-cover z-10" loading="lazy" decoding="async" srcset="assets/img/print2.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
           </div>
           <div
             class="flex-shrink-0 w-[85%] md:w-auto snap-center bg-gray-100 rounded-xl p-4 border border-gray-200 shadow-sm flex items-center justify-center h-64 md:h-80 relative overflow-hidden"
           >
               <picture>
-    <source type="image/webp" srcset="assets/img/print3-540.webp 540w, assets/img/print3-1080.webp 1080w" sizes="(max-width: 768px) 92vw, 520px" />
-    <img src="assets/img/print3.jpg" alt="Depoimento 3" class="absolute inset-0 w-full h-full object-cover z-10" loading="lazy" decoding="async" srcset="assets/img/print3.jpg 1080w" sizes="(max-width: 768px) 92vw, 520px" />
+    <source type="image/webp" srcset="assets/img/print3-360.webp 360w, assets/img/print3-540.webp 540w, assets/img/print3-1080.webp 1080w" sizes="(max-width: 768px) 90vw, 520px" />
+    <img src="assets/img/print3.jpg" alt="Depoimento 3" class="absolute inset-0 w-full h-full object-cover z-10" loading="lazy" decoding="async" srcset="assets/img/print3.jpg 1080w" sizes="(max-width: 768px) 90vw, 520px" />
   </picture>
           </div>
         </div>
@@ -1104,6 +1086,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer
       class="bg-brand-blue text-gray-400 py-6 md:py-8 text-center text-xs md:text-sm border-t border-gray-800 pb-24"
     >
@@ -1126,6 +1110,7 @@
       href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Vim%20pelo%20site."
       class="whatsapp-float wa-link-btn"
       target="_blank"
+      aria-label="Abrir conversa no WhatsApp"
       data-message="Olá! Vim pelo site e quero melhorar minhas fotos."
     >
       <i class="fab fa-whatsapp"></i>
@@ -1565,11 +1550,5 @@
 
     <!-- JS separado (depois do HTML) -->
     <script src="assets/js/main.js" defer></script>
-
-    <!-- Vercel Speed Insights -->
-    <script>
-      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
   </body>
 </html>
