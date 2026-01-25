@@ -1,4 +1,4 @@
-/*
+﻿/*
   FONT RENDERING (Windows/Chrome): reduce “quadriculado” look
   - Improves glyph smoothing without changing layout
 */
@@ -272,14 +272,12 @@ details[open] summary ~ * {
    =========================== */
 
 .bg-commercial-premium{
-  /* Fallback sólido (evita “tela branca” no mobile caso algum background não renderize) */
-  background: #0B0E2A !important;
-  background-color: #0B0E2A !important;
-  color: #ffffff;
-  background-image:
-    radial-gradient(900px 420px at 12% -10%, rgba(255,106,0,.32), transparent 60%),
-    radial-gradient(820px 380px at 88% 0%, rgba(5,111,185,.28), transparent 62%),
-    radial-gradient(640px 360px at 50% 115%, rgba(255,178,2,.12), transparent 60%);
+  background-color: #0b0e2a;
+  color: #fff;
+  background:
+    radial-gradient(900px 400px at 15% 20%, rgba(255,106,0,.22), rgba(255,106,0,0) 60%),
+    radial-gradient(900px 420px at 85% 40%, rgba(255,255,255,.08), rgba(255,255,255,0) 55%),
+    linear-gradient(180deg, #0b0e2a 0%, #07091a 100%);
 }
 
 .pp-bullet{
@@ -467,7 +465,7 @@ details[open] summary ~ * {
 }
 .pp-half img{
   width: 100%;
-  height: auto; /* evita colapsar em alguns mobiles */
+  height: 100%;
   display: block;
   object-fit: cover;
   aspect-ratio: 4/5;
