@@ -252,6 +252,8 @@ details[open] summary ~ * {
    =========================== */
 
 .bg-commercial-premium{
+  background-color: #0b0e2a;
+  color: #fff;
   background:
     radial-gradient(900px 400px at 15% 20%, rgba(255,106,0,.22), rgba(255,106,0,0) 60%),
     radial-gradient(900px 420px at 85% 40%, rgba(255,255,255,.08), rgba(255,255,255,0) 55%),
