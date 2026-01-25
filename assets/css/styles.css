@@ -16,6 +16,23 @@ body {
 .card-title {
   color: #0b0e2a;
 }
+.style-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+.style-subtitle {
+  margin-top: 2px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #6b7280;
+}
 
 
 /* BASE + NOISE (Usado na Navbar) */
