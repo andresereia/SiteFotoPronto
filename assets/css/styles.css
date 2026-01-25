@@ -1,4 +1,4 @@
-/*
+﻿/*
   FONT RENDERING (Windows/Chrome): reduce “quadriculado” look
   - Improves glyph smoothing without changing layout
 */
@@ -26,6 +26,10 @@ body {
   font-size: 12px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   background: #fff;
+  color: #0b0e2a;
+}
+.style-tag i {
+  color: #ff6a00;
 }
 .style-subtitle {
   margin-top: 2px;
@@ -535,3 +539,4 @@ details[open] summary ~ * {
   .pp-slide{ padding: 12px; }
   .pp-nav{ width: 40px; height: 40px; }
 }
+
