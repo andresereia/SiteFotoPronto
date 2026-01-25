@@ -556,3 +556,95 @@ async function askGemini() {
 }
 
 loadProgress();
+
+
+
+// ===========================
+// Produto Publicitário - Carrossel (somente neste bloco)
+// ===========================
+document.addEventListener("DOMContentLoaded", function () {
+  const carousels = document.querySelectorAll("[data-pp-carousel]");
+  carousels.forEach((carousel) => {
+    const track = carousel.querySelector("[data-pp-track]");
+    const slides = Array.from(carousel.querySelectorAll("[data-pp-slide]"));
+    const prevBtn = carousel.querySelector("[data-pp-prev]");
+    const nextBtn = carousel.querySelector("[data-pp-next]");
+    const dotsWrap = carousel.querySelector("[data-pp-dots]");
+
+    if (!track || slides.length === 0) return;
+
+    let index = 0;
+    let startX = 0;
+    let isDragging = false;
+
+    // dots
+    const dots = slides.map((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "pp-dot" + (i === 0 ? " active" : "");
+      b.setAttribute("aria-label", `Ir para o slide ${i + 1}`);
+      b.addEventListener("click", () => goTo(i));
+      dotsWrap && dotsWrap.appendChild(b);
+      return b;
+    });
+
+    function update() {
+      track.style.transform = `translateX(${-index * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle("active", i === index));
+      if (prevBtn) prevBtn.disabled = slides.length <= 1;
+      if (nextBtn) nextBtn.disabled = slides.length <= 1;
+    }
+
+    function clamp(i) {
+      if (i < 0) return slides.length - 1;
+      if (i >= slides.length) return 0;
+      return i;
+    }
+
+    function goTo(i) {
+      index = clamp(i);
+      update();
+    }
+
+    function next() {
+      goTo(index + 1);
+    }
+
+    function prev() {
+      goTo(index - 1);
+    }
+
+    prevBtn && prevBtn.addEventListener("click", prev);
+    nextBtn && nextBtn.addEventListener("click", next);
+
+    // Swipe (mobile)
+    const onDown = (clientX) => {
+      isDragging = true;
+      startX = clientX;
+    };
+
+    const onUp = (clientX) => {
+      if (!isDragging) return;
+      isDragging = false;
+      const dx = clientX - startX;
+      const threshold = 40;
+      if (dx > threshold) prev();
+      else if (dx < -threshold) next();
+    };
+
+    carousel.addEventListener("touchstart", (e) => onDown(e.touches[0].clientX), { passive: true });
+    carousel.addEventListener("touchend", (e) => {
+      const x = (e.changedTouches && e.changedTouches[0] && e.changedTouches[0].clientX) || startX;
+      onUp(x);
+    });
+
+    // Keyboard (acessível quando focado)
+    carousel.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
+    });
+    carousel.tabIndex = 0;
+
+    update();
+  });
+});

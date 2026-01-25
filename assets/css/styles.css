@@ -13,6 +13,10 @@ body {
   font-smooth: always;
 }
 
+.card-title {
+  color: #0b0e2a;
+}
+
 
 /* BASE + NOISE (Usado na Navbar) */
 .bg-base-noise {
@@ -240,4 +244,275 @@ details[open] summary ~ * {
 }
 #policiesModalContent {
   scroll-behavior: smooth;
+}
+
+
+/* ===========================
+   Produto Publicitário (Especial)
+   =========================== */
+
+.bg-commercial-premium{
+  background:
+    radial-gradient(900px 400px at 15% 20%, rgba(255,106,0,.22), rgba(255,106,0,0) 60%),
+    radial-gradient(900px 420px at 85% 40%, rgba(255,255,255,.08), rgba(255,255,255,0) 55%),
+    linear-gradient(180deg, #0b0e2a 0%, #07091a 100%);
+}
+
+.pp-bullet{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,106,0,.14);
+  border: 1px solid rgba(255,106,0,.35);
+  color: #ff6a00;
+  flex-shrink: 0;
+}
+
+.pp-plan{
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  border-radius: 16px;
+  padding: 14px 14px;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.pp-plan:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,106,0,.45);
+  box-shadow: 0 16px 30px rgba(0,0,0,.25);
+}
+.pp-plan-featured{
+  border-color: rgba(255,106,0,.55);
+  background: rgba(255,106,0,.10);
+}
+.pp-plan-title{
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(255,255,255,.85);
+}
+.pp-plan-price{
+  font-weight: 900;
+  font-size: 20px;
+  margin-top: 6px;
+  color: #fff;
+}
+.pp-plan-sub{
+  font-size: 12px;
+  margin-top: 4px;
+  color: rgba(255,255,255,.70);
+}
+
+/* Card preview dentro da grade de estilos */
+.pp-preview{
+  background: linear-gradient(180deg, rgba(11,14,42,.92), rgba(7,9,26,.98));
+}
+.pp-preview-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 180px;
+}
+.pp-preview-cell{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #fff;
+}
+.pp-preview-cell:first-child{
+  border-right: 1px solid rgba(255,255,255,.10);
+  opacity: .85;
+}
+.pp-preview-tag{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.85);
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.18);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+.pp-preview-icon{
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  font-size: 18px;
+}
+.pp-preview-text{
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.80);
+}
+.pp-preview-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-top: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  color: rgba(255,255,255,.75);
+  font-size: 12px;
+}
+.pp-preview-footer-text{
+  font-weight: 700;
+}
+
+
+/* Placeholder visual (para manter o mesmo "card style" sem depender de imagens novas) */
+.pp-placeholder{
+  background:
+    radial-gradient(600px 300px at 20% 20%, rgba(255,106,0,.18), rgba(255,106,0,0) 60%),
+    linear-gradient(180deg, rgba(11,14,42,.92), rgba(7,9,26,.98));
+  color: rgba(255,255,255,.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+}
+.pp-placeholder.pp-before{
+  background:
+    radial-gradient(600px 300px at 80% 20%, rgba(255,255,255,.10), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(13,16,54,.92), rgba(7,9,26,.98));
+}
+.pp-placeholder-inner{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.pp-placeholder-inner i{
+  font-size: 28px;
+  color: #ff6a00;
+}
+.pp-placeholder-inner span{
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,.85);
+}
+
+/* Carrossel (somente no bloco especial) */
+.pp-carousel{
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.20);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.35);
+}
+.pp-track{
+  display: flex;
+  transition: transform .35s ease;
+  will-change: transform;
+}
+.pp-slide{
+  min-width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+}
+.pp-split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.pp-half{
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+}
+.pp-half img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/5;
+}
+.pp-tag{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.88);
+  background: rgba(0,0,0,.38);
+  border: 1px solid rgba(255,255,255,.18);
+  padding: 6px 10px;
+  border-radius: 999px;
+  z-index: 2;
+}
+.pp-caption{
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,.75);
+  font-weight: 700;
+  text-align: center;
+}
+.pp-nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(0,0,0,.35);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: transform .15s ease, background .15s ease;
+}
+.pp-nav:hover{
+  background: rgba(0,0,0,.55);
+  transform: translateY(-50%) scale(1.05);
+}
+.pp-prev{ left: 10px; }
+.pp-next{ right: 10px; }
+
+.pp-dots{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0 14px;
+}
+.pp-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.35);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.pp-dot.active{
+  background: rgba(255,106,0,.95);
+  border-color: rgba(255,106,0,.55);
+}
+
+@media (max-width: 420px){
+  .pp-split{ gap: 8px; }
+  .pp-slide{ padding: 12px; }
+  .pp-nav{ width: 40px; height: 40px; }
 }
