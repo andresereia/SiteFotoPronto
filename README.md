@@ -8,140 +8,99 @@ Este site usa **JPG como fallback** e **WEBP responsivo** (srcset) para carregar
 
 ---
 
-## 1) Formato recomendado (fluxo simples e seguro)
+## Estilos (cards principais)
 
-- **Master (arquivo fonte):** JPG (ou PNG se precisar, mas evite)
-- **Para o site:** gerar **WEBP** em 2–3 tamanhos + manter **JPG** original como fallback
+### Natural Vivo
+- natural-antes.jpg
+- natural-depois.jpg
+- natural-antes-360.webp / natural-antes-540.webp / natural-antes-1080.webp
+- natural-depois-360.webp / natural-depois-540.webp / natural-depois-1080.webp
 
-✅ Por quê:
-- JPG mantém compatibilidade total.
-- WEBP reduz peso e melhora PageSpeed.
+### Perfil Profissional
+- profissional-antes.jpg
+- profissional-depois.jpg
+- profissional-antes-360.webp / profissional-antes-540.webp / profissional-antes-1080.webp
+- profissional-depois-360.webp / profissional-depois-540.webp / profissional-depois-1080.webp
 
----
+### Produto de Catálogo
+- catalogo-antes.jpg
+- catalogo-depois.jpg
+- catalogo-antes-360.webp / catalogo-antes-540.webp / catalogo-antes-1080.webp
+- catalogo-depois-360.webp / catalogo-depois-540.webp / catalogo-depois-1080.webp
 
-## 2) Tamanhos (padrão prático que já combina com o seu HTML)
+### Cinema / Dramático
+- cinema-antes.jpg
+- cinema-depois.jpg
+- cinema-antes-360.webp / cinema-antes-540.webp / cinema-antes-1080.webp
+- cinema-depois-360.webp / cinema-depois-540.webp / cinema-depois-1080.webp
 
-### A) Fotos verticais dos cards de estilo (Antes/Depois)
-Seu HTML já está apontando para estes tamanhos:
-- **360w**, **540w**, **1080w** (webp)
-- **1080px** (jpg fallback)
+### Arte & Ilustração
+- arte-antes.jpg
+- arte-depois.jpg
+- arte-antes-360.webp / arte-antes-540.webp / arte-antes-1080.webp
+- arte-depois-360.webp / arte-depois-540.webp / arte-depois-1080.webp
 
-**Recomendação de export:**
-- `*.jpg` (fallback): **1080px de largura** (ou lado maior 1080), qualidade **80–85**
-- `*.webp`: 360 / 540 / 1080, qualidade **75–82**
+### 3D / Estilizado
+- 3d-antes.jpg
+- 3d-depois.jpg
+- 3d-antes-360.webp / 3d-antes-540.webp / 3d-antes-1080.webp
+- 3d-depois-360.webp / 3d-depois-540.webp / 3d-depois-1080.webp
 
-### B) Prints / depoimentos
-Se o print for “paisagem” (ex.: 1200×900), mantenha:
-- fallback JPG: **1200px** no lado maior
-- webp: **540w** e **1080w** (ou 1200w, se você preferir)
+### Natureza | Vida Máxima
+- natureza-antes.jpg
+- natureza-depois.jpg
+- natureza-antes-360.webp / natureza-antes-540.webp / natureza-antes-1080.webp
+- natureza-depois-360.webp / natureza-depois-540.webp / natureza-depois-1080.webp
 
----
+### Restauração
+- restauracao-antes.jpg
+- restauracao-depois.jpg
+- restauracao-antes-360.webp / restauracao-antes-540.webp / restauracao-antes-1080.webp
+- restauracao-depois-360.webp / restauracao-depois-540.webp / restauracao-depois-1080.webp
 
-## 3) Nomes ideais (SEO + organização)
-
-### Regras de nomeação (sempre)
-- usar **kebab-case** (tudo minúsculo, com hífen)
-- sem acento, sem espaço
-- incluir **antes/depois** e o **tamanho** no webp
-- manter consistente (isso ajuda você e ajuda “organização mental” do projeto)
-
-### Padrão (recomendado)
-**JPG (fallback / master):**
-- `{slug}-antes.jpg`
-- `{slug}-depois.jpg`
-
-**WEBP responsivo:**
-- `{slug}-antes-360.webp`
-- `{slug}-antes-540.webp`
-- `{slug}-antes-1080.webp`
-- `{slug}-depois-360.webp`
-- `{slug}-depois-540.webp`
-- `{slug}-depois-1080.webp`
-
-> `slug` = nome do estilo/uso (ex.: `natural`, `profissional`, `produto`, `cinema`, `arte`, `3d`, `natureza`, `restauracao`, `print1`, etc.)
-
----
-
-## 4) Lista atual de arquivos que o site espera (comparadores Antes/Depois)
-
-### Estilos (cards principais)
-1. **Natural Vivo**
-- `natural-antes.jpg`
-- `natural-depois.jpg`
-- `natural-antes-360.webp` / `540.webp` / `1080.webp`
-- `natural-depois-360.webp` / `540.webp` / `1080.webp`
-
-2. **Perfil Profissional**
-- `profissional-antes.jpg`
-- `profissional-depois.jpg`
-- `profissional-antes-360.webp` / `540.webp` / `1080.webp`
-- `profissional-depois-360.webp` / `540.webp` / `1080.webp`
-
-3. **Produto de Catálogo**
-- `produto-antes.jpg`
-- `produto-depois.jpg`
-- `produto-antes-360.webp` / `540.webp` / `1080.webp`
-- `produto-depois-360.webp` / `540.webp` / `1080.webp`
-
-4. **Cinema / Dramático**
-- `cinema-antes.jpg`
-- `cinema-depois.jpg`
-- `cinema-antes-360.webp` / `540.webp` / `1080.webp`
-- `cinema-depois-360.webp` / `540.webp` / `1080.webp`
-
-5. **Arte & Ilustração**
-- `arte-antes.jpg`
-- `arte-depois.jpg`
-- `arte-antes-360.webp` / `540.webp` / `1080.webp`
-- `arte-depois-360.webp` / `540.webp` / `1080.webp`
-
-6. **3D / Estilizado**
-- `3d-antes.jpg`
-- `3d-depois.jpg`
-- `3d-antes-360.webp` / `540.webp` / `1080.webp`
-- `3d-depois-360.webp` / `540.webp` / `1080.webp`
-
-7. **Natureza | Vida Máxima**
-- `natureza-antes.jpg`
-- `natureza-depois.jpg`
-- `natureza-antes-360.webp` / `540.webp` / `1080.webp`
-- `natureza-depois-360.webp` / `540.webp` / `1080.webp`
-
-8. **Restauração**
-- `restauracao-ex7-antes.jpg`
-- `restauracao-ex7-depois.jpg`
-- `restauracao-ex2-antes.jpg`
-- `restauracao-ex2-depois.jpg`
-- e seus respectivos webp em 360/540/1080 quando existirem
-
-### Prova social (prints)
-- `print1.jpg` + `print1-540.webp` + `print1-1080.webp`
-(Repita o padrão para `print2`, `print3` etc.)
+### Produto Publicitário
+- publicitario-antes.jpg
+- publicitario-depois.jpg
+- publicitario-antes-360.webp / publicitario-antes-540.webp / publicitario-antes-1080.webp
+- publicitario-depois-360.webp / publicitario-depois-540.webp / publicitario-depois-1080.webp
 
 ---
 
-## 5) Como converter (comandos prontos)
+## Sessões especiais
 
-### Opção 1 — ImageMagick + cwebp (recomendado)
-1) Redimensionar (gerar JPG fallback já otimizado):
-```bash
-magick input.jpg -resize 1080x1080\> -quality 82 output.jpg
-```
+### Restauração (especial)
+- especial-restauracao-antes.jpg
+- especial-restauracao-depois.jpg
+- especial-restauracao-antes-360.webp / especial-restauracao-antes-540.webp / especial-restauracao-antes-1080.webp
+- especial-restauracao-depois-360.webp / especial-restauracao-depois-540.webp / especial-restauracao-depois-1080.webp
 
-2) Gerar WEBP (exemplo 3 tamanhos):
-```bash
-cwebp -q 80 -resize 360 0 input.jpg -o output-360.webp
-cwebp -q 80 -resize 540 0 input.jpg -o output-540.webp
-cwebp -q 80 -resize 1080 0 input.jpg -o output-1080.webp
-```
+### Produto Publicitário (especial)
+- especial-publicitario-antes.jpg
+- especial-publicitario-depois.jpg
+- especial-publicitario-antes-360.webp / especial-publicitario-antes-540.webp / especial-publicitario-antes-1080.webp
+- especial-publicitario-depois-360.webp / especial-publicitario-depois-540.webp / especial-publicitario-depois-1080.webp
 
-### Opção 2 — Squoosh (manual, rápido)
-- exportar WEBP com qualidade ~80
-- exportar 360 / 540 / 1080 (ou só 540 / 1080 se quiser simplificar)
+- especial-publicitario-ex2-antes.jpg
+- especial-publicitario-ex2-depois.jpg
+- especial-publicitario-ex2-antes-360.webp / especial-publicitario-ex2-antes-540.webp / especial-publicitario-ex2-antes-1080.webp
+- especial-publicitario-ex2-depois-360.webp / especial-publicitario-ex2-depois-540.webp / especial-publicitario-ex2-depois-1080.webp
 
----
+- especial-publicitario-ex3-antes.jpg
+- especial-publicitario-ex3-depois.jpg
+- especial-publicitario-ex3-antes-360.webp / especial-publicitario-ex3-antes-540.webp / especial-publicitario-ex3-antes-1080.webp
+- especial-publicitario-ex3-depois-360.webp / especial-publicitario-ex3-depois-540.webp / especial-publicitario-ex3-depois-1080.webp
 
-## 6) Checklist rápido antes de subir
-- [ ] Todos os `srcset` existem de verdade em `/assets/img/`
-- [ ] JPG fallback tem tamanho controlado (não jogue 4000px)
-- [ ] Se atualizou uma imagem, **troque o nome** para “furar” o cache do Vercel
+- especial-publicitario-ex4-antes.jpg
+- especial-publicitario-ex4-depois.jpg
+- especial-publicitario-ex4-antes-360.webp / especial-publicitario-ex4-antes-540.webp / especial-publicitario-ex4-antes-1080.webp
+- especial-publicitario-ex4-depois-360.webp / especial-publicitario-ex4-depois-540.webp / especial-publicitario-ex4-depois-1080.webp
+
+- especial-publicitario-ex5-antes.jpg
+- especial-publicitario-ex5-depois.jpg
+- especial-publicitario-ex5-antes-360.webp / especial-publicitario-ex5-antes-540.webp / especial-publicitario-ex5-antes-1080.webp
+- especial-publicitario-ex5-depois-360.webp / especial-publicitario-ex5-depois-540.webp / especial-publicitario-ex5-depois-1080.webp
+
+- especial-publicitario-ex6-antes.jpg
+- especial-publicitario-ex6-depois.jpg
+- especial-publicitario-ex6-antes-360.webp / especial-publicitario-ex6-antes-540.webp / especial-publicitario-ex6-antes-1080.webp
+- especial-publicitario-ex6-depois-360.webp / especial-publicitario-ex6-depois-540.webp / especial-publicitario-ex6-depois-1080.webp
