@@ -298,7 +298,6 @@ details[open] summary ~ * {
   background: rgba(255,255,255,.06);
   border-radius: 16px;
   padding: 14px 14px;
-  position: relative;
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
 .pp-plan:hover{
@@ -327,32 +326,6 @@ details[open] summary ~ * {
   font-size: 12px;
   margin-top: 4px;
   color: rgba(255,255,255,.70);
-}
-.pp-plan-tag{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.85);
-  background: rgba(255,255,255,.12);
-  border: 1px solid rgba(255,255,255,.22);
-  padding: 3px 8px;
-  border-radius: 999px;
-  max-width: calc(100% - 20px);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.pp-plan-benefit{
-  font-size: 11px;
-  margin-top: 4px;
-  color: rgba(255,255,255,.72);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* Card preview dentro da grade de estilos */
@@ -565,3 +538,4 @@ details[open] summary ~ * {
   .pp-slide{ padding: 12px; }
   .pp-nav{ width: 40px; height: 40px; }
 }
+
