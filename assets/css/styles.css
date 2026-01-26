@@ -327,6 +327,32 @@ details[open] summary ~ * {
   margin-top: 4px;
   color: rgba(255,255,255,.70);
 }
+.pp-plan-badge{
+  display: none;
+}
+
+@media (max-width: 767px){
+  .pp-plan{
+    position: relative;
+    padding-right: 96px;
+  }
+  .pp-plan-badge{
+    display: inline-flex;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.85);
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.22);
+    padding: 3px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+}
 
 /* Card preview dentro da grade de estilos */
 .pp-preview{
