@@ -1799,10 +1799,13 @@
         const safeGtag = (...args) => {
           if (typeof window.gtag === "function") window.gtag(...args);
         };
+        const safeFbq = (...args) => {
+          if (typeof window.fbq === "function") window.fbq(...args);
+        };
 
         // GA4: WhatsApp click
         const waButtons = document.querySelectorAll(
-          ".wa-link-btn, .wa-hero-btn"
+          ".wa-link-btn, .wa-hero-btn, #finalWhatsappBtn"
         );
         waButtons.forEach((btn) => {
           if (btn.dataset.ga4Bound === "true") return;
@@ -1812,7 +1815,10 @@
             if (btn.dataset.ga4Pending === "true") return;
             btn.dataset.ga4Pending = "true";
 
-            const fire = () => safeGtag("event", "whatsapp_click");
+            const fire = () => {
+              safeGtag("event", "whatsapp_click");
+              safeFbq("track", "Contact");
+            };
 
             if (btn.tagName === "BUTTON") {
               fire();
@@ -1828,7 +1834,7 @@
               btn.getAttribute("data-href") ||
               btn.getAttribute("data-url");
 
-            if (!href) {
+            if (!href || href === "#") {
               btn.dataset.ga4Pending = "false";
               return;
             }
