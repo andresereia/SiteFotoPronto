@@ -63,16 +63,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
 
     <!-- Preconnects -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
 
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 <!-- Tailwind (compiled) -->
     <link rel="stylesheet" href="assets/css/tailwind.min.css?v=20260125v3" />
 
@@ -183,7 +183,12 @@
           onclick="document.getElementById('orderModal').classList.remove('hidden')"
           class="inline-flex items-center bg-brand-orange hover:bg-brand-orangeHover text-white font-bold py-2 px-4 md:px-6 rounded-full transition duration-300 shadow-sm hover:shadow-md text-xs md:text-base"
         >
-          <i class="fas fa-tasks mr-2"></i> Monte seu Pedido
+          <svg class="fas fa-tasks mr-2" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h12"/>
+<path d="M9 12h12"/>
+<path d="M9 18h12"/>
+<path d="M4 6l1.5 1.5L7 5"/>
+<path d="M4 12l1.5 1.5L7 11"/>
+<path d="M4 18l1.5 1.5L7 17"/></svg> Monte seu Pedido
         </button>
       </div>
     </nav>
@@ -228,22 +233,29 @@
             class="text-xs md:text-sm text-gray-400 mt-2 flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4"
           >
             <div class="flex items-center gap-2">
-              <span><i class="fas fa-bolt text-brand-orange"></i> Rápido</span>
+              <span><svg class="fas fa-bolt text-brand-orange" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg> Rápido</span>
               •
               <span
-                ><i class="fas fa-piggy-bank text-brand-orange"></i>
+                ><svg class="fas fa-piggy-bank text-brand-orange" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a7 7 0 0 1 14 0v3a2 2 0 0 1-2 2H9a4 4 0 0 1-4-4v-1z"/>
+<circle cx="17" cy="12" r="1"/>
+<path d="M8 8l-2-2"/>
+<path d="M5 14H3"/></svg>
                 Acessível</span
               >
               <span class="hidden md:inline">•</span>
             </div>
             <div class="flex items-center gap-2">
               <span
-                ><i class="fas fa-user-friends text-brand-orange"></i>
+                ><svg class="fas fa-user-friends text-brand-orange" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/>
+<circle cx="16" cy="9" r="2.5"/>
+<path d="M2 20c0-3 3-5 6-5s6 2 6 5"/>
+<path d="M12.5 20c0-2 2-3.5 4.5-3.5s4.5 1.5 4.5 3.5"/></svg>
                 Atendimento humano</span
               >
               •
               <span
-                ><i class="fab fa-whatsapp text-brand-orange"></i> Entrega no
+                ><svg class="fab fa-whatsapp text-brand-orange" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Entrega no
                 WhatsApp</span
               >
             </div>
@@ -272,7 +284,9 @@
             <div
               class="w-10 h-10 md:w-14 md:h-14 bg-brand-blue rounded-full flex items-center justify-center text-brand-orange text-lg md:text-2xl mb-2 md:mb-4 mx-auto"
             >
-              <i class="fab fa-instagram"></i>
+              <svg class="fab fa-instagram" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/>
+<circle cx="12" cy="12" r="4"/>
+<circle cx="17" cy="7" r="1"/></svg>
             </div>
             <h3
               class="text-base md:text-xl font-semibold text-center card-title mb-1 md:mb-2"
@@ -290,7 +304,9 @@
             <div
               class="w-10 h-10 md:w-14 md:h-14 bg-brand-blue rounded-full flex items-center justify-center text-brand-orange text-lg md:text-2xl mb-2 md:mb-4 mx-auto"
             >
-              <i class="fas fa-lightbulb"></i>
+              <svg class="fas fa-lightbulb" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/>
+<path d="M10 22h4"/>
+<path d="M12 2a7 7 0 0 0-4 12c1 1 1 2 1 4h6c0-2 0-3 1-4a7 7 0 0 0-4-12z"/></svg>
             </div>
             <h3
               class="text-base md:text-xl font-semibold text-center card-title mb-1 md:mb-2"
@@ -308,7 +324,9 @@
             <div
               class="w-10 h-10 md:w-14 md:h-14 bg-brand-blue rounded-full flex items-center justify-center text-brand-orange text-lg md:text-2xl mb-2 md:mb-4 mx-auto"
             >
-              <i class="fas fa-history"></i>
+              <svg class="fas fa-history" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6"/>
+<path d="M3 4v4h4"/>
+<path d="M12 7v5l3 2"/></svg>
             </div>
             <h3
               class="text-base md:text-xl font-semibold text-center card-title mb-1 md:mb-2"
@@ -326,7 +344,8 @@
             <div
               class="w-10 h-10 md:w-14 md:h-14 bg-brand-blue rounded-full flex items-center justify-center text-brand-orange text-lg md:text-2xl mb-2 md:mb-4 mx-auto"
             >
-              <i class="fas fa-magic"></i>
+              <svg class="fas fa-magic" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.5 3.5L17 8l-3.5 1.5L12 13l-1.5-3.5L7 8l3.5-1.5L12 3z"/>
+<path d="M3 21l6-6"/></svg>
             </div>
             <h3
               class="text-base md:text-xl font-semibold text-center card-title mb-1 md:mb-2"
@@ -360,7 +379,8 @@
     <div class="mb-3">
       <div class="flex flex-wrap items-center gap-2">
         <h3 class="text-lg font-bold card-title">Pessoas | Natural Vivo</h3>
-        <span class="style-tag"><i class="fas fa-leaf"></i> natural</span>
+        <span class="style-tag"><svg class="fas fa-leaf" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20c9-1 14-6 14-15-9 1-14 6-14 15z"/>
+<path d="M5 20c4-4 7-7 11-11"/></svg> natural</span>
       </div>
       <p class="style-subtitle">"A mesma foto, só que melhor."</p>
       <p class="text-sm text-gray-500 mt-1">
@@ -381,14 +401,17 @@
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
       <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
-      <div class="style-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+      <div class="style-slider-handle"><svg class="fas fa-arrows-alt-h" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/>
+<path d="M7 8l-4 4 4 4"/>
+<path d="M17 8l4 4-4 4"/></svg></div>
     </div>
 
     <a
       href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20estilo%20Natural%20Aprimorado."
       class="wa-link-btn inline-flex items-center gap-2 border-2 border-brand-orange bg-white hover:bg-orange-50 text-brand-orange font-bold px-4 py-2 rounded-full text-sm transition mt-3"
     >
-      <i class="fab fa-whatsapp"></i> Quero este estilo
+      <svg class="fab fa-whatsapp" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Quero este estilo
     </a>
   </div>
 
@@ -397,7 +420,9 @@
     <div class="mb-3">
       <div class="flex flex-wrap items-center gap-2">
         <h3 class="text-lg font-bold card-title">Perfil Profissional</h3>
-        <span class="style-tag"><i class="fas fa-briefcase"></i> trabalho</span>
+        <span class="style-tag"><svg class="fas fa-briefcase" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="10" rx="2"/>
+<path d="M9 7V5h6v2"/>
+<path d="M4 12h16"/></svg> trabalho</span>
       </div>
       <p class="style-subtitle">"Foto séria, limpa e confiável."</p>
       <p class="text-sm text-gray-500 mt-1">
@@ -418,14 +443,17 @@
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
       <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
-      <div class="style-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+      <div class="style-slider-handle"><svg class="fas fa-arrows-alt-h" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/>
+<path d="M7 8l-4 4 4 4"/>
+<path d="M17 8l4 4-4 4"/></svg></div>
     </div>
 
     <a
       href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20estilo%20Perfil%20Profissional."
       class="wa-link-btn inline-flex items-center gap-2 border-2 border-brand-orange bg-white hover:bg-orange-50 text-brand-orange font-bold px-4 py-2 rounded-full text-sm transition mt-3"
     >
-      <i class="fab fa-whatsapp"></i> Quero este estilo
+      <svg class="fab fa-whatsapp" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Quero este estilo
     </a>
   </div>
 
@@ -434,7 +462,8 @@
     <div class="mb-3">
       <div class="flex flex-wrap items-center gap-2">
         <h3 class="text-lg font-bold card-title">Produto de Catálogo</h3>
-        <span class="style-tag"><i class="fas fa-bag-shopping"></i> vendas</span>
+        <span class="style-tag"><svg class="fas fa-bag-shopping" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/>
+<path d="M9 7a3 3 0 0 1 6 0"/></svg> vendas</span>
       </div>
       <p class="style-subtitle">"Foto mais vendável."</p>
       <p class="text-sm text-gray-500 mt-1">
@@ -455,14 +484,17 @@
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
       <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
-      <div class="style-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+      <div class="style-slider-handle"><svg class="fas fa-arrows-alt-h" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/>
+<path d="M7 8l-4 4 4 4"/>
+<path d="M17 8l4 4-4 4"/></svg></div>
     </div>
 
     <a
       href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20estilo%20Produto%20em%20Destaque."
       class="wa-link-btn inline-flex items-center gap-2 border-2 border-brand-orange bg-white hover:bg-orange-50 text-brand-orange font-bold px-4 py-2 rounded-full text-sm transition mt-3"
     >
-      <i class="fab fa-whatsapp"></i> Quero este estilo
+      <svg class="fab fa-whatsapp" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Quero este estilo
     </a>
   </div>
 
@@ -471,7 +503,11 @@
     <div class="mb-3">
       <div class="flex flex-wrap items-center gap-2">
         <h3 class="text-lg font-bold card-title">Cinema / Dramático</h3>
-        <span class="style-tag"><i class="fas fa-film"></i> impacto</span>
+        <span class="style-tag"><svg class="fas fa-film" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/>
+<path d="M7 5v14"/>
+<path d="M17 5v14"/>
+<path d="M3 9h18"/>
+<path d="M3 15h18"/></svg> impacto</span>
       </div>
       <p class="style-subtitle">"Foto com impacto."</p>
       <p class="text-sm text-gray-500 mt-1">
@@ -492,14 +528,17 @@
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
       <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
-      <div class="style-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+      <div class="style-slider-handle"><svg class="fas fa-arrows-alt-h" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/>
+<path d="M7 8l-4 4 4 4"/>
+<path d="M17 8l4 4-4 4"/></svg></div>
     </div>
 
     <a
       href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20estilo%20Cinema%20/%20Dram%C3%A1tico."
       class="wa-link-btn inline-flex items-center gap-2 border-2 border-brand-orange bg-white hover:bg-orange-50 text-brand-orange font-bold px-4 py-2 rounded-full text-sm transition mt-3"
     >
-      <i class="fab fa-whatsapp"></i> Quero este estilo
+      <svg class="fab fa-whatsapp" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Quero este estilo
     </a>
   </div>
 
@@ -508,7 +547,11 @@
     <div class="mb-3">
       <div class="flex flex-wrap items-center gap-2">
         <h3 class="text-lg font-bold card-title">Arte &amp; Ilustração</h3>
-        <span class="style-tag"><i class="fas fa-palette"></i> arte</span>
+        <span class="style-tag"><svg class="fas fa-palette" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c2 0 2-2 1-3s-1-3 1-3h2a4 4 0 0 0 0-8z"/>
+<circle cx="7.5" cy="9" r="1"/>
+<circle cx="10" cy="6.5" r="1"/>
+<circle cx="14" cy="6.5" r="1"/>
+<circle cx="16.5" cy="9" r="1"/></svg> arte</span>
       </div>
       <p class="style-subtitle">"Transformação artística."</p>
       <p class="text-sm text-gray-500 mt-1">
@@ -529,14 +572,17 @@
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
       <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
-      <div class="style-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+      <div class="style-slider-handle"><svg class="fas fa-arrows-alt-h" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/>
+<path d="M7 8l-4 4 4 4"/>
+<path d="M17 8l4 4-4 4"/></svg></div>
     </div>
 
     <a
       href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20estilo%20Arte%20e%20Ilustra%C3%A7%C3%A3o."
       class="wa-link-btn inline-flex items-center gap-2 border-2 border-brand-orange bg-white hover:bg-orange-50 text-brand-orange font-bold px-4 py-2 rounded-full text-sm transition mt-3"
     >
-      <i class="fab fa-whatsapp"></i> Quero este estilo
+      <svg class="fab fa-whatsapp" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Quero este estilo
     </a>
   </div>
 
@@ -545,7 +591,9 @@
     <div class="mb-3">
       <div class="flex flex-wrap items-center gap-2">
         <h3 class="text-lg font-bold card-title">3D / Estilizado</h3>
-        <span class="style-tag"><i class="fas fa-cube"></i> 3D</span>
+        <span class="style-tag"><svg class="fas fa-cube" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v12l-8 4-8-4V6l8-4z"/>
+<path d="M12 22V10"/>
+<path d="M4 6l8 4 8-4"/></svg> 3D</span>
       </div>
       <p class="style-subtitle">"Estilo divertido."</p>
       <p class="text-sm text-gray-500 mt-1">
@@ -566,14 +614,17 @@
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
       <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
-      <div class="style-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+      <div class="style-slider-handle"><svg class="fas fa-arrows-alt-h" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/>
+<path d="M7 8l-4 4 4 4"/>
+<path d="M17 8l4 4-4 4"/></svg></div>
     </div>
 
     <a
       href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20estilo%203D%20Estilizado."
       class="wa-link-btn inline-flex items-center gap-2 border-2 border-brand-orange bg-white hover:bg-orange-50 text-brand-orange font-bold px-4 py-2 rounded-full text-sm transition mt-3"
     >
-      <i class="fab fa-whatsapp"></i> Quero este estilo
+      <svg class="fab fa-whatsapp" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Quero este estilo
     </a>
   </div>
 
@@ -582,7 +633,7 @@
     <div class="mb-3">
       <div class="flex flex-wrap items-center gap-2">
         <h3 class="text-lg font-bold card-title">Natureza | Vida Máxima</h3>
-        <span class="style-tag"><i class="fas fa-mountain"></i> natureza</span>
+        <span class="style-tag"><svg class="fas fa-mountain" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19l7-10 4 6 3-4 4 8H3z"/></svg> natureza</span>
       </div>
       <p class="style-subtitle">"A mesma paisagem, só que viva."</p>
       <p class="text-sm text-gray-500 mt-1">
@@ -603,14 +654,17 @@
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
       <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
-      <div class="style-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+      <div class="style-slider-handle"><svg class="fas fa-arrows-alt-h" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/>
+<path d="M7 8l-4 4 4 4"/>
+<path d="M17 8l4 4-4 4"/></svg></div>
     </div>
 
     <a
       href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20estilo%20Natureza%20Vida%20M%C3%A1xima."
       class="wa-link-btn inline-flex items-center gap-2 border-2 border-brand-orange bg-white hover:bg-orange-50 text-brand-orange font-bold px-4 py-2 rounded-full text-sm transition mt-3"
     >
-      <i class="fab fa-whatsapp"></i> Quero este estilo
+      <svg class="fab fa-whatsapp" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Quero este estilo
     </a>
   </div>
 
@@ -621,7 +675,9 @@
   <div class="mb-3 text-left">
     <div class="flex flex-wrap items-center gap-2">
   <h3 class="text-lg font-bold card-title">Restauração de Fotos</h3>
-  <span class="style-tag"><i class="fas fa-clock-rotate-left"></i> memória</span>
+  <span class="style-tag"><svg class="fas fa-clock-rotate-left" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6"/>
+<path d="M3 4v4h4"/>
+<path d="M12 7v5l3 2"/></svg> memória</span>
 </div>
     <p class="style-subtitle">"Resgatar memórias."</p>
     <p class="text-sm text-gray-500 mt-1">
@@ -642,14 +698,17 @@
       <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
     </div>
     <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
-    <div class="style-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+    <div class="style-slider-handle"><svg class="fas fa-arrows-alt-h" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/>
+<path d="M7 8l-4 4 4 4"/>
+<path d="M17 8l4 4-4 4"/></svg></div>
   </div>
 
   <a
     href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20restaurar%20uma%20foto%20antiga."
     class="wa-link-btn inline-flex items-center gap-2 border-2 border-brand-orange bg-white hover:bg-orange-50 text-brand-orange font-bold px-4 py-2 rounded-full text-sm transition mt-3"
   >
-    <i class="fab fa-whatsapp"></i> Quero este estilo
+    <svg class="fab fa-whatsapp" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Quero este estilo
   </a>
 </div>
 
@@ -658,7 +717,12 @@
     <div class="mb-3">
       <div class="flex flex-wrap items-center gap-2">
         <h3 class="text-lg font-bold card-title">Produto Publicitário</h3>
-        <span class="style-tag"><i class="fas fa-bullseye"></i> especial</span>
+        <span class="style-tag"><svg class="fas fa-bullseye" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/>
+<circle cx="12" cy="12" r="3"/>
+<path d="M12 4v2"/>
+<path d="M12 18v2"/>
+<path d="M4 12h2"/>
+<path d="M18 12h2"/></svg> especial</span>
       </div>
       <p class="style-subtitle">"Imagem com cara de anúncio."</p>
       <p class="text-sm text-gray-500 mt-1">
@@ -679,14 +743,17 @@
         <span class="absolute top-1/2 left-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-20">Antes</span>
       </div>
       <span class="absolute top-1/2 right-4 -translate-y-1/2 text-white/80 text-sm font-medium tracking-widest drop-shadow-sm uppercase pointer-events-none z-0">Depois</span>
-      <div class="style-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+      <div class="style-slider-handle"><svg class="fas fa-arrows-alt-h" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/>
+<path d="M7 8l-4 4 4 4"/>
+<path d="M17 8l4 4-4 4"/></svg></div>
     </div>
 
     <a
       href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20o%20Produto%20Publicit%C3%A1rio%20(imagens%20de%20campanha)%20para%20meu%20produto."
       class="wa-link-btn inline-flex items-center gap-2 border-2 border-brand-orange bg-white hover:bg-orange-50 text-brand-orange font-bold px-4 py-2 rounded-full text-sm transition mt-3"
     >
-      <i class="fab fa-whatsapp"></i> Quero este estilo
+      <svg class="fab fa-whatsapp" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Quero este estilo
     </a>
   </div>
 
@@ -695,7 +762,7 @@
           <div
             class="inline-flex items-center gap-3 bg-blue-50 border border-blue-200 text-brand-blue px-5 py-1 rounded-xl shadow-sm text-left md:text-center"
           >
-            <i class="fas fa-shield-alt text-xl text-brand-orange shrink-0"></i>
+            <svg class="fas fa-shield-alt text-xl text-brand-orange shrink-0" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9.5-8 12-4.5-2.5-8-7-8-12V6l8-4z"/></svg>
             <p class="text-sm font-semibold leading-snug">
               Fotos com crianças seguem regras especiais de segurança e
               proteção. Consulte a disponibilidade dos estilos.
@@ -709,7 +776,8 @@
             href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20melhorar%20minhas%20fotos."
             class="wa-link-btn inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orangeHover text-white text-lg font-bold py-4 px-10 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-xl w-10/12 md:w-auto text-center leading-tight"
           >
-            <i class="fab fa-whatsapp mr-2 text-2xl"></i>
+            <svg class="fab fa-whatsapp mr-2 text-2xl" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg>
             Quero melhorar minhas fotos no WhatsApp
           </a>
         </div>
@@ -750,15 +818,15 @@
               class="text-left text-gray-600 text-xs md:text-sm space-y-2 mb-6 px-2"
             >
               <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i> Resultado
+                <svg class="fas fa-check text-green-500 mr-2" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Resultado
                 natural
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i> Você escolhe o
+                <svg class="fas fa-check text-green-500 mr-2" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Você escolhe o
                 estilo
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i> Entrega no
+                <svg class="fas fa-check text-green-500 mr-2" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Entrega no
                 WhatsApp
               </li>
             </ul>
@@ -795,14 +863,14 @@
               class="text-left text-gray-600 text-xs md:text-sm space-y-2 mb-6 px-2"
             >
               <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i> Mais escolhido
+                <svg class="fas fa-check text-green-500 mr-2" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Mais escolhido
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i> Você escolhe o
+                <svg class="fas fa-check text-green-500 mr-2" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Você escolhe o
                 estilo
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i> Entrega no
+                <svg class="fas fa-check text-green-500 mr-2" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Entrega no
                 WhatsApp
               </li>
             </ul>
@@ -834,15 +902,15 @@
               class="text-left text-gray-600 text-xs md:text-sm space-y-2 mb-6 px-2"
             >
               <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i> Melhor custo
+                <svg class="fas fa-check text-green-500 mr-2" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Melhor custo
                 por foto
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i> Você escolhe
+                <svg class="fas fa-check text-green-500 mr-2" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Você escolhe
                 até 2 estilos
               </li>
               <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i> Entrega no
+                <svg class="fas fa-check text-green-500 mr-2" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Entrega no
                 WhatsApp
               </li>
             </ul>
@@ -980,19 +1048,29 @@
 
             <div class="space-y-3 mb-6">
               <div class="flex items-center gap-3 text-sm md:text-base">
-                <span class="pp-bullet"><i class="fas fa-layer-group"></i></span>
+                <span class="pp-bullet"><svg class="fas fa-layer-group" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/>
+<path d="M3 12l9 5 9-5"/>
+<path d="M3 17l9 5 9-5"/></svg></span>
                 <span>Cenário profissional que valoriza (sem competir)</span>
               </div>
               <div class="flex items-center gap-3 text-sm md:text-base">
-                <span class="pp-bullet"><i class="fas fa-lightbulb"></i></span>
+                <span class="pp-bullet"><svg class="fas fa-lightbulb" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/>
+<path d="M10 22h4"/>
+<path d="M12 2a7 7 0 0 0-4 12c1 1 1 2 1 4h6c0-2 0-3 1-4a7 7 0 0 0-4-12z"/></svg></span>
                 <span>Luz de anúncio com sombras suaves para assentar o produto</span>
               </div>
               <div class="flex items-center gap-3 text-sm md:text-base">
-                <span class="pp-bullet"><i class="fas fa-bullseye"></i></span>
+                <span class="pp-bullet"><svg class="fas fa-bullseye" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/>
+<circle cx="12" cy="12" r="3"/>
+<path d="M12 4v2"/>
+<path d="M12 18v2"/>
+<path d="M4 12h2"/>
+<path d="M18 12h2"/></svg></span>
                 <span>Intenção comercial: destaque, presença e foco em conversão</span>
               </div>
               <div class="flex items-center gap-3 text-sm md:text-base">
-                <span class="pp-bullet"><i class="fas fa-ban"></i></span>
+                <span class="pp-bullet"><svg class="fas fa-ban" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/>
+<path d="M7 7l10 10"/></svg></span>
                 <span>Sem mockup falso, sem brilho exagerado, sem estilização</span>
               </div>
             </div>
@@ -1020,7 +1098,8 @@
                 href="https://wa.me/5565992726478?text=Ol%C3%A1!%20Quero%20fazer%20Produto%20Publicit%C3%A1rio%20(imagens%20de%20campanha)%20para%20meu%20produto.%20Quero%20ver%20os%20planos%205%2F10%2F20."
                 class="wa-link-btn inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orangeHover text-white text-base font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-xl w-full md:w-auto"
               >
-                <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                <svg class="fab fa-whatsapp mr-2 text-xl" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg>
                 Enviar fotos no WhatsApp
               </a>
             </div>
@@ -1030,7 +1109,7 @@
           <div class="md:w-1/2 w-full">
             <div class="pp-carousel" data-pp-carousel>
               <button class="pp-nav pp-prev" type="button" aria-label="Anterior" data-pp-prev>
-                <i class="fas fa-chevron-left"></i>
+                <svg class="fas fa-chevron-left" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
               </button>
 
               <div class="pp-track" data-pp-track>
@@ -1121,7 +1200,7 @@
               </div>
 
               <button class="pp-nav pp-next" type="button" aria-label="Próximo" data-pp-next>
-                <i class="fas fa-chevron-right"></i>
+                <svg class="fas fa-chevron-right" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
               </button>
 
               <div class="pp-dots" data-pp-dots aria-label="Indicador do carrossel"></div>
@@ -1188,7 +1267,8 @@
             data-message="Olá! Vi os depoimentos e quero o meu resultado também."
           >
             Quer o seu resultado também? <br class="block md:hidden" />
-            Fale com a gente no WhatsApp <i class="fas fa-arrow-right ml-1"></i>
+            Fale com a gente no WhatsApp <svg class="fas fa-arrow-right ml-1" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/>
+<path d="M13 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
@@ -1209,8 +1289,7 @@
             >
               <span class="text-sm md:text-base">As fotos ficam naturais?</span
               ><span class="transition group-open:rotate-180"
-                ><i class="fas fa-chevron-down text-brand-orange"></i
-              ></span>
+                ><svg class="fas fa-chevron-down text-brand-orange" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
             </summary>
             <div
               class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base"
@@ -1226,8 +1305,7 @@
             >
               <span class="text-sm md:text-base">Quanto tempo demora?</span
               ><span class="transition group-open:rotate-180"
-                ><i class="fas fa-chevron-down text-brand-orange"></i
-              ></span>
+                ><svg class="fas fa-chevron-down text-brand-orange" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
             </summary>
             <div
               class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base"
@@ -1243,8 +1321,7 @@
             >
               <span class="text-sm md:text-base">Como envio minhas fotos?</span
               ><span class="transition group-open:rotate-180"
-                ><i class="fas fa-chevron-down text-brand-orange"></i
-              ></span>
+                ><svg class="fas fa-chevron-down text-brand-orange" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
             </summary>
             <div
               class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base"
@@ -1260,8 +1337,7 @@
               <span class="text-sm md:text-base"
                 >Como funciona o pagamento?</span
               ><span class="transition group-open:rotate-180"
-                ><i class="fas fa-chevron-down text-brand-orange"></i
-              ></span>
+                ><svg class="fas fa-chevron-down text-brand-orange" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
             </summary>
             <div
               class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base"
@@ -1276,8 +1352,7 @@
             >
               <span class="text-sm md:text-base">Posso escolher o estilo?</span
               ><span class="transition group-open:rotate-180"
-                ><i class="fas fa-chevron-down text-brand-orange"></i
-              ></span>
+                ><svg class="fas fa-chevron-down text-brand-orange" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
             </summary>
             <div
               class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base"
@@ -1292,8 +1367,7 @@
               <span class="text-sm md:text-base"
                 >O resultado depende da foto original?</span
               ><span class="transition group-open:rotate-180"
-                ><i class="fas fa-chevron-down text-brand-orange"></i
-              ></span>
+                ><svg class="fas fa-chevron-down text-brand-orange" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
             </summary>
             <div
               class="text-gray-600 px-4 md:px-6 pb-3 md:pb-4 pt-0 text-sm md:text-base"
@@ -1322,7 +1396,8 @@
           class="wa-link-btn bg-brand-orange hover:bg-brand-orangeHover text-white text-lg md:text-xl font-bold py-3 md:py-4 px-8 md:px-12 rounded-full shadow-lg transform transition hover:-translate-y-1 inline-flex items-center"
           data-message="Vamos começar! Quero melhorar minhas fotos."
         >
-          <i class="fab fa-whatsapp mr-2 md:mr-3 text-xl md:text-2xl"></i> Falar
+          <svg class="fab fa-whatsapp mr-2 md:mr-3 text-xl md:text-2xl" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Falar
           Agora no WhatsApp
         </a>
       </div>
@@ -1356,7 +1431,8 @@
       aria-label="Abrir conversa no WhatsApp"
       data-message="Olá! Vim pelo site e quero melhorar minhas fotos."
     >
-      <i class="fab fa-whatsapp"></i>
+      <svg class="fab fa-whatsapp" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg>
     </a>
 
     <!-- MODAL DE POLITICAS -->
@@ -1377,7 +1453,8 @@
             onclick="document.getElementById('policiesModal').classList.add('hidden')"
             class="text-white/80 hover:text-white transition"
           >
-            <i class="fas fa-times text-xl"></i>
+            <svg class="fas fa-times text-xl" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12"/>
+<path d="M6 18L18 6"/></svg>
           </button>
         </div>
 
@@ -1501,7 +1578,8 @@
             onclick="closeOrderModal()"
             class="text-white/80 hover:text-white"
           >
-            <i class="fas fa-times text-2xl"></i>
+            <svg class="fas fa-times text-2xl" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12"/>
+<path d="M6 18L18 6"/></svg>
           </button>
         </div>
 
@@ -1757,7 +1835,8 @@
               href="#"
               class="bg-gray-300 text-white font-bold py-3 px-6 rounded-lg mt-6 inline-flex items-center justify-center w-full pointer-events-none opacity-70"
             >
-              <i class="fab fa-whatsapp mr-2 text-xl"></i> Enviar Pedido pelo
+              <svg class="fab fa-whatsapp mr-2 text-xl" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12.5 6.6L4 20l1.4-4.5A8 8 0 1 1 21 12z"/>
+<path d="M9 9l1.5 3 2.5-1 2 2-1 2.5-3-1.5a6 6 0 0 1-2-2z"/></svg> Enviar Pedido pelo
               WhatsApp
             </a>
 
