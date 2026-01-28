@@ -562,3 +562,6 @@ details[open] summary ~ * {
   .pp-nav{ width: 40px; height: 40px; }
 }
 
+
+/* FIX: missing Tailwind utility used by SVG icons */
+.h-5{height:1.25rem}

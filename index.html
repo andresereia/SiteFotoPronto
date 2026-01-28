@@ -78,7 +78,10 @@
 
     <!-- CSS separado -->
     <link rel="stylesheet" href="assets/css/styles.css?v=20260125v3" />
-  </head>
+  
+    <!-- FIX: missing Tailwind utility (h-5) in custom tailwind.min.css; needed for SVG icon sizing -->
+    <style>.h-5{height:1.25rem}</style>
+</head>
 
   <body class="font-sans text-gray-700 bg-white">
     <!-- Navbar (Sticky com Botão de Pedido) -->
