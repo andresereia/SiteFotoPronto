@@ -89,6 +89,42 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.href = url;
   });
 
+  // Meta Pixel: track WhatsApp contact before redirect
+  const waTrackButtons = document.querySelectorAll(".wa-link-btn");
+  waTrackButtons.forEach((btn) => {
+    if (btn.dataset.metaPixelBound === "true") return;
+    btn.dataset.metaPixelBound = "true";
+
+    btn.addEventListener("click", (e) => {
+      if (btn.dataset.metaPixelPending === "true") return;
+
+      const isModifiedClick =
+        e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey;
+      const targetBlank = btn.getAttribute("target") === "_blank";
+
+      if (isModifiedClick || targetBlank) return;
+
+      const href =
+        (btn.tagName === "A" && btn.href) ||
+        btn.getAttribute("href") ||
+        btn.getAttribute("data-href") ||
+        btn.getAttribute("data-url");
+
+      if (!href) return;
+
+      e.preventDefault();
+      btn.dataset.metaPixelPending = "true";
+
+      if (typeof fbq === "function") {
+        fbq("track", "Contact");
+      }
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300);
+    });
+  });
+
   // Close Policies Modal Logic
   const policiesModal = document.getElementById("policiesModal");
   if (policiesModal) {
