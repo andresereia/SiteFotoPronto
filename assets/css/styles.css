@@ -561,26 +561,3 @@ details[open] summary ~ * {
   .pp-slide{ padding: 12px; }
   .pp-nav{ width: 40px; height: 40px; }
 }
-/* ============================
-   FontAwesome-to-SVG sizing fix
-   The site uses inline <svg class="fas ..."> / <svg class="fab ..."> icons.
-   Some of them still have width/height="1em" attributes and rely on Tailwind
-   utilities (w-5/h-5) that may be missing in the custom tailwind build.
-   These rules force consistent icon sizing across the site.
-   ============================ */
-
-svg.fas, svg.fab {
-  width: 1.375rem !important;  /* ~22px */
-  height: 1.375rem !important;
-  display: inline-block;
-  vertical-align: -0.125em;
-  flex: 0 0 auto;
-}
-
-/* Slightly larger for primary WhatsApp CTAs */
-.wa-hero-btn svg.fab,
-.wa-link-btn svg.fab,
-#finalWhatsappBtn svg.fab{
-  width: 1.5rem !important;    /* 24px */
-  height: 1.5rem !important;
-}
