@@ -90,7 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Meta Pixel: track WhatsApp contact before redirect
-  const waTrackButtons = document.querySelectorAll(".wa-link-btn");
+  const waTrackButtons = document.querySelectorAll(
+    ".wa-link-btn, .wa-hero-btn"
+  );
   waTrackButtons.forEach((btn) => {
     if (btn.dataset.metaPixelBound === "true") return;
     btn.dataset.metaPixelBound = "true";
