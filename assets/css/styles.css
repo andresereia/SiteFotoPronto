@@ -562,38 +562,25 @@ details[open] summary ~ * {
   .pp-nav{ width: 40px; height: 40px; }
 }
 /* ============================
-   ICON SIZE GUARDRAILS (FIX)
-   Reason: If SVG icons are used inside WhatsApp CTAs, missing utility classes
-   (e.g., h-5) or inherited sizing can make them render HUGE on some builds.
-   These rules constrain ONLY the WhatsApp CTA buttons and the final modal CTA.
+   FontAwesome-to-SVG sizing fix
+   The site uses inline <svg class="fas ..."> / <svg class="fab ..."> icons.
+   Some of them still have width/height="1em" attributes and rely on Tailwind
+   utilities (w-5/h-5) that may be missing in the custom tailwind build.
+   These rules force consistent icon sizing across the site.
    ============================ */
 
-/* Tailwind utility missing in this custom build (used by some SVG icon markup) */
-.h-5{height:1.25rem}
-
-/* If WhatsApp icons are SVGs, constrain them */
-.wa-hero-btn svg,
-.wa-link-btn svg,
-#finalWhatsappBtn svg{
-  width: 1.25rem;
-  height: 1.25rem;
-  display: block;
+svg.fas, svg.fab {
+  width: 1.375rem !important;  /* ~22px */
+  height: 1.375rem !important;
+  display: inline-block;
+  vertical-align: -0.125em;
   flex: 0 0 auto;
 }
 
-/* If WhatsApp icons are <img> by any chance, constrain them too */
-.wa-hero-btn img,
-.wa-link-btn img,
-#finalWhatsappBtn img{
-  width: 1.25rem;
-  height: 1.25rem;
-  display: block;
-  flex: 0 0 auto;
-}
-
-/* Ensure icon + text alignment in the CTA buttons */
-.wa-hero-btn,
-.wa-link-btn,
-#finalWhatsappBtn{
-  align-items: center;
+/* Slightly larger for primary WhatsApp CTAs */
+.wa-hero-btn svg.fab,
+.wa-link-btn svg.fab,
+#finalWhatsappBtn svg.fab{
+  width: 1.5rem !important;    /* 24px */
+  height: 1.5rem !important;
 }
